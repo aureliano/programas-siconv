@@ -7,7 +7,8 @@
 
 namespace :data do
   resources = {
-    :programas => 'http://api.convenios.gov.br/siconv/v1/consulta/programas.<formato>?situacao=DISPONIBILIZADO',
+    :concedentes => 'http://api.convenios.gov.br/siconv/v1/consulta/orgaos.<formato>',
+    :programas   => 'http://api.convenios.gov.br/siconv/v1/consulta/programas.<formato>?situacao=DISPONIBILIZADO'
   }
 
   desc 'Web crawler para extração dos dados da api de dados do Siconv'

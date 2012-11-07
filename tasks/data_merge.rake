@@ -10,7 +10,8 @@ require 'csv'
 
 namespace :data do
   resources = {
-    :programas => { :file => 'tmp/programas_db_<offset>.csv', :columns => ['id', 'cod_programa_siconv', 'data_disponibilizacao', 'data_fim_recebimento_propostas', 'data_inicio_recebimento_propostas', 'data_publicacao_dou', 'nome', 'obriga_plano_trabalho', 'orgao_executor', 'orgao_mandatario', 'orgao_superior', 'orgao_vinculado'] },
+    :concedentes => { :file => 'tmp/orgaos_db_<offset>.csv', :columns => ['id', 'nome', 'orgao_superior'] },
+    :programas   => { :file => 'tmp/programas_db_<offset>.csv', :columns => ['id', 'cod_programa_siconv', 'data_disponibilizacao', 'data_fim_recebimento_propostas', 'data_inicio_recebimento_propostas', 'data_publicacao_dou', 'nome', 'obriga_plano_trabalho', 'orgao_executor', 'orgao_mandatario', 'orgao_superior', 'orgao_vinculado'] }
   }
 
   desc 'Mescla todos osarquivos de dados (CSV) de uma entidade (após a execução os arquivos da pasta tmp são excluídos)'
