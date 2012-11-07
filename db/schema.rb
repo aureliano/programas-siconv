@@ -11,7 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 2) do
+
+  create_table "concedentes", :force => true do |t|
+    t.integer "id_orgao"
+    t.string  "nome"
+  end
 
   create_table "programas", :force => true do |t|
     t.integer "id_programa"
