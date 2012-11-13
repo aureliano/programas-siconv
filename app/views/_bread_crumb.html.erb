@@ -1,0 +1,9 @@
+<div id="breadcrumbs" name="breadcrumbs">
+  <ul class="breadcrumb">
+    <li><a href="<%= url(:index) %>"><i class="icon-home"></i>Início</a>
+    <% @breadcrumbs.each do |breadcrumb| %>
+      <span class="divider"> &gt;&gt; </span>
+      <li><%= link_to breadcrumb[:text], breadcrumb[:link] %></li>
+    <% end %>
+  </ul>
+</div>
