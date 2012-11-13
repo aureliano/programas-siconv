@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title><%= @page_title %></title>
+    <meta name="Description" content="Consulta de programas de convênio do governo federal (União)."/>
+    <%= stylesheet_link_tag 'bootstrap.min.css' %>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+  </head>
+  
+  <body>
+    <div name = 'header-container' align = 'center' class = 'hero-unit'>
+      <p/><h2>TVSonar</h2>
+      <p align = 'right'>
+        Dados extraídos do sítio <a href="http://api.convenios.gov.br">http://api.convenios.gov.br</a> em <%= LAST_EXTRACTION_DATE %>.
+      </p>
+    </div>
+  
+    <div name = 'main-container' class = 'container-fluid'>
+      <div name = 'row-container' class = 'row-fluid'>
+        <div name = 'side-bar-container' class = 'span2' style = 'width: 20%'>
+          <ul class="nav nav-list">
+            <li class = "nav-header">Convênios</li>
+            <li><a href = "https://www.convenios.gov.br/portal/"><i class = "icon-chevron-right"></i>Portal de Convênios</a></li>
+            <li><a href = "http://api.convenios.gov.br/"><i class = "icon-chevron-right"></i>Dados abertos</a></li>
+            <li><a href = "https://www.convenios.gov.br/siconv/ForwardAction.do?modulo=programa&path=/ConsultarPrograma/ConsultarPrograma.do&Usr=guest&Pwd=guest"><i class = "icon-chevron-right"></i>Programas - Siconv</a></li>
+            
+            <li class = "nav-header">Sítio</li>
+            <li><a href = "/sobre"><i class = "icon-chevron-right"></i>Sobre o sítio</a></li>
+            <li><a href = "https://github.com/aureliano/programas-siconv"><i class = "icon-chevron-right"></i>Projeto</a></li>
+          </ul>
+        </div>
+        
+        <div name = 'body-container' class = 'span10' style = 'width: 75%'>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
