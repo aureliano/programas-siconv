@@ -23,7 +23,7 @@ Baixar gems necessários:
 bundle install
 ```
 
-Preparar ambiente de trabalho
+Preparar ambiente de trabalho:
 ```
 padrino rake data:prepare
 padrino rake ar:migrate
