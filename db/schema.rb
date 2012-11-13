@@ -11,15 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 2) do
+ActiveRecord::Schema.define(:version => 7) do
 
   create_table "concedentes", :force => true do |t|
-    t.integer "id_orgao"
+    t.integer "orgao_id"
     t.string  "nome"
+    t.integer "orgao_superior"
   end
 
   create_table "programas", :force => true do |t|
-    t.integer "id_programa"
+    t.integer "programa_id"
     t.string  "acao_orcamentaria"
     t.boolean "aceita_emenda_parlamentar"
     t.string  "cod_programa_siconv"
@@ -34,6 +35,10 @@ ActiveRecord::Schema.define(:version => 2) do
     t.string  "descricao"
     t.string  "nome"
     t.boolean "obriga_plano_trabalho"
+    t.integer "orgao_executor_id"
+    t.integer "orgao_mandatario_id"
+    t.integer "orgao_superior_id"
+    t.integer "orgao_vinculado_id"
   end
 
 end

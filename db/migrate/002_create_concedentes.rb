@@ -1,7 +1,7 @@
 class CreateConcedentes < ActiveRecord::Migration
   def self.up
     create_table :concedentes do |t|
-      t.integer :id_orgao
+      t.integer :orgao_id
       t.string :nome
     end
   end
