@@ -1,7 +1,7 @@
 class CreateProgramas < ActiveRecord::Migration
   def self.up
     create_table :programas do |t|
-      t.integer :id_programa
+      t.integer :programa_id
       t.string :acao_orcamentaria
       t.boolean :aceita_emenda_parlamentar
       t.string :cod_programa_siconv
