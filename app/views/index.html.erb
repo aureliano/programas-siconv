@@ -1,0 +1,5 @@
+<h3>Programas de Convênio disponibilizados recentemente</h3>
+
+<% most_up_to_date_programs(100).each do |programa| %>
+  <%= programa.cod_programa_siconv %> => <%= programa.nome %> => <%= programa.data_disponibilizacao %> <p/>
+<% end %>
