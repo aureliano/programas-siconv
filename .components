@@ -1,5 +1,5 @@
 ---
-:orm: activerecord
+:orm: datamapper
 :test: cucumber
 :mock: none
 :script: none

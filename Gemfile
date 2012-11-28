@@ -10,9 +10,13 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
 gem 'erubis', "~> 2.7.0"
-gem 'activerecord', :require => "active_record"
-gem 'sqlite3'
-#gem 'pg', :require => "postgres"
+gem 'dm-mongo-adapter'
+gem 'dm-validations'
+gem 'dm-timestamps'
+gem 'dm-migrations'
+gem 'dm-constraints'
+gem 'dm-aggregates'
+gem 'dm-core'
 
 # Test requirements
 gem 'rspec', :group => "test"

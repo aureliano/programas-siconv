@@ -1,45 +1,8 @@
-#ActiveRecord::Base.configurations[:development] = {
-#  :adapter   => 'postgresql',
-#  :database  => "programas_siconv_development",
-#  :username  => 'postgres',
-#  :password  => 'postgres',
-#  :host      => 'localhost',
-#  :port      => 5432
-#}
+DataMapper.logger = logger
+DataMapper::Property::String.length(255)
 
-ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "programas_siconv_development.db")
-
-}
-
-ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "programas_siconv_production.db")
-
-}
-
-ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "programas_siconv_test.db")
-
-}
-
-# Setup our logger
-ActiveRecord::Base.logger = logger
-
-# Include Active Record class name as root for JSON serialized output.
-ActiveRecord::Base.include_root_in_json = true
-
-# Store the full class name (including module namespace) in STI type column.
-ActiveRecord::Base.store_full_sti_class = true
-
-# Use ISO 8601 format for JSON serialized times and dates.
-ActiveSupport.use_standard_json_time_format = true
-
-# Don't escape HTML entities in JSON, leave that for the #json_escape helper.
-# if you're including raw json in an HTML page.
-ActiveSupport.escape_html_entities_in_json = false
-
-# Now we can estabilish connection with our db
-ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Padrino.env])
+case Padrino.env
+  when :development then DataMapper.setup(:default, :adapter => 'mongo', :database => 'programas_siconv')
+  when :production then DataMapper.setup(:default, :adapter => 'mongo', :database => 'programas_siconv')
+  when :test then DataMapper.setup(:default, :adapter => 'mongo', :database => 'programas_siconv')
+end
