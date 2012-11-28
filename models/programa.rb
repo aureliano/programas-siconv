@@ -3,7 +3,6 @@ require 'date'
 class Programa
   include DataMapper::Resource
   
-  property :id, Integer
   property :acao_orcamentaria, String
   property :aceita_emenda_parlamentar, Boolean
   property :cod_programa_siconv, String

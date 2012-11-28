@@ -42,7 +42,7 @@ data.each do |row|
     data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
   end
   
-  Programa.create(:id => row['id'], :cod_programa_siconv => row['cod_programa_siconv'],
+  Programa.create(:cod_programa_siconv => row['cod_programa_siconv'],
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_publicacao_dou => row['data_publicacao_dou'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
