@@ -1,18 +1,12 @@
-##
-# You can use other adapters like:
-#
-#   ActiveRecord::Base.configurations[:development] = {
-#     :adapter   => 'mysql',
-#     :encoding  => 'utf8',
-#     :reconnect => true,
-#     :database  => 'your_database',
-#     :pool      => 5,
-#     :username  => 'root',
-#     :password  => '',
-#     :host      => 'localhost',
-#     :socket    => '/tmp/mysql.sock'
-#   }
-#
+#ActiveRecord::Base.configurations[:development] = {
+#  :adapter   => 'postgresql',
+#  :database  => "programas_siconv_development",
+#  :username  => 'postgres',
+#  :password  => 'postgres',
+#  :host      => 'localhost',
+#  :port      => 5432
+#}
+
 ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
   :database => Padrino.root('db', "programas_siconv_development.db")
