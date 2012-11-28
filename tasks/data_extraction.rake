@@ -13,6 +13,7 @@ namespace :data do
 
   desc 'Web crawler para extração dos dados da api de dados do Siconv'
   task :extraction do
+    `mkdir tmp` unless File.exist? 'tmp'
     resources.each do |k, v|
       puts "Carregando arquivos de dados de '#{k}'"
       download_data_files(v.sub(/<formato>/ , 'csv'), get_number_of_objects(k, v.sub(/<formato>/, 'html')), 'csv')
