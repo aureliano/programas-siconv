@@ -7,6 +7,10 @@ class ProgramasSiconv < Padrino::Application
   get :index do
     render :index
   end
+  
+  post :index do
+    render :index
+  end
 
   get '/sobre' do
     render :sobre

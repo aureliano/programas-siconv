@@ -36,8 +36,14 @@ shell.say "Carregando dados de 'programas' do arquivo 'programas_db.csv'"
 data = load_data_from_csv 'db/programas_db.csv'
 
 data.each do |row|
+  data_disponibilizacao = nil
+  if row['data_disponibilizacao']
+    tokens = row['data_disponibilizacao'].split '-'    
+    data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
+  end
+  
   Programa.create(:id => row['id'], :cod_programa_siconv => row['cod_programa_siconv'],
-                  :data_disponibilizacao => row['data_disponibilizacao'], :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
+                  :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_publicacao_dou => row['data_publicacao_dou'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
                   :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],

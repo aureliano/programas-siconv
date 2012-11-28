@@ -17,7 +17,7 @@ ProgramasSiconv.helpers do
     programas.each do |programa|
       t << "\n  <tr>\n    <td>#{programa.cod_programa_siconv}</td>"
       t << "\n    <td>#{programa.nome}</td>"
-      t << "\n    <td width=\"150\">#{programa.data_disponibilizacao}</td>"
+      t << "\n    <td width=\"150\">#{time_to_date_s programa.data_disponibilizacao}</td>"
       t << "\n    <td><a href=\"programa/#{programa.id}\" class=\"btn btn-primary btn-small\">Detalhar</a></td>"
       t << "\n  </tr>"
     end
