@@ -1,0 +1,62 @@
+<h4>Dados do Programa</h4>
+
+<div name="codigo">
+  <span><strong>Código: </strong></span><span><%= @programa.cod_programa_siconv %></span>
+</div>
+<div name="Nome">
+  <span><strong>Nome: </strong></span><span><%= @programa.nome %></span>
+</div>
+<div name="descricao">
+  <span><strong>Descrição: </strong></span><span></span>
+</div>
+<div name="obriga_plano_trabalho">
+  <span><strong>Obriga Plano de Trabalho: </strong></span><span><%= parse_boolean @programa.obriga_plano_trabalho %></span>
+</div>
+<div name="aceita_emenda_parlamentar">
+  <span><strong>Aceita Emenda Parlamentar: </strong></span><span><%= parse_boolean @programa.aceita_emenda_parlamentar %></span>
+</div>
+<div name="acao_orcamentaria">
+  <span><strong>Ação Orçamentária: </strong></span><span><%= @programa.acao_orcamentaria %></span>
+</div>
+<hr/>
+
+<h4>Datas</h4>
+<div name="data_disponibilizacao">
+  <span><strong>Data de disponibilização: </strong></span><span><%= @programa.data_disponibilizacao %></span>
+</div>
+<div name="data_inicio_beneficiario_especifico">
+  <span><strong>Data inicial para beneficiário específico: </strong></span><span><%= format_date @programa.data_inicio_beneficiario_especifico %></span>
+</div>
+<div name="data_fim_beneficiario_especifico">
+  <span><strong>Data final para beneficiário específico: </strong></span><span><%= format_date @programa.data_fim_beneficiario_especifico %></span>
+</div>
+<div name="data_inicio_emenda_parlamentar">
+  <span><strong>Data de início da Emenda Parlamentar: </strong></span><span><%= format_date @programa.data_inicio_emenda_parlamentar %></span>
+</div>
+<div name="data_fim_emenda_parlamentar">
+  <span><strong>Data de término da Emenda Parlamentar: </strong></span><span><%= format_date @programa.data_fim_emenda_parlamentar %></span>
+</div>
+<div name="data_inicio_recebimento_propostas">
+  <span><strong>Data inicial para recebimento de propostas: </strong></span><span><%= format_date @programa.data_inicio_recebimento_propostas %></span>
+</div>
+<div name="data_fim_recebimento_propostas">
+  <span><strong>Data final para recebimento de propostas: </strong></span><span><%= format_date @programa.data_fim_recebimento_propostas %></span>
+</div>
+<div name="data_publicacao_dou">
+  <span><strong>Data de publicação no DOU: </strong></span><span><%= format_date @programa.data_publicacao_dou %></span>
+</div>
+<hr/>
+
+<h4>Órgãos Administrativos Relacionados</h4>
+<div name="orgao_superior">
+  <span><strong>Órgão Superior: </strong></span><span><%= @programa.orgao_superior %></span>
+</div>
+<div name="orgao_executor">
+  <span><strong>Órgão Executor: </strong></span><span><%= @programa.orgao_executor %></span>
+</div>
+<div name="orgao_mandatario">
+  <span><strong>Órgão Mandatário: </strong></span><span><%= @programa.orgao_mandatario %></span>
+</div>
+<div name="orgao_vinculado">
+  <span><strong>Órgão Vinculado: </strong></span><span><%= @programa.orgao_vinculado %></span>
+</div>
