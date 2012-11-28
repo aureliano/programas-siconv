@@ -15,14 +15,12 @@ class Programa
   property :data_inicio_emenda_parlamentar, String
   property :data_inicio_recebimento_propostas, String
   property :data_publicacao_dou, String
-  property :descricao, String
   property :nome, String
   property :obriga_plano_trabalho, Boolean
   
   property :orgao_superior, String
   property :orgao_executor, String
   property :orgao_mandatario, String
-  property :orgao_superior, String
   property :orgao_vinculado, String
   
   def self.most_up_to_date_programs(options)
