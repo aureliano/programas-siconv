@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'programas_data_fetching' %>
+
 <h4>Dados do Programa</h4>
 
 <div name="codigo">
@@ -7,7 +9,7 @@
   <span><strong>Nome: </strong></span><span><%= @programa.nome %></span>
 </div>
 <div name="descricao">
-  <span><strong>Descrição: </strong></span><span></span>
+  <span><strong>Descrição: </strong></span><span id="tx_descricao"></span>
 </div>
 <div name="obriga_plano_trabalho">
   <span><strong>Obriga Plano de Trabalho: </strong></span><span><%= parse_boolean @programa.obriga_plano_trabalho %></span>
@@ -16,25 +18,13 @@
   <span><strong>Aceita Emenda Parlamentar: </strong></span><span><%= parse_boolean @programa.aceita_emenda_parlamentar %></span>
 </div>
 <div name="acao_orcamentaria">
-  <span><strong>Ação Orçamentária: </strong></span><span><%= @programa.acao_orcamentaria %></span>
+  <span><strong>Ação Orçamentária: </strong></span><span id="tx_acao_orcamentaria"></span>
 </div>
 <hr/>
 
 <h4>Datas</h4>
 <div name="data_disponibilizacao">
-  <span><strong>Data de disponibilização: </strong></span><span><%= @programa.data_disponibilizacao %></span>
-</div>
-<div name="data_inicio_beneficiario_especifico">
-  <span><strong>Data inicial para beneficiário específico: </strong></span><span><%= format_date @programa.data_inicio_beneficiario_especifico %></span>
-</div>
-<div name="data_fim_beneficiario_especifico">
-  <span><strong>Data final para beneficiário específico: </strong></span><span><%= format_date @programa.data_fim_beneficiario_especifico %></span>
-</div>
-<div name="data_inicio_emenda_parlamentar">
-  <span><strong>Data de início da Emenda Parlamentar: </strong></span><span><%= format_date @programa.data_inicio_emenda_parlamentar %></span>
-</div>
-<div name="data_fim_emenda_parlamentar">
-  <span><strong>Data de término da Emenda Parlamentar: </strong></span><span><%= format_date @programa.data_fim_emenda_parlamentar %></span>
+  <span><strong>Data de disponibilização: </strong></span><span><%= time_to_date_s @programa.data_disponibilizacao %></span>
 </div>
 <div name="data_inicio_recebimento_propostas">
   <span><strong>Data inicial para recebimento de propostas: </strong></span><span><%= format_date @programa.data_inicio_recebimento_propostas %></span>
