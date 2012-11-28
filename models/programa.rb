@@ -6,10 +6,8 @@ class Programa
   property :aceita_emenda_parlamentar, Boolean
   property :cod_programa_siconv, String
   property :data_disponibilizacao, Time
-  property :data_fim_beneficiario_especifico, String
   property :data_fim_emenda_parlamentar, String
   property :data_fim_recebimento_propostas, String
-  property :data_inicio_beneficiario_especifico, String
   property :data_inicio_emenda_parlamentar, String
   property :data_inicio_recebimento_propostas, String
   property :data_publicacao_dou, String
