@@ -13,6 +13,7 @@ gem 'erubis', "~> 2.7.0"
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3'
 #gem 'pg', :require => "postgres"
+gem 'will_paginate', '~> 3.0.0'
 
 # Test requirements
 gem 'rspec', :group => "test"
