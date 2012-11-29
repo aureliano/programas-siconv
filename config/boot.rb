@@ -1,6 +1,7 @@
 # Defines our constants
 PADRINO_ENV  = ENV["PADRINO_ENV"] ||= ENV["RACK_ENV"] ||= "development"  unless defined?(PADRINO_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
+STOPWORDS = File.read('stopwords').split "\n"
 LAST_EXTRACTION_DATE = File.read('.data_extraction_date').strip
 DAY = 24 * 60 * 60
 
