@@ -23,6 +23,8 @@ class Programa
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0])
     start_time = end_time - (options[:last_days] * DAY)
+    options[:page] = 0 if options[:page].nil?
+    options[:limit] = 0 if options[:limit].nil?
 
     collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
     programas = Array.new
