@@ -50,7 +50,7 @@ class Programa
     options[:page] = 0 if options[:page].nil?
     options[:limit] = 0 if options[:limit].nil?
     
-    collection.find(:tags => {'$all' => tags}).sort([:data_disponibilizacao, -1]).skip(options[:page]).limit(options[:limit]).each do |document|
+    collection.find(:tags => {'$all' => options[:tags]}).sort([:data_disponibilizacao, -1]).skip(options[:page]).limit(options[:limit]).each do |document|
       hash = Hash.new
       document.each_pair {|k, v| hash[k] = v unless k == '_id'}
       programas << Programa.new(hash)
@@ -59,9 +59,9 @@ class Programa
     programas
   end
   
-  def self.count_with_tags(tags)
+  def self.count_with_tags(options)
     collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
-    collection.find(:tags => {'$all' => tags}).count(true)
+    collection.find(:tags => {'$all' => options[:tags]}).count(true)
   end
   
 =begin  

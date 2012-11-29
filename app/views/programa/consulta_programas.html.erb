@@ -1,0 +1,14 @@
+<% form_tag '/consulta/programas', :method => 'get', :id => 'form_consulta', :class => 'form-search' do %>
+  <div class="input-append">
+    <input type="text" class="span12 search-query" id="search_params" name="search_params" value="<%= params[:search_params] %>">
+    <button type="submit" class="btn" onclick="return validaFiltroConsulta()">Consultar</button>
+  </div>
+<% end %>
+
+<% if params['search_params'] %>
+  <div name="div_resultado_consulta">
+    <form method="post" name="form_search_result">
+      <%= search_data_list %>
+    </form>
+  </div>
+<% end %>

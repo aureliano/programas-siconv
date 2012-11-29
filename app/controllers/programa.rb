@@ -5,4 +5,12 @@ ProgramasSiconv.controllers :programa do
     render 'programa/programa'
   end
   
+  get :consulta, :map => '/consulta/programas' do
+    render 'programa/consulta_programas'
+  end
+  
+  post :consulta, :map => '/consulta/programas' do
+    render 'programa/consulta_programas'
+  end
+  
 end
