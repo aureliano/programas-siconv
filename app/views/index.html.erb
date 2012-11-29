@@ -1,7 +1,7 @@
 <% @days = 10 %>
 <h4>Programas de Convênio disponibilizados nos últimos <%= @days %> dias.</h4>
 
-<%= feed_tag(:rss, '/feed',:title => "RSS") %>
+<%= feed_tag(:rss, url(:feed),:title => "RSS") %>
 
 <form method="post" name="form_programas">
   <%= programas_data_table :most_up_to_date_programs, :count_most_up_to_date_programs, :last_days => @days %>
