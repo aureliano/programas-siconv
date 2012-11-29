@@ -18,6 +18,14 @@ def load_data_from_csv(file)
   data
 end
 
+def get_tags_without_stopwords(text)
+  return [] if text.nil? || text.empty?
+  
+  tags = text.split(/[\s\/]/)
+  tags.each {|tag| tag.downcase! }
+  tags.delete_if {|t| STOPWORDS.include? t }
+end
+
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
@@ -42,12 +50,30 @@ data.each do |row|
     data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
   end
   
+  tagged_orgs = []
+  org_exe = concedentes[row['orgao_executor']]
+  tags = get_tags_without_stopwords(org_exe)
+  tagged_orgs << org_exe
+  
+  org_sup = concedentes[row['orgao_superior']]
+  tags.concat get_tags_without_stopwords(org_sup) unless tagged_orgs.include? org_sup
+  tagged_orgs << org_sup
+  
+  org_mand = concedentes[row['orgao_mandatario']]
+  tags.concat get_tags_without_stopwords(org_mand) unless tagged_orgs.include? org_mand
+  tagged_orgs << org_mand
+  
+  org_vin = concedentes[row['orgao_vinculado']]
+  tags.concat get_tags_without_stopwords(org_vin) unless tagged_orgs.include? org_vin
+  tagged_orgs << org_vin
+  
   Programa.create(:cod_programa_siconv => row['cod_programa_siconv'],
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_publicacao_dou => row['data_publicacao_dou'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
-                  :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
-                  :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']])
+                  :orgao_executor => org_exe, :orgao_mandatario => org_mand,
+                  :orgao_superior => org_sup, :orgao_vinculado => org_vin,
+                  :tags => tags)
 end
 
 shell.say ''

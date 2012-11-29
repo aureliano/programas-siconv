@@ -17,6 +17,8 @@ class Programa
   property :orgao_mandatario, String
   property :orgao_vinculado, String
   
+  property :tags, Array
+  
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0])
@@ -41,6 +43,27 @@ class Programa
     collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
     collection.find({:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}}).count()
   end
+  
+  def self.with_tags(options)
+    collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
+    programas = Array.new
+    options[:page] = 0 if options[:page].nil?
+    options[:limit] = 0 if options[:limit].nil?
+    
+    collection.find(:tags => {'$all' => tags}).sort([:data_disponibilizacao, -1]).skip(options[:page]).limit(options[:limit]).each do |document|
+      hash = Hash.new
+      document.each_pair {|k, v| hash[k] = v unless k == '_id'}
+      programas << Programa.new(hash)
+    end
+    
+    programas
+  end
+  
+  def self.count_with_tags(tags)
+    collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
+    collection.find(:tags => {'$all' => tags}).count(true)
+  end
+  
 =begin  
   private
     def self.get_entities(search_options)
