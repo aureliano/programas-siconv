@@ -63,31 +63,4 @@ class Programa
     collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])['programas']
     collection.find(:tags => {'$all' => options[:tags]}).count(true)
   end
-  
-=begin  
-  private
-    def self.get_entities(search_options)
-      entity = search_options[:collection_name].capitalize.sub(/s$/, '')
-      entities = Array.new    
-      find_documents(search_options) {|values| entities << eval(entity).new(values) }
-      entities
-    end
-    
-    def self.count_entities(options)
-      collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])[options[:collection_name]]
-      collection.find(options[:filter_name] => options[:filter_value]).count()
-    end
-  
-    def self.find_documents(options, &block)
-      collection = Mongo::Connection.new.db(repository('default').adapter.options[:database])[options[:collection_name]]
-      page = (options[:page].nil?) ? 0 : options[:page]
-      limit = (options[:limit].nil?) ? 0 : options[:limit]
-      
-      collection.find(options[:filter_name] => options[:filter_value]).sort(options[:order_by]).skip(page).limit(limit).each do |document|
-        hash = Hash.new
-        document.each_pair {|k, v| hash[k] = v unless k == '_id'}
-        block.call hash
-      end
-    end
-=end
 end
