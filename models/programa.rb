@@ -83,4 +83,12 @@ class Programa
     collection = DATABASE['programas']
     collection.find(:tags => {'$all' => options[:tags]}).count(true)
   end
+  
+  def self.create(programa)
+    DATABASE['programas'].save programa
+  end
+  
+  def self.destroy
+    DATABASE['programas'].remove
+  end
 end
