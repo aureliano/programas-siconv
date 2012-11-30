@@ -25,7 +25,7 @@ Padrino.before_load do
 
   DATABASE = case Padrino.env
     when :development then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
-    when :production then Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI'])
+    when :production then puts "!!!!!!!!!!!! #{Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI']).database_names}"
     when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
   end
 end
