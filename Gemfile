@@ -10,13 +10,9 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
 gem 'erubis', "~> 2.7.0"
-gem 'dm-mongo-adapter'
-gem 'dm-validations'
-gem 'dm-timestamps'
-gem 'dm-migrations'
-gem 'dm-constraints'
-gem 'dm-aggregates'
-gem 'dm-core'
+gem 'mongo'
+gem 'bson'
+gem 'bson_ext'
 
 # Test requirements
 gem 'rspec', :group => "test"

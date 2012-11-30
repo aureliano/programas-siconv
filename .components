@@ -1,5 +1,5 @@
 ---
-:orm: datamapper
+:orm: none 
 :test: cucumber
 :mock: none
 :script: none
