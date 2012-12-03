@@ -16,7 +16,8 @@ ProgramasSiconv.helpers do
   
   def format_date(date_str)
     return '-' if date_str.nil? || date_str.empty?
-    date_str.gsub /-/, '/'
+    tokens = date_str.split '-'
+    "#{tokens[2]}/#{tokens[1]}/#{tokens[0]}"
   end
   
   def parse_boolean(bool)
