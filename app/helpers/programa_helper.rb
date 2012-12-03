@@ -33,4 +33,11 @@ ProgramasSiconv.helpers do
   def format_get_params(params)
     params.sub /\s/, '+'
   end
+  
+  def programa_back_link
+    filter = params[:search_params]
+    page = (params[:page]) ? params[:page] : 1
+    
+    link = (filter) ? "/consulta/programas?page=#{page}&search_params=#{format_get_params filter}" : url(:index)
+  end
 end
