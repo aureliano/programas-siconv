@@ -1,6 +1,6 @@
 xml.instruct!
 xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
-  xml.title   "TVSonar"
+  xml.title   "Novos Programas"
   xml.link    "rel" => "self", "href" => url_for(:posts, :index)
   xml.id      url(:feed)
   xml.updated @programas.last.data_disponibilizacao.strftime "%Y-%m-%dT%H:%M:%SZ" if @programas.any?

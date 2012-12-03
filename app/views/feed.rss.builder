@@ -1,7 +1,7 @@
 xml.instruct!
 xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
   xml.channel do
-    xml.title "TVSonar"
+    xml.title "Novos Programas"
     xml.description "Sistema de consulta de Programas de Convênio disponibilizados pelo Governo Federal. Relação de Programas disponibilizados nos últimos #{@last_days} dias."
     xml.link url(:feed)
 
