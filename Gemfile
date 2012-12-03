@@ -3,6 +3,7 @@ source :rubygems
 # Server requirements (defaults to WEBrick)
 # gem 'thin'
 # gem 'mongrel'
+gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 
 # Project requirements
 gem 'rake'
