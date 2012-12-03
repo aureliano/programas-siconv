@@ -24,7 +24,13 @@ ProgramasSiconv.helpers do
     case bool
       when true; then 'Sim'
       when false; then 'Não'
+      when 'True'; then 'Sim'
+      when 'False'; then 'Não'
       when nil; then 'Não'
     end
+  end
+  
+  def format_get_params(params)
+    params.sub /\s/, '+'
   end
 end
