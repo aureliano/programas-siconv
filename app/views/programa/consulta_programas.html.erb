@@ -7,7 +7,7 @@
 
 <% if params['search_params'] && !params['search_params'].empty? %>
   <div name="div_resultado_consulta">
-    <form method="post" name="form_search_result">
+    <form method="get" name="form_search_result">
       <%= search_data_list %>
     </form>
   </div>

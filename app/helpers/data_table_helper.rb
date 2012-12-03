@@ -52,6 +52,9 @@ ProgramasSiconv.helpers do
     
     t << "\n  </ul>"
     t << "</div>\n<input id=\"page\" name=\"page\" type=\"hidden\" value=\"#{data_page.page_index}\"/>"
+    t << "\n<input id=\"search_params\" name=\"search_params\" type=\"hidden\" value=\"#{params[:search_params]}\"/>" if params[:search_params]
+    
+    t
   end
 
 end
