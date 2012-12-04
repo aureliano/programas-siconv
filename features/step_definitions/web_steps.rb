@@ -1,5 +1,9 @@
 # encoding: utf-8
 
+Before do
+  Programa.destroy
+end
+
 Dado /^que eu acesso a página inicial do sistema$/ do
   visit '/'
 end
@@ -16,7 +20,7 @@ Dado /^que eu marco o campo '(.+)'$/ do |campo|
   check campo
 end
 
-Quando /^eu clico no botão '(.+)'$/ do |botao|
+Quando /^eu clico no botão '([\w\s]+)'$/ do |botao|
   click_button botao
 end
 

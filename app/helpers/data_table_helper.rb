@@ -26,7 +26,7 @@ ProgramasSiconv.helpers do
     t << "\n</table>"
     t << pagination_layer(data_page)
     
-    t << "\n<hr/><div>Total de programas: #{data_page.total}</div>"
+    t << "\n<hr/><div name=\"div_total_programas\">Total de programas: #{data_page.total}</div>"
   end
   
   def pagination_layer(data_page)
