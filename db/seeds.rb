@@ -26,6 +26,11 @@ def get_tags_without_stopwords(text)
   tags.delete_if {|t| STOPWORDS.include? t }
 end
 
+def time_to_date_s(time)
+  return '-' if time.nil?
+  time.strftime '%d/%m/%Y'
+end
+
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
@@ -77,5 +82,23 @@ data.each do |row|
 end
 
 shell.say ''
+
+# https://github.com/sferik/twitter
+Twitter.configure do |config|
+  config.consumer_key = ''
+  config.consumer_secret = ''
+  config.oauth_token = ''
+  config.oauth_token_secret = ''
+end
+
+programas = Programa.most_up_to_date_programs :last_days => 10
+(programas.size - 1).downto(0) do |i|
+  tweet = programas[i].nome
+  tweet = tweet[0..69] if tweet.size > 69
+  tweet << "\n" + programas[i].orgao_executor
+  tweet << "\n" + time_to_date_s(programas[i].data_disponibilizacao)
+  
+  #Twitter.update tweet
+end
 
 shell.say 'Povoamento da base de dados concluído'

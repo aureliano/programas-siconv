@@ -14,6 +14,7 @@ gem 'erubis', "~> 2.7.0"
 gem 'mongo'
 gem 'bson'
 gem 'bson_ext'
+gem 'twitter', '~> 4.4.0'
 
 # Test requirements
 gem 'rspec'
