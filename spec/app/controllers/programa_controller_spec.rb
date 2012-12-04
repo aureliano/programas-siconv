@@ -11,7 +11,7 @@ describe "ProgramaController" do
     get '/'
     
     last_response.body.should include '<title>Novos Programas: Início</title>'
-    last_response.body.should include '<div>Total de programas: 2</div>'
+    last_response.body.should include '<div name="div_total_programas">Total de programas: 2</div>'
   end
   
   it 'carrega página com informações sobre o portal' do
