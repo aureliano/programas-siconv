@@ -96,11 +96,12 @@ if PADRINO_ENV == 'production'
 
   programas = Programa.most_up_to_date_programs :last_days => last_days
   (programas.size - 1).downto(0) do |i|
-    tweet = "<a href=\"http://novosprogramas.herokuapp.com/programa/#{programas[i].cod_programa_siconv}\">#{programas[i].nome}</a>"
+    nome = (programas[i].nome.size > 70) ? "#{programas[i].nome[0, 67]}..." : programas[i].nome
+    tweet = "#{nome} - (http://novosprogramas.herokuapp.com/programa/#{programas[i].cod_programa_siconv})"
     Twitter.update tweet
   end
 
-  Twitter.update "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days}."
+  Twitter.update "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days} dias."
 
   shell.say ''
   shell.say 'Publicação de programas no Twitter concluída'
