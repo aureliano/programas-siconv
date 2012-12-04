@@ -38,7 +38,7 @@ class Programa
 
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
-    end_time = Time.new(tokens[2], tokens[1], tokens[0])
+    end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
     start_time = end_time - (options[:last_days] * DAY)
     options[:page] = 0 if options[:page].nil?
     options[:limit] = 0 if options[:limit].nil?
@@ -57,7 +57,7 @@ class Programa
   
   def self.count_most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
-    end_time = Time.new(tokens[2], tokens[1], tokens[0])
+    end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
     start_time = end_time - (options[:last_days] * DAY)
     
     collection = DATABASE['programas']
