@@ -26,11 +26,6 @@ def get_tags_without_stopwords(text)
   tags.delete_if {|t| STOPWORDS.include? t }
 end
 
-def time_to_date_s(time)
-  return '-' if time.nil?
-  time.strftime '%d/%m/%Y'
-end
-
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
@@ -82,23 +77,31 @@ data.each do |row|
 end
 
 shell.say ''
-
-# https://github.com/sferik/twitter
-Twitter.configure do |config|
-  config.consumer_key = ''
-  config.consumer_secret = ''
-  config.oauth_token = ''
-  config.oauth_token_secret = ''
-end
-
-programas = Programa.most_up_to_date_programs :last_days => 10
-(programas.size - 1).downto(0) do |i|
-  tweet = programas[i].nome
-  tweet = tweet[0..69] if tweet.size > 69
-  tweet << "\n" + programas[i].orgao_executor
-  tweet << "\n" + time_to_date_s(programas[i].data_disponibilizacao)
-  
-  #Twitter.update tweet
-end
-
 shell.say 'Povoamento da base de dados concluído'
+
+if PADRINO_ENV == 'production'
+  shell.say ''
+  shell.say 'Publicando programas disponibilizados recentemente no Twitter'
+
+  # https://github.com/sferik/twitter
+  Twitter.configure do |config|
+    config.consumer_key = ENV['CONSUMER_KEY']
+    config.consumer_secret = ENV['CONSUMER_SECRET']
+    config.oauth_token = ENV['OAUTH_TOKEN']
+    config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']
+  end
+
+  Twitter.update "Extração de dados de Programas do Governo Federal realizada em #{LAST_EXTRACTION_DATE}."
+  last_days = 10
+
+  programas = Programa.most_up_to_date_programs :last_days => last_days
+  (programas.size - 1).downto(0) do |i|
+    tweet = "<a href=\"http://novosprogramas.herokuapp.com/programa/#{programas[i].cod_programa_siconv}\">#{programas[i].nome}</a>"
+    Twitter.update tweet
+  end
+
+  Twitter.update "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days}."
+
+  shell.say ''
+  shell.say 'Publicação de programas no Twitter concluída'
+end
