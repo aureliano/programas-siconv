@@ -8,4 +8,6 @@ script: rake spec
 services:
   - mongodb
 
-script: bundle exec cucumber
+script:
+  - rake spec
+  - bundle exec cucumber
