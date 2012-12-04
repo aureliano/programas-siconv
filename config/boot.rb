@@ -17,6 +17,14 @@ Bundler.require(:default, PADRINO_ENV)
 # Padrino::Logger.log_static = true
 #
 
+def load_environment_vars
+  return unless File.exist? '.env'
+  File.open('.env', 'r') {|f| f.read }.each_line do |line|
+    var = line.split '='
+    ENV[var[0].strip] ||= var[1].strip
+  end
+end
+
 ##
 # Add your before load hooks here
 #
@@ -28,6 +36,8 @@ Padrino.before_load do
     when :production then Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI'])['heroku_app9631427']
     when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
   end
+  
+  load_environment_vars
 end
 
 ##
