@@ -2,7 +2,7 @@
 PADRINO_ENV  = ENV["PADRINO_ENV"] ||= ENV["RACK_ENV"] ||= "development"  unless defined?(PADRINO_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 STOPWORDS = File.read('stopwords').split "\n"
-LAST_EXTRACTION_DATE = File.read('.data_extraction_date').strip
+LAST_EXTRACTION_DATE = (PADRINO_ENV == 'test') ? Time.now.strftime('%d/%m/%Y') : File.read('.data_extraction_date').strip
 DAY = 24 * 60 * 60
 
 # Load our dependencies
@@ -34,7 +34,7 @@ Padrino.before_load do
   DATABASE = case Padrino.env
     when :development then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
     when :production then Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI'])['heroku_app9631427']
-    when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
+    when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv_test']
   end
   
   load_environment_vars
