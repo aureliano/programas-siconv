@@ -20,6 +20,9 @@ Quando /^eu clico no botão 'Detalhar' do programa '(\d+)'$/ do |codigo|
 end
 
 Então /^eu devo ver a página de detalhamento do programa '(\d+)'$/ do |codigo|
+  alert = page.driver.browser.switch_to.alert
+  alert.send('accept')
+  
   find(:xpath, "//div[@name='codigo']").text.should eq "Código: #{codigo}"
   has_text? 'Dados do Programa'
   has_text? 'Datas'
