@@ -25,6 +25,10 @@
 # Setup global project settings for your apps. These settings are inherited by every subapp. You can
 # override these settings in the subapps as needed.
 #
+require 'padrino'
+require 'padrino-rpm'
+require 'newrelic_rpm'
+
 Padrino.configure_apps do
   # enable :sessions
   set :session_secret, '38cfceb81ac436edb79e5039b288d9193d3f55bc907ddd5bccba65621d94af13'

@@ -3,7 +3,6 @@ source :rubygems
 # Server requirements (defaults to WEBrick)
 # gem 'thin'
 # gem 'mongrel'
-gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 
 # Project requirements
 gem 'rake'
@@ -24,6 +23,8 @@ gem 'rack-test', :require => "rack/test"
 
 # Padrino Stable Gem
 gem 'padrino', '0.10.5'
+gem 'padrino-rpm'
+gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
