@@ -7,7 +7,7 @@ require 'capybara'
 require 'capybara/dsl'
 
 Capybara.default_driver = :selenium
-Capybara.app_host = 'http://0.0.0.0:3000'
+Capybara.app_host = 'http://0.0.0.0:9292'
 World(Capybara)
 
 ##
