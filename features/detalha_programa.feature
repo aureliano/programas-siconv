@@ -5,7 +5,7 @@ Funcionalidade: Detalhar dados de um programa do governo federal
   Como um usuário do sistema
   Eu desejo obter informações detalhadas sobre o programa
 
-  Cenário: Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias
+  Cenário: C1 - Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias
     Dado que existe o programa '6658947120' disponibilizado '2' dia(s) atrás
     Dado que existe o programa '1154879632' disponibilizado '9' dia(s) atrás
     Dado que existe o programa '8896345784' disponibilizado '10' dia(s) atrás
