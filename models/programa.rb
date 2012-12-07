@@ -1,5 +1,3 @@
-require 'date'
-
 class Programa
 
   def initialize(props = {})
