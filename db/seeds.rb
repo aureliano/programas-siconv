@@ -26,6 +26,11 @@ def get_tags_without_stopwords(text)
   tags.delete_if {|t| STOPWORDS.include? t }
 end
 
+def time_to_date_s(time)
+  return '-' if time.nil?
+  time.strftime '%d/%m/%Y'
+end
+
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
@@ -102,15 +107,35 @@ if PADRINO_ENV == 'production'
   Twitter.update "Extração de dados de Programas do Governo Federal realizada em #{LAST_EXTRACTION_DATE}."
   last_days = 10
 
+  fb_post = "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days} dias.\n"
+  fb_post << "Extração de dados de Programas do Governo Federal realizada em #{LAST_EXTRACTION_DATE}.\n"
   programas = Programa.most_up_to_date_programs :last_days => last_days
+  
   (programas.size - 1).downto(0) do |i|
     nome = (programas[i].nome.size > 70) ? "#{programas[i].nome[0, 67]}..." : programas[i].nome
     tweet = "#{nome} - (http://novosprogramas.herokuapp.com/programa/#{programas[i].cod_programa_siconv})"
     Twitter.update tweet
+    
+    fb_post << "\nPrograma: #{programas[i].nome}\n"
+    fb_post << "Órgão Executor: #{programas[i].orgao_executor}\n"
+    fb_post << "Data de disponibilização: #{time_to_date_s programas[i].data_disponibilizacao}\n"
   end
 
   Twitter.update "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days} dias."
 
   shell.say ''
   shell.say 'Publicação de programas no Twitter concluída'
+  
+  shell.say ''
+  shell.say 'Publicando programas disponibilizados recentemente no Facebook'
+  
+  # https://github.com/arsduo/koala
+  Koala.http_service.http_options = {
+    :ssl => { :ca_path => "/etc/ssl/certs" }
+  }
+  graph = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'])
+  graph.put_connections('opendata.convenios', 'feed', :message => fb_post)
+  
+  shell.say
+  shell.say 'Publicação de programas no Facebook concluída'
 end
