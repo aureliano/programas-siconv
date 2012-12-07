@@ -14,6 +14,11 @@
   <body>
     <div name="header-container" align="center" class="hero-unit">
       <p/><h2>Novos Programas</h2>
+      <div name="div-feeds" align="right">
+        <span name="span-rss-feed"><a href="<%= url(:feed) %>"><%= image_tag 'rss.png', :alt => 'Feed' %></a></span>
+        <span name="span-twitter"><a href="https://twitter.com/opendataconv"><%= image_tag 'twitter.png', :alt => 'Twitter' %></a></span>
+        <span name="span-facebook"><a href="#"><%= image_tag 'facebook.png', :alt => 'Facebook' %></a></span>
+      </div>
       <p align="right">
         Dados extraídos do sítio <a href="http://api.convenios.gov.br">http://api.convenios.gov.br</a> em <%= LAST_EXTRACTION_DATE %>.
       </p>
@@ -35,9 +40,6 @@
             <li><a href="/sobre"><i class = "icon-chevron-right"></i>Sobre o sítio</a></li>
             <li><a href="https://github.com/aureliano/programas-siconv"><i class = "icon-chevron-right"></i>Projeto</a></li>
           </ul>
-          <br/>
-          <a href="<%= url(:feed) %>"><%= image_tag 'rss.png', :alt => 'Feed' %></a>
-          <a href="https://twitter.com/opendataconv"><%= image_tag 'twitter.png', :alt => 'Twitter' %></a>
         </div>
         
         <div name="body-container" class="span10" style="width: 75%">
