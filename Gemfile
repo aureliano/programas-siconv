@@ -14,6 +14,7 @@ gem 'mongo'
 gem 'bson'
 gem 'bson_ext'
 gem 'twitter', '~> 4.4.0'
+gem 'koala'
 
 # Test requirements
 gem 'rspec'
