@@ -50,7 +50,7 @@ GEM
       bson (~> 1.8.0)
     multi_json (1.4.0)
     multipart-post (1.1.5)
-    newrelic_rpm (3.5.3.25)
+    newrelic_rpm (3.3.5)
     nokogiri (1.5.5)
     padrino (0.10.5)
       padrino-admin (= 0.10.5)
@@ -80,8 +80,8 @@ GEM
     padrino-mailer (0.10.5)
       mail (~> 2.3.0)
       padrino-core (= 0.10.5)
-    padrino-rpm (0.4.0)
-      newrelic_rpm (>= 3.0.0)
+    padrino-rpm (0.6.1)
+      newrelic_rpm (~> 3.3.3)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-protection (1.2.0)
@@ -135,7 +135,7 @@ DEPENDENCIES
   cucumber
   erubis (~> 2.7.0)
   mongo
-  newrelic_rpm (= 3.5.3.25)
+  newrelic_rpm
   padrino (= 0.10.5)
   padrino-rpm
   rack-test
