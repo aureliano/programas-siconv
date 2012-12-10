@@ -2,7 +2,7 @@
 
 Dado /^que existe o programa '(\d+)' disponibilizado '(\d+)' dia\(s\) atrás$/ do |codigo, dias|
   Programa.create :aceita_emenda_parlamentar => true, :cod_programa_siconv => codigo,
-                  :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => 'Programa de Teste 1 ',
+                  :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
                   :obriga_plano_trabalho => true, :orgao_executor => 'MINISTERIO DOS TESTES', :tags => ['ministerio', 'testes']
 end
 
@@ -24,8 +24,27 @@ Então /^eu devo ver a página de detalhamento do programa '(\d+)'$/ do |codigo|
   alert.send('accept')
   
   find(:xpath, "//div[@name='codigo']").text.should eq "Código: #{codigo}"
-  has_text? 'Dados do Programa'
-  has_text? 'Datas'
-  has_text? 'Órgãos Administrativos Relacionados'
-  has_link? 'Voltar'
+  should have_text 'Dados do Programa'
+  should have_text 'Datas'
+  should have_text 'Órgãos Administrativos Relacionados'
+  should have_link 'Voltar'
+end
+
+Então /^eu devo ver a página de consulta de programas$/ do
+  should have_xpath "//ul[@class='breadcrumb']/li/a[@href='/']"
+  should have_xpath "//form/div/input[@id='search_params']"
+  should have_button 'Consultar'
+end
+
+Então /^eu devo ver o resultado da consulta de programas$/ do
+  should have_xpath "//div[@name='div_resultado_consulta']"
+end
+
+Então /^eu devo ver '(\d+)' programas no resultado da consulta$/ do |total|
+  should have_text "#{total} item(s) encontrado(s)."
+  should have_xpath "//div/form[@name='form_search_result']/div", :count => (total.to_i + 1) # total + 1 por causa da div de paginação
+end
+
+Quando /^eu seleciono o programa '(\d+)'$/ do |codigo|
+  find(:xpath, "//div/a[contains(text(), '#{codigo}')]").click
 end
