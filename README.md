@@ -19,7 +19,7 @@ Pré-requisitos:
 - [wget] (http://www.gnu.org/software/wget/)
 - [MongoDB] (http://www.mongodb.org/)
 
-Baixar gems necessários:
+Baixar gems necessárias:
 ```
 bundle install
 ```
