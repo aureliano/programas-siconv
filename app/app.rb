@@ -16,13 +16,6 @@ class ProgramasSiconv < Padrino::Application
     render :sobre
   end
   
-  get '/programa/dados', :with => :codigo, :provides => :json do
-    @programa = Programa.find(:cod_programa_siconv => params[:codigo]).first
-    @programa ||= Programa.new
-    
-    render 'programa'
-  end
-  
   get :feed, :provides => [:rss, :atom] do
     @last_days = 10
     @programas = Programa.most_up_to_date_programs :last_days => @last_days
