@@ -54,4 +54,10 @@ describe "ProgramaController" do
     last_response.body.should include '<form method="get" id="form_consulta" class="form-search" action="/consulta/programas" accept-charset="UTF-8">  <div class="input-append">'
   end
   
+  it 'gera arquivo de dados json de um programa' do
+    get '/programa/dados/12345678945'
+    
+    last_response.body.should eq "{\n  \"nome\": \"Programa de Teste 1 \",\n  \"orgao_superior\": \"\"\n}\n"
+  end
+  
 end
