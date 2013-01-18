@@ -16,5 +16,5 @@ World(Capybara)
 Capybara.app = ProgramasSiconv.tap { |app|  }
 
 Before do
-  Programa.destroy
+  Programa.delete_all
 end

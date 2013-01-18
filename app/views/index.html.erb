@@ -3,6 +3,4 @@
 <% @days = 10 %>
 <h4>Programas de Convênio disponibilizados nos últimos <%= @days %> dias.</h4>
 
-<form method="post" name="form_programas">
-  <%= programas_data_table :most_up_to_date_programs, :count_most_up_to_date_programs, :last_days => @days %>
-</form>
+<%= programas_data_table :data => @programas, :total => @total, :last_days => @days %>

@@ -10,7 +10,7 @@ xml.rss "version" => "2.0", "xmlns:dc" => "http://purl.org/dc/elements/1.1/" do
         xml.title programa.nome
         xml.description "Programa de Convênio disponibilizado em #{time_to_date_s programa.data_disponibilizacao} pelo Órgão Administrativo #{programa.orgao_executor}."
         xml.pubDate time_to_date_s programa.data_disponibilizacao
-        xml.link "http://novosprogramas.herokuapp.com/programa/#{programa.cod_programa_siconv}"
+        xml.link "http://novosprogramas.herokuapp.com/programa/#{programa.id}"
       end
     end
   end

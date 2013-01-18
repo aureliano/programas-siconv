@@ -29,14 +29,6 @@ end
 # Add your before load hooks here
 #
 Padrino.before_load do
-  # URI format => mongodb://<dbuser>:<dbpassword>@ds033187.mongolab.com:33187/heroku_app9631427
-
-  DATABASE = case Padrino.env
-    when :development then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
-    when :production then Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI'])['heroku_app9631427']
-    when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv_test']
-  end
-  
   load_environment_vars
 end
 

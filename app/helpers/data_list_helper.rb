@@ -2,18 +2,16 @@
 
 ProgramasSiconv.helpers do
 
-  def search_data_list()
-    page = params[:page].to_i
-    tags = get_tags_without_stopwords params[:search_params]
-    data_page = DataPage.create(:page_size => 10, :page => page, :total => Programa.count_with_tags({ :tags => tags })) {|index, page_size| Programa.with_tags({ :tags => tags, :page => index, :limit => page_size }) }
-    result = data_page.data
-    return "<i>Nenhum resultado encontrado.</i>" if result.empty?
+  def search_data_list(options)
+    options[:page] ||= pagination_page_index
+    data_page = DataPage.new(options)
+    return "<i>Nenhum resultado encontrado.</i>" if data_page.data.empty?
     
     d = "#{data_page.total} item(s) encontrado(s).\n<hr/>"
         
-    result.each do |programa|      
+    data_page.data.each do |programa|      
       d << "<div name=\"div_item_resultado_consulta\">"
-      d << "\n  <a href=\"/programa/#{programa.cod_programa_siconv}?page=#{params[:page]}&search_params=#{format_get_params params[:search_params]}\"> #{programa.nome}</a><br/>"
+      d << "\n  <a href=\"/programa/#{programa.id}?page=#{params[:page]}&search_params=#{format_get_params params[:search_params]}\"> #{programa.nome}</a><br/>"
       d << "\n  Data de disponibilização: #{time_to_date_s programa.data_disponibilizacao}<br/>"
       d << "\n  Órgãos Relacionados: #{related_concedentes(programa).join '; '}"
       d << "\n</div>"

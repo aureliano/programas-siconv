@@ -50,7 +50,7 @@ data.each {|row| concedentes[row['id']] = row['nome'] }
 
 shell.say ''
 shell.say "Removendo (se existir) registros da coleção 'programas'"
-Programa.destroy
+Programa.delete_all
 shell.say ''
 
 shell.say "Carregando dados de 'programas' do arquivo 'programas_db.csv'"
@@ -80,7 +80,7 @@ data.each do |row|
   tags.concat get_tags_without_stopwords(org_vin) unless tagged_orgs.include? org_vin
   tagged_orgs << org_vin
   
-  Programa.create(:cod_programa_siconv => row['cod_programa_siconv'],
+  Programa.create(:id => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_publicacao_dou => row['data_publicacao_dou'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],

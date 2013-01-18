@@ -5,10 +5,9 @@ class ProgramasSiconv < Padrino::Application
   register Padrino::Helpers
 
   get :index do
-    render :index
-  end
-  
-  post :index do
+    last_days = 10
+    @programas = Programa.most_up_to_date_programs :skip => skip_value, :limit => DataPage.default_page_size, :last_days => last_days
+    @total = Programa.count_most_up_to_date_programs last_days
     render :index
   end
 

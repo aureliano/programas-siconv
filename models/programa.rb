@@ -1,92 +1,51 @@
 class Programa
-
-  def initialize(props = {})
-    @aceita_emenda_parlamentar = props['aceita_emenda_parlamentar']
-    @cod_programa_siconv = props['cod_programa_siconv']
-    @data_disponibilizacao = props['data_disponibilizacao']
-    @data_fim_recebimento_propostas = props['data_fim_recebimento_propostas']
-    @data_inicio_recebimento_propostas = props['data_inicio_recebimento_propostas']
-    @data_publicacao_dou = props['data_publicacao_dou']
-    @nome = props['nome']
-    @obriga_plano_trabalho = props['obriga_plano_trabalho']
-    @orgao_superior = props['orgao_superior']
-    @orgao_executor = props['orgao_executor']
-    @orgao_mandatario = props['orgao_mandatario']
-    @orgao_vinculado = props['orgao_vinculado']
-    @tags = props['tags']
-  end
+  include Mongoid::Document
   
-  attr_accessor :aceita_emenda_parlamentar, :cod_programa_siconv, :data_disponibilizacao,
-                :data_fim_recebimento_propostas, :data_inicio_recebimento_propostas,
-                :data_publicacao_dou, :nome, :obriga_plano_trabalho, :orgao_superior,
-                :orgao_executor, :orgao_mandatario, :orgao_vinculado, :tags
-
-  def self.find(filters)
-    collection = DATABASE['programas']
-    programas = Array.new
-    
-    collection.find(filters).sort([:data_disponibilizacao, -1]).each do |document|
-      hash = Hash.new
-      document.each_pair {|k, v| hash[k] = v unless k == '_id'}
-      programas << Programa.new(hash)
-    end
-    
-    programas
-  end
+  field :_id, :type => Integer
+  field :aceita_emenda_parlamentar, :type => Boolean
+  field :data_disponibilizacao, :type => Date
+  field :data_fim_recebimento_propostas, :type => String
+  field :data_inicio_recebimento_propostas, :type => String
+  field :data_publicacao_dou, :type => String
+  field :nome, :type => String
+  field :obriga_plano_trabalho, :type => Boolean
+  field :orgao_superior, :type => String
+  field :orgao_executor, :type => String
+  field :orgao_mandatario, :type => String
+  field :orgao_vinculado, :type => String
+  field :tags, :type => Array
 
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
     start_time = end_time - (options[:last_days] * DAY)
-    options[:page] = 0 if options[:page].nil?
-    options[:limit] = 0 if options[:limit].nil?
+    options[:skip] ||= 0
+    options[:limit] ||= 0
 
-    collection = DATABASE['programas']
-    programas = Array.new
+    programas = []
     
-    collection.find({:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}}).sort([:data_disponibilizacao, -1]).skip(options[:page]).limit(options[:limit]).each do |document|
-      hash = Hash.new
-      document.each_pair {|k, v| hash[k] = v unless k == '_id'}
-      programas << Programa.new(hash)
-    end
-    
+    where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }    
     programas
   end
   
-  def self.count_most_up_to_date_programs(options)
+  def self.count_most_up_to_date_programs(last_days)
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
-    start_time = end_time - (options[:last_days] * DAY)
+    start_time = end_time - (last_days * DAY)
     
-    collection = DATABASE['programas']
-    collection.find({:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}}).count
+    where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).count
   end
   
   def self.with_tags(options)
-    collection = DATABASE['programas']
-    programas = Array.new
-    options[:page] = 0 if options[:page].nil?
-    options[:limit] = 0 if options[:limit].nil?
+    options[:skip] ||= 0
+    options[:limit] ||= 0
+    programas = []
     
-    collection.find(:tags => {'$all' => options[:tags]}).sort([:data_disponibilizacao, -1]).skip(options[:page]).limit(options[:limit]).each do |document|
-      hash = Hash.new
-      document.each_pair {|k, v| hash[k] = v unless k == '_id'}
-      programas << Programa.new(hash)
-    end
-    
+    where(:tags => {'$all' => options[:tags]}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
     programas
   end
   
-  def self.count_with_tags(options)
-    collection = DATABASE['programas']
-    collection.find(:tags => {'$all' => options[:tags]}).count(true)
-  end
-  
-  def self.create(programa)
-    DATABASE['programas'].save programa
-  end
-  
-  def self.destroy
-    DATABASE['programas'].remove
+  def self.count_with_tags(tags)
+    where(:tags => {'$all' => tags}).count
   end
 end

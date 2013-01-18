@@ -10,9 +10,8 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
 gem 'erubis', "~> 2.7.0"
-gem 'mongo'
-gem 'bson'
-gem 'bson_ext'
+gem 'mongoid', '2.4.12'
+gem 'bson_ext', :require => "mongo"
 gem 'twitter', '~> 4.4.0'
 gem 'koala'
 

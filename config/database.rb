@@ -1,8 +1,15 @@
-# URI format => mongodb://<dbuser>:<dbpassword>@ds033187.mongolab.com:33187/heroku_app9631427
-# Utilizando código do método before_load em boot.rb
+# Connection.new takes host, port
+host = 'localhost'
+port = Mongo::Connection::DEFAULT_PORT
 
-#case Padrino.env
-#  when :development then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
-#  when :production then Mongo::MongoClient.from_uri(ENV['MONGOLAB_URI'])
-#  when :test then Mongo::MongoClient.new('localhost', 27017)['programas_siconv']
-#end
+database_name = case Padrino.env
+  when :development then 'convenios_siconv_development'
+  when :production  then 'heroku_app10168188'
+  when :test        then 'convenios_siconv_test'
+end
+
+Mongoid.database = if Padrino.env == :production
+  Mongo::Connection.from_uri(ENV['MONGOLAB_URI']).db(database_name)
+else
+  Mongo::Connection.new(host, port).db(database_name)
+end

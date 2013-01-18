@@ -40,4 +40,17 @@ ProgramasSiconv.helpers do
     
     link = (filter) ? "/consulta/programas?page=#{page}&search_params=#{format_get_params filter}" : url(:index)
   end
+  
+  def pagination_page_index
+    value = params[:page] ||= 1
+    page = value.to_i
+    page = 1 if page < 1
+    
+    page
+  end
+  
+  def skip_value(limit=nil)
+    limit ||= DataPage.default_page_size
+    ((pagination_page_index - 1) * limit)
+  end
 end

@@ -1,5 +1,5 @@
 ---
-:orm: none 
+:orm: mongoid
 :test: cucumber
 :mock: none
 :script: none
