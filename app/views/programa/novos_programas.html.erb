@@ -1,0 +1,11 @@
+<% @page_title = 'Programas Disponibilizados' %>
+
+<% @disponiblizacoes_ativa = true %>
+<% @days = 10 %>
+
+<div class="hero-unit">
+  <h3>Disponibilizações</h3>
+  <p>Programas de Convênio disponibilizados nos últimos <%= @days %> dias.</p>
+</div>
+
+<%= programas_data_table :data => @programas, :total => @total, :last_days => @days %>

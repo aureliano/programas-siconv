@@ -2,9 +2,9 @@
 
 <%= javascript_include_tag 'programas_data_fetching' %>
 
-<% @breadcrumbs = Array.new %>
-<% @breadcrumbs << { :text => 'Consulta Programas', :link => programa_back_link } if params[:search_params] %>
-<%= partial :bread_crumb, :object => @breadcrumbs %>
+<div class="hero-unit">
+  <h3>Programa de Convênio</h3>
+</div>
 
 <h4>Dados do Programa</h4>
 
@@ -56,7 +56,3 @@
 <div name="orgao_vinculado">
   <span><strong>Órgão Vinculado: </strong></span><span><%= @programa.orgao_vinculado %></span>
 </div>
-
-<br/>
-
-<%= link_to 'Voltar', programa_back_link, :class => 'btn btn-primary' %>

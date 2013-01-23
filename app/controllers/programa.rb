@@ -14,4 +14,12 @@ ProgramasSiconv.controllers :programa do
     render 'programa/consulta_programas'
   end
   
+  get :disponibilizacoes, :map => '/disponibilizacoes' do
+    last_days = 10
+    @programas = Programa.most_up_to_date_programs :skip => skip_value, :limit => DataPage.default_page_size, :last_days => last_days
+    @total = Programa.count_most_up_to_date_programs last_days
+    
+    render 'programa/novos_programas'
+  end
+  
 end

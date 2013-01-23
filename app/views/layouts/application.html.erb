@@ -12,40 +12,64 @@
   </head>
   
   <body>
-    <div name="header-container" align="center" class="hero-unit">
-      <p/><h2>Novos Programas</h2>
-      <div name="div-feeds" align="right">
-        <span name="span-rss-feed"><a href="<%= url(:feed) %>"><%= image_tag 'rss.png', :alt => 'Feed' %></a></span>
-        <span name="span-twitter"><a href="https://twitter.com/opendataconv"><%= image_tag 'twitter.png', :alt => 'Twitter' %></a></span>
-        <span name="span-facebook"><a href="http://www.facebook.com/opendata.convenios"><%= image_tag 'facebook.png', :alt => 'Facebook' %></a></span>
-      </div>
-      <p align="right">
-        Dados extraídos do sítio <a href="http://api.convenios.gov.br">http://api.convenios.gov.br</a> em <%= LAST_EXTRACTION_DATE %>.
-      </p>
-    </div>
-  
-    <div name="main-container" class="container-fluid">
-      <div name="row-container" class="row-fluid">
-        <div name="side-bar-container" class="span2" style="width: 20%">
-          <ul class="nav nav-list">
-            <li class="nav-header">Consultas</li>
-            <li><a href="/consulta/programas"><i class="icon-chevron-right"></i>Programas</a></li>
-          
-            <li class="nav-header">Convênios</li>
-            <li><a href="https://www.convenios.gov.br/portal/"><i class="icon-chevron-right"></i>Portal de Convênios</a></li>
-            <li><a href="http://api.convenios.gov.br/"><i class="icon-chevron-right"></i>Dados abertos</a></li>
-            <li><a href="https://www.convenios.gov.br/siconv/ForwardAction.do?modulo=programa&path=/ConsultarPrograma/ConsultarPrograma.do&Usr=guest&Pwd=guest"><i class="icon-chevron-right"></i>Programas - Siconv</a></li>
-            
-            <li class="nav-header">Sítio</li>
-            <li><a href="/sobre"><i class = "icon-chevron-right"></i>Sobre o sítio</a></li>
-            <li><a href="https://github.com/aureliano/programas-siconv"><i class = "icon-chevron-right"></i>Projeto</a></li>
-          </ul>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+
+          <a class="brand" href="<%= url :index %>">Novos Programas</a>
+          <div class="nav-collapse collapse navbar-responsive-collapse">
+            <ul class="nav pull-right">
+              <li<%= @disponiblizacoes_ativa ? ' class="active"' : '' %>><a href="<%= @disponiblizacoes_ativa ? 'javascript:void(0)' : url(:programa, :disponibilizacoes) %>">Disponibilizações</a></li>
+              <li<%= @consulta_ativa ? ' class="active"' : '' %>><a href="<%= @consulta_ativa ? 'javascript:void(0)' : url(:programa, :consulta) %>">Consulta</a></li>
+              <li<%= @sobre_ativa ? ' class="active"' : '' %>><a href="<%= @sobre_ativa ? 'javascript:void(0)' : url(:sobre) %>">Sobre</a></li>
+              <li class="divider-vertical"></li>
+              <li><a href="https://github.com/aureliano/programas-siconv/wiki/Log-de-vers%C3%B5es">-versão 0.1.0</a></li>
+            </ul>
+          </div><!-- /.nav-collapse -->
         </div>
+      </div><!-- /navbar-inner -->
+    </div><!-- /navbar -->
         
-        <div name="body-container" class="span10" style="width: 75%">
-          <%= yield %>
-        </div>
+    <div name="body-container" class="container">
+      <br/><br/><br/>
+      <%= yield %>
+      
+      <hr/>
+      
+      <div class="page-footer">
+        <p align="right">
+          Dados extraídos do sítio <a href="http://api.convenios.gov.br">http://api.convenios.gov.br</a> em <%= LAST_EXTRACTION_DATE %>.
+        </p>
+        <nav id="menu-rodape">
+          <ul class="nav nav-pills">
+            <li>
+              <a href="http://www.convenios.gov.br">Portal de Convênios</a>
+            </li>
+            <li>
+              <a href="http://dados.gov.br">Dados Abertos</a>
+            </li>
+            <li>
+              <a href="https://github.com/aureliano/programas-siconv">Código fonte</a>
+            </li>
+            <li>
+              <a href="/sobre#licenca">Copyright (C) 2013  Consumidor online</a>
+            </li>
+            <li>
+              <div name="div-feeds-footer">
+                <a href="<%= url(:feed) %>"><%= image_tag 'rss.png', :alt => 'Feed' %></a>
+                <a href="https://twitter.com/opendataconv"><%= image_tag 'twitter.png', :alt => 'Twitter' %></a>
+                <a href="http://www.facebook.com/opendata.convenios"><%= image_tag 'facebook.png', :alt => 'Facebook' %></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
+      
   </body>
 </html>
