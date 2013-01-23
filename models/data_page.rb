@@ -4,7 +4,7 @@ class DataPage
     10
   end
 
-  def initialize(options)    
+  def initialize(options)
     @page_size = options[:page_size] ||= DataPage.default_page_size
     @total = options[:total]
     @data = options[:data]
@@ -32,7 +32,7 @@ class DataPage
   end
   
   def has_page_index?(index)
-    ((@total >= index) && (index > 0))
+    ((@pages >= index) && (index > 0))
   end
   
   def next_page
@@ -43,7 +43,7 @@ class DataPage
   def previous_page
     return (@page_index - 1) if has_previous_page?
     @page_index
-  end  
+  end
   
   def has_previous_pagination_block?
     block = @current_page_block

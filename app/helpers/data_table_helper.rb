@@ -30,30 +30,24 @@ ProgramasSiconv.helpers do
   
   def pagination_layer(data_page)
     t = "<div class=\"pagination\">"
-    t << "\n  <ul>"
+    t << "\n <ul>"
     
-    find_page_function = "onclick=\"javascript: sendPageIndex(#{data_page.previous_block_page})\""
-    t << "\n    <li #{data_page.has_previous_pagination_block? ? '' : 'class="disabled"'}><a href=\"#{data_page.has_previous_pagination_block? ? '#' : 'javascript: void(0)'}\" #{data_page.has_previous_pagination_block? ? find_page_function : ''}>&lt;&lt;</a></li>"
-    
-    find_page_function = "onclick=\"javascript: sendPageIndex(#{data_page.previous_page})\""
-    t << "\n    <li #{data_page.has_previous_page? ? '' : 'class="disabled"'}><a href=\"#{data_page.has_previous_page? ? '#' : 'javascript: void(0)'}\" #{data_page.has_previous_page? ? find_page_function : ''}>&lt;</a></li>"
+    t << "\n <li#{data_page.has_previous_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_pagination_block? ? pagination_url(data_page.previous_block_page) : 'javascript: void(0)'}\">&lt;&lt;</a></li>"
+    t << "\n <li#{data_page.has_previous_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_page? ? pagination_url(data_page.previous_page) : 'javascript: void(0)'}\">&lt;</a></li>"
     
     data_page.current_page_block.each do |page|
-      find_page_function = "onclick=\"javascript: sendPageIndex(#{page})\""
-      t << "\n    <li #{(data_page.page_index ==  page) ? 'class="disabled"' : ''}><a href=\"#{(data_page.page_index ==  page) ? 'javascript: void(0)' : '#'}\" #{(data_page.page_index ==  page) ? '' : find_page_function}>#{page}</a></li>"
+      t << "\n <li#{(data_page.page_index == page) ? ' class="disabled"' : ''}><a href=\"#{(data_page.page_index == page) ? 'javascript: void(0)' : pagination_url(page)}\">#{page}</a></li>"
     end
     
-    find_page_function = "onclick=\"javascript: sendPageIndex(#{data_page.next_page})\""
-    t << "\n    <li #{data_page.has_next_page? ? '' : 'class="disabled"'}><a href=\"#{data_page.has_next_page? ? '#' : 'javascript: void(0)'}\" #{data_page.has_next_page? ? find_page_function : ''}>&gt;</a></li>"
+    t << "\n <li#{data_page.has_next_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_page? ? pagination_url(data_page.next_page) : 'javascript: void(0)'}\">&gt;</a></li>"
+    t << "\n <li#{data_page.has_next_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_pagination_block? ? pagination_url(data_page.next_block_page) : 'javascript: void(0)'}\">&gt;&gt;</a></li>"
     
-    find_page_function = "onclick=\"javascript: sendPageIndex(#{data_page.next_block_page})\""
-    t << "\n    <li #{data_page.has_next_pagination_block? ? '' : 'class="disabled"'}><a href=\"#{data_page.has_next_pagination_block? ? '#' : 'javascript: void(0)'}\" #{data_page.has_next_pagination_block? ? find_page_function : ''}>&gt;&gt;</a></li>"
-    
-    t << "\n  </ul>"
-    t << "</div>\n<input id=\"page\" name=\"page\" type=\"hidden\" value=\"#{data_page.page_index}\"/>"
-    t << "\n<input id=\"search_params\" name=\"search_params\" type=\"hidden\" value=\"#{params[:search_params]}\"/>" if params[:search_params]
-    
-    t
+    t << "\n </ul>"
+    t << "</div>"
+  end
+  
+  def pagination_url(page_index)
+    params[:search_params] ? "?search_params=#{params[:search_params].gsub(/\s/, '+')}&page=#{page_index}" : "?page=#{page_index}"
   end
 
 end
