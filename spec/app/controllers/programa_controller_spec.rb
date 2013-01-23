@@ -7,10 +7,19 @@ describe "ProgramaController" do
   puts 'Carregando programas no banco de testes'
   populate_programs_collection
 
-  it 'carrega página inicial com os programas disponibilizados nos últimos 10 dias' do
+  it 'carrega página inicial' do
     get '/'
     
     last_response.body.should include '<title>Novos Programas: Início</title>'
+    last_response.body.should include '<div class="pagination-centered">'
+    last_response.body.should include '<h2>Novos Programas</h2>'
+    last_response.body.should include '<h3>Portal para livre consulta de Programas de Convênio.</h3>'
+  end
+  
+  it 'carrega página com os programas disponibilizados nos últimos 10 dias' do
+    get '/disponibilizacoes'
+    
+    last_response.body.should include '<title>Novos Programas: Programas Disponibilizados</title>'
     last_response.body.should include '<div name="div_total_programas">Total de programas: 2</div>'
   end
   
