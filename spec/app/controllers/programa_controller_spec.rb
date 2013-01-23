@@ -31,12 +31,6 @@ describe "ProgramaController" do
     last_response.body.should include '<title>Programa de Teste 4 </title>'
   end
   
-  it 'redireciona usuário para página de erro 404' do
-    get '/pagina_inexistente'
-    
-    last_response.body.should eq '<h2>Página inexistente.</h2>'
-  end
-  
   it 'carrega página de detalhamento do programa' do
     get '/programa/12345678945'
     

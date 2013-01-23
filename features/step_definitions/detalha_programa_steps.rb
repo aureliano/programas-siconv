@@ -42,7 +42,7 @@ end
 
 Então /^eu devo ver '(\d+)' programas no resultado da consulta$/ do |total|
   should have_text "#{total} item(s) encontrado(s)."
-  should have_xpath "//div/form[@name='form_search_result']/div", :count => (total.to_i + 1) # total + 1 por causa da div de paginação
+  should have_xpath "//div[@name='div_resultado_consulta']/div", :count => (total.to_i + 1) # total + 1 por causa da div de paginação
 end
 
 Quando /^eu seleciono o programa '(\d+)'$/ do |codigo|
