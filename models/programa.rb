@@ -41,11 +41,11 @@ class Programa
     options[:limit] ||= 0
     programas = []
     
-    where(:tags => {'$all' => options[:tags]}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
+    where(:tags => {'$in' => options[:tags]}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
     programas
   end
   
   def self.count_with_tags(tags)
-    where(:tags => {'$all' => tags}).count
+    where(:tags => {'$in' => tags}).count
   end
 end
