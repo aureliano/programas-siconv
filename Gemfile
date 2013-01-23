@@ -16,7 +16,7 @@ gem 'twitter', '~> 4.4.0'
 gem 'koala'
 
 # Test requirements
-gem 'rspec'
+gem 'rspec', '2.12.0'
 gem 'capybara'
 gem 'cucumber'
 gem 'rack-test', :require => "rack/test"
