@@ -24,8 +24,8 @@ Quando /^eu clico no link '([\p{L}\s-]+)'$/ do |link|
   click_link link
 end
 
-Quando /^eu clico no item '([\p{L}\s-]+)' do menu '([\p{L}\s-]+)'$/ do |submenu, menu|
-  find(:xpath, "//ul/li[text() = '#{menu}']/../li/a[text() = '#{submenu}']").click
+Quando /^eu clico no item '([\p{L}\s-]+)' do menu$/ do |item|
+  find(:xpath, "//div/ul/li/a[text() = '#{item}']").click
 end
 
 Então /^eu devo ver o campo '([\w\s]+)'$/ do |campo|

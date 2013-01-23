@@ -14,7 +14,8 @@ Funcionalidade: Detalhar dados de um programa do governo federal
 
     Cenário: C1 - Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias.
       Dado que eu acesso a página inicial do sistema
-      Quando eu verifico os programas disponibilizados nos últimos 10 dias
+      Quando eu clico no item 'Disponibilizações' do menu
+      E eu verifico os programas disponibilizados nos últimos 10 dias
       Então eu devo ver o total de '3' programas disponibilizados
       
       Quando eu clico no botão 'Detalhar' do programa '1875424879'
@@ -22,7 +23,7 @@ Funcionalidade: Detalhar dados de um programa do governo federal
 
     Cenário: C2 - Um usuário acessa o sítio, faz uma pesquisa de programas por órgão relacionado e detalha os dados de um programa.
       Dado que eu acesso a página inicial do sistema
-      Quando eu clico no item 'Programas' do menu 'Consultas'
+      Quando eu clico no item 'Consulta' do menu
       Então eu devo ver a página de consulta de programas
       
       Dado que eu preencho o campo 'search_params' com 'ministerio testes'

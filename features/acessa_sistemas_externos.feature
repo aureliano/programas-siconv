@@ -12,10 +12,5 @@ Funcionalidade: Acessar sistemas externos através do menu do sítio
 
   Cenário: C2 - Um usuário acessa a página principal do sítio e navega para a API de dados abertos do Siconv
     Dado que eu acesso a página inicial do sistema
-    Quando eu clico no link 'Dados abertos'
+    Quando eu clico no link 'Dados Abertos'
     Então eu devo ver a página inicial da API de dados abertos do Siconv
-
-  Cenário: C3 - Um usuário acessa a página principal do sítio e navega para a página de consulta de Programas do Siconv
-    Dado que eu acesso a página inicial do sistema
-    Quando eu clico no link 'Programas - Siconv'
-    Então eu devo ver a página de consulta de Programas do Siconv

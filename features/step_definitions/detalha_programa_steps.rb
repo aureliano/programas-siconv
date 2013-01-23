@@ -27,11 +27,9 @@ Então /^eu devo ver a página de detalhamento do programa '(\d+)'$/ do |codigo|
   should have_text 'Dados do Programa'
   should have_text 'Datas'
   should have_text 'Órgãos Administrativos Relacionados'
-  should have_link 'Voltar'
 end
 
 Então /^eu devo ver a página de consulta de programas$/ do
-  should have_xpath "//ul[@class='breadcrumb']/li/a[@href='/']"
   should have_xpath "//form/div/input[@id='search_params']"
   should have_button 'Consultar'
 end
