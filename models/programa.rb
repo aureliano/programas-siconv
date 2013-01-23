@@ -24,7 +24,7 @@ class Programa
 
     programas = []
     
-    where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }    
+    where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).desc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }    
     programas
   end
   
