@@ -82,7 +82,9 @@ data.each do |row|
   
   Programa.create(:id => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
-                  :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_publicacao_dou => row['data_publicacao_dou'],
+                  :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
+                  :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],
+                  :data_inicio_emenda_parlamentar => row['data_inicio_emenda_parlamentar'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
                   :orgao_executor => org_exe, :orgao_mandatario => org_mand,
                   :orgao_superior => org_sup, :orgao_vinculado => org_vin,

@@ -32,15 +32,34 @@
 <div name="data_disponibilizacao">
   <span><strong>Data de disponibilização: </strong></span><span><%= time_to_date_s @programa.data_disponibilizacao %></span>
 </div>
+
+<% if @programa.data_inicio_recebimento_propostas && !@programa.data_inicio_recebimento_propostas.empty? %>
 <div name="data_inicio_recebimento_propostas">
   <span><strong>Data inicial para recebimento de propostas: </strong></span><span><%= format_date @programa.data_inicio_recebimento_propostas %></span>
 </div>
 <div name="data_fim_recebimento_propostas">
   <span><strong>Data final para recebimento de propostas: </strong></span><span><%= format_date @programa.data_fim_recebimento_propostas %></span>
 </div>
-<div name="data_publicacao_dou">
-  <span><strong>Data de publicação no DOU: </strong></span><span><%= format_date @programa.data_publicacao_dou %></span>
+<% end %>
+
+<% if @programa.data_inicio_beneficiario_especifico && !@programa.data_inicio_beneficiario_especifico.empty? %>
+<div name="data_inicio_beneficiario_especifico">
+  <span><strong>Data inicial para beneficiário específico: </strong></span><span><%= format_date @programa.data_inicio_beneficiario_especifico %></span>
 </div>
+<div name="data_fim_beneficiario_especifico">
+  <span><strong>Data final para beneficiário específico: </strong></span><span><%= format_date @programa.data_fim_beneficiario_especifico %></span>
+</div>
+<% end %>
+
+<% if @programa.data_inicio_emenda_parlamentar && !@programa.data_inicio_emenda_parlamentar.empty? %>
+<div name="data_inicio_emenda_parlamentar">
+  <span><strong>Data inicial para emenda parlamentar: </strong></span><span><%= format_date @programa.data_inicio_emenda_parlamentar %></span>
+</div>
+<div name="data_fim_emenda_parlamentar">
+  <span><strong>Data final para emenda parlamentar: </strong></span><span><%= format_date @programa.data_fim_emenda_parlamentar %></span>
+</div>
+<% end %>
+
 <hr/>
 
 <h4>Órgãos Administrativos Relacionados</h4>

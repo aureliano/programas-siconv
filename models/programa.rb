@@ -4,9 +4,12 @@ class Programa
   field :_id, :type => Integer
   field :aceita_emenda_parlamentar, :type => Boolean
   field :data_disponibilizacao, :type => Date
+  field :data_fim_beneficiario_especifico, :type => String
+  field :data_inicio_beneficiario_especifico, :type => String
+  field :data_fim_emenda_parlamentar, :type => String
+  field :data_inicio_emenda_parlamentar, :type => String
   field :data_fim_recebimento_propostas, :type => String
   field :data_inicio_recebimento_propostas, :type => String
-  field :data_publicacao_dou, :type => String
   field :nome, :type => String
   field :obriga_plano_trabalho, :type => Boolean
   field :orgao_superior, :type => String

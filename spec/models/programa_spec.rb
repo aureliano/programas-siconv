@@ -15,7 +15,10 @@ describe "Entidade Programa" do
     programa.should respond_to :data_disponibilizacao
     programa.should respond_to :data_fim_recebimento_propostas
     programa.should respond_to :data_inicio_recebimento_propostas
-    programa.should respond_to :data_publicacao_dou
+    programa.should respond_to :data_fim_emenda_parlamentar
+    programa.should respond_to :data_inicio_emenda_parlamentar
+    programa.should respond_to :data_fim_beneficiario_especifico
+    programa.should respond_to :data_inicio_beneficiario_especifico
     programa.should respond_to :nome
     programa.should respond_to :obriga_plano_trabalho
     programa.should respond_to :orgao_superior
