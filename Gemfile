@@ -13,7 +13,7 @@ gem 'erubis', "~> 2.7.0"
 gem 'mongoid', '2.4.12'
 gem 'bson_ext', :require => "mongo"
 gem 'twitter', '~> 4.4.0'
-gem 'koala'
+gem 'koala', '1.6.0'
 
 # Test requirements
 gem 'rspec', '2.12.0'
