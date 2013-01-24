@@ -1,5 +1,21 @@
 # encoding: utf-8
 
+start_time = Time.now
+BUCKET_SIZE = 100
+
+def elapsed_time(t1, t2)
+  diff = (t2 - t1)
+  s = (diff % 60).to_i
+  m = (diff / 60).to_i
+  h = (m / 60).to_i
+
+  if s > 0
+    "#{(h < 10) ? '0' + h.to_s : h}:#{(m < 10) ? '0' + m.to_s : m}:#{(s < 10) ? '0' + s.to_s : s}"
+  else
+    format("%.5f", diff) + " milisegundos."
+  end
+end
+
 def load_data_from_csv(file)
   data = Array.new
   text = File.read(file)  
@@ -55,6 +71,8 @@ shell.say ''
 
 shell.say "Carregando dados de 'programas' do arquivo 'programas_db.csv'"
 data = load_data_from_csv 'db/programas_db.csv'
+docs = 0
+programas = []
 
 data.each do |row|
   data_disponibilizacao = nil
@@ -80,7 +98,7 @@ data.each do |row|
   tags.concat get_tags_without_stopwords(org_vin) unless tagged_orgs.include? org_vin
   tagged_orgs << org_vin
   
-  Programa.create(:id => row['cod_programa_siconv'].to_i,
+  programas << { :id => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
                   :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],
@@ -88,8 +106,18 @@ data.each do |row|
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
                   :orgao_executor => org_exe, :orgao_mandatario => org_mand,
                   :orgao_superior => org_sup, :orgao_vinculado => org_vin,
-                  :tags => tags)
+                  :tags => tags }
+
+  docs += 1
+  if docs == BUCKET_SIZE
+    Programa.collection.insert programas
+    programas.clear
+    docs = 0
+  end
 end
+
+Programa.collection.insert programas # insere o resto
+programas.clear
 
 shell.say ''
 shell.say 'Povoamento da base de dados concluído'
@@ -141,3 +169,5 @@ if PADRINO_ENV == 'production'
   shell.say
   shell.say 'Publicação de programas no Facebook concluída'
 end
+
+shell.say 'Tempo gasto: ' + elapsed_time(start_time, Time.now)
