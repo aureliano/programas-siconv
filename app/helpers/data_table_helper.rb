@@ -44,6 +44,8 @@ ProgramasSiconv.helpers do
     
     t << "\n </ul>"
     t << "</div>"
+    
+    data_page.pages > 1 ? t : ''
   end
   
   def pagination_url(page_index)

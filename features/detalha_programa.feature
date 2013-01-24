@@ -11,6 +11,13 @@ Funcionalidade: Detalhar dados de um programa do governo federal
     Dado que existe o programa '8896345784' disponibilizado '10' dia(s) atrás
     Dado que existe o programa '3025781001' disponibilizado '15' dia(s) atrás
     Dado que existe o programa '1875424879' disponibilizado '5' dia(s) atrás
+    Dado que existe o programa '5548753669' disponibilizado '21' dia(s) atrás
+    Dado que existe o programa '4587992125' disponibilizado '90' dia(s) atrás
+    Dado que existe o programa '6612455875' disponibilizado '11' dia(s) atrás
+    Dado que existe o programa '2000145547' disponibilizado '15' dia(s) atrás
+    Dado que existe o programa '7780000002' disponibilizado '51' dia(s) atrás
+    Dado que existe o programa '9898954554' disponibilizado '15' dia(s) atrás
+    Dado que existe o programa '3326565440' disponibilizado '25' dia(s) atrás
 
     Cenário: C1 - Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias.
       Dado que eu acesso a página inicial do sistema
@@ -29,7 +36,7 @@ Funcionalidade: Detalhar dados de um programa do governo federal
       Dado que eu preencho o campo 'search_params' com 'ministerio testes'
       Quando eu clico no botão 'Consultar'
       Então eu devo ver o resultado da consulta de programas
-      E eu devo ver '5' programas no resultado da consulta
+      E eu devo ver '12' programas no resultado da consulta
       
       Quando eu seleciono o programa '3025781001'
       Então eu devo ver a página de detalhamento do programa '3025781001'
