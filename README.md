@@ -12,6 +12,7 @@ Os dados apresentados aqui foram retirados do [Portal de Convênios - Siconv] (h
 
 Instalação
 ----------
+Para orientações detalhadas da configuração do ambiente de desenvolvimento visite a página https://github.com/aureliano/dados-procon/wiki/Prepara%C3%A7%C3%A3o-do-ambiente-de-desenvolvimento
 
 Pré-requisitos:
 - [Ruby] (http://www.ruby-lang.org)
@@ -24,8 +25,11 @@ Baixar gems necessárias:
 bundle install
 ```
 
+Preparar ambiente de trabalho: Para orientações detalhadas para execução da aplicação visite a página https://github.com/aureliano/dados-procon/wiki/Execu%C3%A7%C3%A3o-da-aplica%C3%A7%C3%A3o
+
 Preparar ambiente de trabalho:
 ```
+padrino rake data:prepare
 padrino rake seed
 ```
 
