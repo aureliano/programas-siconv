@@ -134,7 +134,6 @@ if PADRINO_ENV == 'production'
     config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']
   end
 
-  Twitter.update "Extração de dados de Programas do Governo Federal realizada em #{LAST_EXTRACTION_DATE}."
   last_days = 10
 
   fb_post = "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days} dias.\n"
@@ -143,15 +142,13 @@ if PADRINO_ENV == 'production'
   
   (programas.size - 1).downto(0) do |i|
     nome = (programas[i].nome.size > 70) ? "#{programas[i].nome[0, 67]}..." : programas[i].nome
-    tweet = "#{nome} - (http://novosprogramas.herokuapp.com/programa/#{programas[i].id})"
-    Twitter.update tweet
     
     fb_post << "\nPrograma: #{programas[i].nome}\n"
     fb_post << "Órgão Executor: #{programas[i].orgao_executor}\n"
     fb_post << "Data de disponibilização: #{time_to_date_s programas[i].data_disponibilizacao}\n"
   end
 
-  Twitter.update "Divulgando Programas do Governo Federal disponibilizados nos últimos #{last_days} dias."
+  Twitter.update "Extração de dados de Programas do Governo Federal realizada em #{LAST_EXTRACTION_DATE}. http://novosprogramas.herokuapp.com/disponibilizacoes"
 
   shell.say ''
   shell.say 'Publicação de programas no Twitter concluída'
