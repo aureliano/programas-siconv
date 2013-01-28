@@ -20,7 +20,7 @@ Quando /^eu clico no botão '([\p{L}\s-]+)'$/ do |botao|
   click_button botao
 end
 
-Quando /^eu clico no link '([\p{L}\s-]+)'$/ do |link|
+Quando /^eu clico no link '([\.\p{L}\s-]+)'$/ do |link|
   click_link link
 end
 
