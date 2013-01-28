@@ -40,6 +40,20 @@ describe "ProgramaController" do
     last_response.body.should include '<title>Programa de Teste 4 </title>'
   end
   
+  it 'carrega página com o log da versão atual' do
+    get '/log/versao/atual'
+    
+    last_response.body.should include '<title>Novos Programas: Log de versão</title>'
+    last_response.body.should include '<a href="/log/versao/todas">Ver log completo...</a>'
+  end
+  
+  it 'carrega página com o log de todas as versões' do
+    get '/log/versao/todas'
+    
+    last_response.body.should include '<title>Novos Programas: Log de versão</title>'
+    last_response.body.should_not include '<a href="/log/versao/todas">Ver log completo...</a>'
+  end
+  
   it 'carrega página de detalhamento do programa' do
     get '/programa/12345678945'
     

@@ -12,6 +12,20 @@ class ProgramasSiconv < Padrino::Application
     render :sobre
   end
   
+  get :changelog, :map => '/log/versao/:version' do
+    @show_full_log = case params[:version]
+      when 'atual' then false
+      when 'todas' then 'true'
+      else redirect '/404'
+    end
+    
+    render :changelog
+  end
+  
+  get :changelog, :map => '/log/versao/todas' do
+    render :changelog
+  end
+  
   get :feed, :provides => [:rss, :atom] do
     @last_days = 10
     @programas = Programa.most_up_to_date_programs :last_days => @last_days

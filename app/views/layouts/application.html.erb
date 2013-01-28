@@ -9,7 +9,7 @@
     
     <%= feed_tag(:rss, url(:feed), :title => "RSS") %>
     <%= feed_tag(:atom, url(:feed), :title => "ATOM") %>
-    
+    <% if PADRINO_ENV == 'production' %>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-37957439-1']);
@@ -21,6 +21,7 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <%end %>
   </head>
   
   <body>
@@ -40,7 +41,7 @@
               <li<%= @consulta_ativa ? ' class="active"' : '' %>><a href="<%= @consulta_ativa ? 'javascript:void(0)' : url(:programa, :consulta) %>">Consulta</a></li>
               <li<%= @sobre_ativa ? ' class="active"' : '' %>><a href="<%= @sobre_ativa ? 'javascript:void(0)' : url(:sobre) %>">Sobre</a></li>
               <li class="divider-vertical"></li>
-              <li><a href="https://github.com/aureliano/programas-siconv/wiki/Log-de-vers%C3%B5es">versão 0.3.0</a></li>
+              <li><%= link_to "Versão #{APP_VERSION}", url(:changelog, :version => 'atual') %></li>
             </ul>
           </div><!-- /.nav-collapse -->
         </div>
