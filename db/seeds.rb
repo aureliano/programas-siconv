@@ -161,7 +161,7 @@ if PADRINO_ENV == 'production'
     :ssl => { :ca_path => "/etc/ssl/certs" }
   }
   graph = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'])
-  graph.put_connections('opendata.convenios', 'feed', :message => fb_post)
+  graph.put_connections('147823665372978', 'feed', :message => fb_post)
   
   shell.say
   shell.say 'Publicação de programas no Facebook concluída'
