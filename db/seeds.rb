@@ -126,7 +126,7 @@ data.each do |row|
   tags.concat tokens if tokens && !tagged_orgs.include?(org_vin)
   tagged_orgs << org_vin
   
-  programas << { :id => row['cod_programa_siconv'].to_i,
+  programas << { :_id => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
                   :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],
