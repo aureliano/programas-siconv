@@ -1,0 +1,42 @@
+<% @page_title = 'Log de versão' %>
+
+<% @changelog_ativa = true %>
+
+<div class="hero-unit">
+  <h3>Log de versão</h3>
+  <p>Acompanhe aqui as alterações realizadas no sítio.</p>
+</div>
+
+<a href="https://github.com/aureliano/programas-siconv/tree/v-0.3.0">Versão 0.3.0</a>
+<ul>
+  <li>Melhora exibição de links de ajuda no README do projeto.</li>
+  <li>Exibe o build status do processo de integração contínua na página de apresentação do projeto.</li>
+  <li>Altera link do Facebook nas páginas do sítio. Agora ao invés de apontar para o profile aponta para a página do projeto no Facebook.</li>
+  <li>Deixa de publicar os feeds do projeto no perfil do Facebook para publicá-los na página do projeto no Facebook.</li>
+  <li>Refatora povoamento da base de dados: otimiza geração de tags para consulta.</li>
+</ul>
+<% if @show_full_log %>
+<hr/>
+<a href="https://github.com/aureliano/programas-siconv/tree/v-0.2.0">Versão 0.2.0</a>
+<ul>
+  <li>Adiciona análise de navegação dos usuários.</li>
+  <li>Corrige texto do link Código-fonte do rodapé do layout principal.</li>
+  <li>Reduz o número de tweets por extração de dados. Apenas um tweet é criado com o link para a página de Programas disponibilizados.</li>
+  <li>Atualiza documentação do ambiente de desenvolvimento.</li>
+</ul>
+<hr/>
+<a href="https://github.com/aureliano/programas-siconv/tree/v-0.1.0">Versão 0.1.0</a>
+<ul>
+  <li>Extrai da API de dados abertos do Siconv todos os programas com situação igual a 'DISPONIBILIZADO'.</li>
+  <li>Carrega dados pertinentes à API na base de dados do projeto.</li>
+  <li>Exibe tela com Programas de Convênio disponibilizados nos últimos dez dias.</li>
+  <li>Permite consultar Programas de Convênio informando nome ou parte do nome dos órgãos executor, superior, mandatário ou vinculado.</li>
+  <li>Exibe tela com informações do projeto.</li>
+  <li>Disponibiliza atualizações por meio de feeds: RSS e Atom</li>
+  <li>Atualiza perfil no Facebook com os Programas disponibilizados nos últimos dez dias.</li>
+  <li>Atualiza perfil no Twitter coms os Programas disponibilizados nos últimos dez dias.</li>
+  <li>Exibe data da última extração de dados no rodapé de cada página.</li>
+  <li>Implementa processo de integração contínua no Travis</li>
+</ul><% else %>
+<%= link_to 'Ver log completo...', url(:changelog, :version => 'todas') %>
+<% end %>

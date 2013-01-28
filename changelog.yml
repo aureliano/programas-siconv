@@ -1,0 +1,23 @@
+---
+'0.3.0':
+- Melhora exibição de links de ajuda no README do projeto.
+- Exibe o build status do processo de integração contínua na página de apresentação do projeto.
+- Altera link do Facebook nas páginas do sítio. Agora ao invés de apontar para o profile aponta para a página do projeto no Facebook.
+- Deixa de publicar os feeds do projeto no perfil do Facebook para publicá-los na página do projeto no Facebook.
+- "Refatora povoamento da base de dados: otimiza geração de tags para consulta."
+'0.2.0':
+- Adiciona análise de navegação dos usuários.
+- Corrige texto do link Código-fonte do rodapé do layout principal.
+- Reduz o número de tweets por extração de dados. Apenas um tweet é criado com o link para a página de Programas disponibilizados.
+- Atualiza documentação do ambiente de desenvolvimento.
+'0.1.0':
+- Extrai da API de dados abertos do Siconv todos os programas com situação igual a 'DISPONIBILIZADO'.
+- Carrega dados pertinentes à API na base de dados do projeto.
+- Exibe tela com Programas de Convênio disponibilizados nos últimos dez dias.
+- Permite consultar Programas de Convênio informando nome ou parte do nome dos órgãos executor, superior, mandatário ou vinculado.
+- Exibe tela com informações do projeto.
+- "Disponibiliza atualizações por meio de feeds: RSS e Atom"
+- Atualiza perfil no Facebook com os Programas disponibilizados nos últimos dez dias.
+- Atualiza perfil no Twitter coms os Programas disponibilizados nos últimos dez dias.
+- Exibe data da última extração de dados no rodapé de cada página.
+- Implementa processo de integração contínua no Travis
