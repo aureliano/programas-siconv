@@ -3,6 +3,21 @@
 start_time = Time.now
 BUCKET_SIZE = 100
 
+@characters = {
+  'á' => 'a', 'Á' => 'A',
+  'é' => 'e', 'É' => 'E',
+  'í' => 'i', 'Í' => 'I',
+  'ó' => 'o', 'Ó' => 'O',
+  'ú' => 'u', 'Ú' => 'U',
+  'ã' => 'a', 'Ã' => 'A',
+  'õ' => 'o', 'Õ' => 'O',
+  'ê' => 'e', 'Ê' => 'E',
+  'ô' => 'o', 'Ô' => 'O',
+  'ü' => 'u', 'Ü' => 'U',
+  'ç' => 'c', 'Ç' => 'C',
+  'à' => 'a', 'À' => 'A'
+}
+
 def elapsed_time(t1, t2)
   diff = (t2 - t1)
   s = (diff % 60).to_i
@@ -34,12 +49,20 @@ def load_data_from_csv(file)
   data
 end
 
-def get_tags_without_stopwords(text)
-  return [] if text.nil? || text.empty?
+def replace_special_characters(text)
+  return text if text.nil?
   
-  tags = text.split(/[\s\/]/)
-  tags.each {|tag| tag.downcase! }
-  tags.delete_if {|t| STOPWORDS.include? t }
+  txt = text.dup
+  @characters.each {|k, v| txt.gsub! /#{k}/, v }
+  txt
+end
+
+def get_tags_without_stopwords(text)
+  txt = replace_special_characters text
+  return txt if txt.nil?
+  
+  tags = txt.downcase.split(/[\s\/]/)
+  tags.delete_if {|t| STOPWORDS.include?(t) || t.empty? || t.size == 1 }
 end
 
 def time_to_date_s(time)
@@ -82,20 +105,25 @@ data.each do |row|
   end
   
   tagged_orgs = []
+  tags = []
   org_exe = concedentes[row['orgao_executor']]
-  tags = get_tags_without_stopwords(org_exe)
+  tokens = get_tags_without_stopwords(org_exe)
+  tags.concat tokens if tokens
   tagged_orgs << org_exe
   
   org_sup = concedentes[row['orgao_superior']]
-  tags.concat get_tags_without_stopwords(org_sup) unless tagged_orgs.include? org_sup
+  tokens = get_tags_without_stopwords(org_sup)
+  tags.concat tokens if tokens && !tagged_orgs.include?(org_sup)
   tagged_orgs << org_sup
   
   org_mand = concedentes[row['orgao_mandatario']]
-  tags.concat get_tags_without_stopwords(org_mand) unless tagged_orgs.include? org_mand
+  tokens = get_tags_without_stopwords(org_mand)
+  tags.concat tokens if tokens && !tagged_orgs.include?(org_mand)
   tagged_orgs << org_mand
   
   org_vin = concedentes[row['orgao_vinculado']]
-  tags.concat get_tags_without_stopwords(org_vin) unless tagged_orgs.include? org_vin
+  tokens = get_tags_without_stopwords(org_vin)
+  tags.concat tokens if tokens && !tagged_orgs.include?(org_vin)
   tagged_orgs << org_vin
   
   programas << { :id => row['cod_programa_siconv'].to_i,
