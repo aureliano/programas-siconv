@@ -7,6 +7,7 @@
 # data: 07/11/2012
 
 require 'csv'
+require 'yaml'
 
 namespace :data do
   resources = {
@@ -33,7 +34,7 @@ namespace :data do
     end
     
     puts `rm tmp/*`
-    File.open('.data_extraction_date', 'w') {|file| file.write Time.now.strftime('%d/%m/%Y') }
+    update_extraction_date
   end
 
   def write_file(entity, columns, data)
@@ -85,5 +86,11 @@ namespace :data do
     end
 
     files
+  end
+  
+  def update_extraction_date
+    metadata = YAML.load_file 'metadata.yml'
+    metadata['LAST_EXTRACTION_DATE'] = Time.now.strftime('%d/%m/%Y')
+    File.open('metadata.yml', 'w') {|file| file.write metadata.to_yaml }
   end
 end
