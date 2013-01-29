@@ -7,7 +7,7 @@
 
 require 'yaml'
 
-namespace :sitio do
+namespace :site do
 
   template_file = 'app/views/changelog.html.erb'
   url = 'https://github.com/aureliano/programas-siconv/tree/v-'
