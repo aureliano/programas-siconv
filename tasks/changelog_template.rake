@@ -7,13 +7,13 @@
 
 require 'yaml'
 
-namespace :changelog do
+namespace :sitio do
 
   template_file = 'app/views/changelog.html.erb'
   url = 'https://github.com/aureliano/programas-siconv/tree/v-'
 
   desc 'Atualiza template da página de log de alterações de acordo com o arquivo changelog.yml'
-  task :template do
+  task :changelog do
     log = YAML.load_file 'changelog.yml'
     text = changelog_template
     
