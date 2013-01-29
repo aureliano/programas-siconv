@@ -1,5 +1,8 @@
 ---
 '0.3.0':
+- Remove campo id duplicado da entidade Programa.
+- Desabilita análise de navegação nos ambiente de desenvolvimento e de teste.
+- Cria tarefa para auxílio no versionamento do projeto.
 - Melhora exibição de links de ajuda no README do projeto.
 - Exibe o build status do processo de integração contínua na página de apresentação do projeto.
 - Altera link do Facebook nas páginas do sítio. Agora ao invés de apontar para o profile aponta para a página do projeto no Facebook.
