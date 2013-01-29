@@ -8,16 +8,10 @@ Funcionalidade: Detalhar dados de um programa do governo federal
   Contexto:
     Dado que existe o programa '6658947120' disponibilizado '2' dia(s) atrás
     Dado que existe o programa '1154879632' disponibilizado '9' dia(s) atrás
-    Dado que existe o programa '8896345784' disponibilizado '10' dia(s) atrás
-    Dado que existe o programa '3025781001' disponibilizado '15' dia(s) atrás
     Dado que existe o programa '1875424879' disponibilizado '5' dia(s) atrás
-    Dado que existe o programa '5548753669' disponibilizado '21' dia(s) atrás
-    Dado que existe o programa '4587992125' disponibilizado '90' dia(s) atrás
-    Dado que existe o programa '6612455875' disponibilizado '11' dia(s) atrás
-    Dado que existe o programa '2000145547' disponibilizado '15' dia(s) atrás
-    Dado que existe o programa '7780000002' disponibilizado '51' dia(s) atrás
-    Dado que existe o programa '9898954554' disponibilizado '15' dia(s) atrás
-    Dado que existe o programa '3326565440' disponibilizado '25' dia(s) atrás
+    
+    Dado que existem '50' programas disponibilizados '23' dia(s) atrás pelo órgão executor 'MINISTERIO DA INTEGRACAO CONTINUA'
+    Dado que existem '50' programas disponibilizados '25' dia(s) atrás pelo órgão executor 'MINISTERIO POPULAR'
 
     Cenário: C1 - Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias.
       Dado que eu acesso a página inicial do sistema
@@ -33,10 +27,66 @@ Funcionalidade: Detalhar dados de um programa do governo federal
       Quando eu clico no item 'Consulta' do menu
       Então eu devo ver a página de consulta de programas
       
-      Dado que eu preencho o campo 'search_params' com 'ministerio testes'
+      Dado que eu preencho o campo 'search_params' com 'testes'
       Quando eu clico no botão 'Consultar'
       Então eu devo ver o resultado da consulta de programas
-      E eu devo ver '12' programas no resultado da consulta
+      E eu devo ver '3' programas no resultado da consulta
       
-      Quando eu seleciono o programa '3025781001'
-      Então eu devo ver a página de detalhamento do programa '3025781001'
+      Quando eu seleciono o programa '6658947120'
+      Então eu devo ver a página de detalhamento do programa '6658947120'
+
+    Cenário: C3 - Um usuário acessa o sítio, faz uma pesquisa de programas e navega até o último programa da lista.
+      Dado que existem '900' programas disponibilizados '25' dia(s) atrás pelo órgão executor 'MINISTERIO POPULAR'
+      Dado que eu acesso a página inicial do sistema
+      Quando eu clico no item 'Consulta' do menu
+      Então eu devo ver a página de consulta de programas
+      
+      Dado que eu preencho o campo 'search_params' com 'ministerio'
+      Quando eu clico no botão 'Consultar'
+      Então eu devo ver o resultado da consulta de programas
+      E eu devo ver '1003' programas no resultado da consulta
+      
+      Quando eu clico no link de paginação '2'
+      Então eu devo ver o resultado da consulta de programas na página '2' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>'
+      Então eu devo ver o resultado da consulta de programas na página '3' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '<'
+      Então eu devo ver o resultado da consulta de programas na página '2' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '12' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '22' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '<<'
+      Então eu devo ver o resultado da consulta de programas na página '12' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '22' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '32' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '42' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '52' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '62' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '72' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '82' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '92' com '10' programas num total de '1003'
+      
+      Quando eu clico no link de paginação '>>'
+      Então eu devo ver o resultado da consulta de programas na página '101' com '3' programas num total de '1003'

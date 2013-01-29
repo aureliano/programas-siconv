@@ -6,6 +6,22 @@ Dado /^que existe o programa '(\d+)' disponibilizado '(\d+)' dia\(s\) atrás$/ d
                   :obriga_plano_trabalho => true, :orgao_executor => 'MINISTERIO DOS TESTES', :tags => ['ministerio', 'testes']
 end
 
+Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pelo órgão executor '([\p{L}\s-]+)'$/ do |total, dias, orgao|
+  programas = []
+  total.to_i.times do |index|
+    codigo = ''
+    10.times {|v| codigo << (rand(9) + 1).to_s}
+
+    programas << {
+      :aceita_emenda_parlamentar => true, :_id => codigo.to_i,
+      :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
+      :obriga_plano_trabalho => true, :orgao_executor => orgao, :tags => orgao.split(' ').each(&:downcase!)
+    }
+  end
+  
+  Programa.collection.insert programas  
+end
+
 Quando /^eu verifico os programas disponibilizados nos últimos 10 dias$/ do
 
 end
@@ -39,11 +55,26 @@ Então /^eu devo ver o resultado da consulta de programas$/ do
 end
 
 Então /^eu devo ver '(\d+)' programas no resultado da consulta$/ do |total|
-  should have_text "#{total} item(s) encontrado(s)."
-  divs = 10 if total.to_i > 10
-  should have_xpath "//div[@name='div_resultado_consulta']/div", :count => (divs + 1) # total + 1 por causa da div de paginação
+  itens = (total.to_i > 10) ? 10 : total.to_i
+  itens += 1 if total.to_i > 10 # total + 1 por causa da div de paginação
+  verifica_pagina_resultado_consulta_programas total, itens
 end
 
 Quando /^eu seleciono o programa '(\d+)'$/ do |codigo|
   find(:xpath, "//div/a[contains(text(), '#{codigo}')]").click
+end
+
+Então /^eu devo ver o resultado da consulta de programas na página '(\d+)' com '(\d+)' programas num total de '(\d+)'$/ do |pagina, itens, total|
+  should have_xpath "//div[@class='pagination']/ul/li[@class='disabled']/a[text()='#{pagina}']"
+  itens = (itens.to_i + 1) if total.to_i > 10 # total + 1 por causa da div de paginação
+  verifica_pagina_resultado_consulta_programas total, itens
+end
+
+Quando /^eu clico no link de paginação '([\.\p{L}\s\d-><]+)'$/ do |link|
+  find(:xpath, "//div[@class='pagination']/ul/li/a[text()='#{link}']").click
+end
+
+def verifica_pagina_resultado_consulta_programas(total, itens)
+  should have_text "#{total} item(s) encontrado(s)."
+  should have_xpath "//div[@name='div_resultado_consulta']/div", :count => itens
 end
