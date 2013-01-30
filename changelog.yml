@@ -1,6 +1,7 @@
 ---
 '0.3.1':
 - Correção de bug na extração de dados de programas disponibilizados.
+- Correção do estado do menu da versão do sítio quando este está selecionado.
 '0.3.0':
 - Remove campo id duplicado da entidade Programa.
 - Desabilita análise de navegação nos ambiente de desenvolvimento e de teste.
