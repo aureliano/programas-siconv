@@ -41,7 +41,7 @@
               <li<%= @consulta_ativa ? ' class="active"' : '' %>><a href="<%= @consulta_ativa ? 'javascript:void(0)' : url(:programa, :consulta) %>">Consulta</a></li>
               <li<%= @sobre_ativa ? ' class="active"' : '' %>><a href="<%= @sobre_ativa ? 'javascript:void(0)' : url(:sobre) %>">Sobre</a></li>
               <li class="divider-vertical"></li>
-              <li><%= link_to "Versão #{APP_VERSION}", url(:changelog, :version => 'atual') %></li>
+              <li<%= @changelog_ativa ? ' class="active"' : '' %>><%= link_to "Versão #{APP_VERSION}", (@changelog_ativa) ? 'javascript:void(0)' : url(:changelog, :version => 'atual') %></li>
             </ul>
           </div><!-- /.nav-collapse -->
         </div>
