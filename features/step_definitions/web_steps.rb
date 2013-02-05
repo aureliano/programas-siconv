@@ -4,7 +4,7 @@ Dado /^que eu acesso a página inicial do sistema$/ do
   visit '/'
 end
 
-Dado /^que eu preencho o campo '([\w\s]+)' com '([\p{L}\s]+)'$/ do |campo, valor|
+Dado /^que eu preencho o campo '([\w\s_]+)' com '([\p{L}\s\d]+)'$/ do |campo, valor|
   fill_in campo, :with => valor
 end
 

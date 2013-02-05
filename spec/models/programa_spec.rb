@@ -36,7 +36,7 @@ describe "Entidade Programa" do
   
   it 'conta o número de programas disponibilizados nos últimos 10 dias' do
     populate_programs_collection
-    size = Programa.count_most_up_to_date_programs  10
+    size = Programa.count_most_up_to_date_programs 10
     size.should eq 2
   end
 end

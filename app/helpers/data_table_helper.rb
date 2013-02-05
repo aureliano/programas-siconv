@@ -32,15 +32,15 @@ ProgramasSiconv.helpers do
     t = "<div class=\"pagination\">"
     t << "\n <ul>"
     
-    t << "\n <li#{data_page.has_previous_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_pagination_block? ? pagination_url(data_page.previous_block_page) : 'javascript: void(0)'}\">&lt;&lt;</a></li>"
-    t << "\n <li#{data_page.has_previous_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_page? ? pagination_url(data_page.previous_page) : 'javascript: void(0)'}\">&lt;</a></li>"
+    t << "\n <li#{data_page.has_previous_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_pagination_block? ? inject_params(data_page.previous_block_page) : 'javascript: void(0)'}\">&lt;&lt;</a></li>"
+    t << "\n <li#{data_page.has_previous_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_previous_page? ? inject_params(data_page.previous_page) : 'javascript: void(0)'}\">&lt;</a></li>"
     
     data_page.current_page_block.each do |page|
-      t << "\n <li#{(data_page.page_index == page) ? ' class="disabled"' : ''}><a href=\"#{(data_page.page_index == page) ? 'javascript: void(0)' : pagination_url(page)}\">#{page}</a></li>"
+      t << "\n <li#{(data_page.page_index == page) ? ' class="disabled"' : ''}><a href=\"#{(data_page.page_index == page) ? 'javascript: void(0)' : inject_params(page)}\">#{page}</a></li>"
     end
     
-    t << "\n <li#{data_page.has_next_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_page? ? pagination_url(data_page.next_page) : 'javascript: void(0)'}\">&gt;</a></li>"
-    t << "\n <li#{data_page.has_next_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_pagination_block? ? pagination_url(data_page.next_block_page) : 'javascript: void(0)'}\">&gt;&gt;</a></li>"
+    t << "\n <li#{data_page.has_next_page? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_page? ? inject_params(data_page.next_page) : 'javascript: void(0)'}\">&gt;</a></li>"
+    t << "\n <li#{data_page.has_next_pagination_block? ? '' : ' class="disabled"'}><a href=\"#{data_page.has_next_pagination_block? ? inject_params(data_page.next_block_page) : 'javascript: void(0)'}\">&gt;&gt;</a></li>"
     
     t << "\n </ul>"
     t << "</div>"
@@ -48,8 +48,14 @@ ProgramasSiconv.helpers do
     data_page.pages > 1 ? t : ''
   end
   
-  def pagination_url(page_index)
-    params[:search_params] ? "?search_params=#{params[:search_params].gsub(/\s/, '+')}&page=#{page_index}" : "?page=#{page_index}"
+  def inject_params(page_index=nil)
+    url = '?'
+    url << "search_params=#{params[:search_params].gsub(/\s/, '+')}" if params[:search_params]
+    url << '&' unless url == '?'
+    url << "page=#{page_index}"
+    url << "&dias=#{params[:dias]}" if params[:dias]
+    
+    url
   end
 
 end

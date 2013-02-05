@@ -1,11 +1,17 @@
 <% @page_title = 'Programas Disponibilizados' %>
 
 <% @disponiblizacoes_ativa = true %>
-<% @days = 10 %>
+<% params[:dias] ||= 10 %>
 
 <div class="hero-unit">
   <h3>Disponibilizações</h3>
-  <p>Programas de Convênio disponibilizados nos últimos <%= @days %> dias.</p>
+  <p>Programas de Convênio disponibilizados nos últimos <%= params[:dias].to_i %> dias.</p>
 </div>
+
+<form class="form-inline" method="get">
+  <label class="control-label" for="last_days">Programas disponibilizados nos últimos dias: </label>
+  <input type="text" id="last_days" name="dias" value="<%= params[:dias].to_i %>" class="tiny-text" maxlength="3">
+  <button type="submit" class="btn btn-primary" onclick="return validateDays()">Filtrar</button>
+</form>
 
 <%= programas_data_table :data => @programas, :total => @total, :last_days => @days %>

@@ -6,3 +6,8 @@
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
+
+.tiny-text {
+  width: 40px;
+  height: 15px;
+}
