@@ -1,4 +1,7 @@
 ---
+'0.4.0':
+- Adiciona filtro para exibição de programas disponibilizados. Agora é possível ver os programas disponibilizados nos últimos X dias.
+- Refatora gerador de tags para versões de novas funcionalidades.
 '0.3.1':
 - Correção de bug na extração de dados de programas disponibilizados.
 - Correção do estado do menu da versão do sítio quando este está selecionado.
