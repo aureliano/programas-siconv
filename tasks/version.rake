@@ -47,6 +47,8 @@ namespace :site do
       up = new_tag.split('.')[lindex].to_i + 1
       new_tag[rindex] = up.to_s
       
+      new_tag[-1] = '0' unless bug
+      
       [tag, new_tag]
     end
   
