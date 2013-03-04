@@ -1,0 +1,30 @@
+<% @page_title = 'Estatísticas'
+   @estatisticas_ativa = true %>
+   
+<br/><br/><br/>
+
+<div class="pagination-centered">
+  <h2>Novos Programas</h2>
+  <h3>Indicadores de Programas</h3>
+  <p class="lead">
+    Aqui você encontrará dados estatístico de Programas de Convênio do Governo Federal.
+  </p>
+</div>
+
+<div class="container">
+  <div class="row">    
+    <div class="span6">
+      <a href="<%= url :programa, :estatisticas_programas_por_ano %>" class="btn btn-info">
+        <h3>Período/Ano</h3>
+        <p>Programas disponibilizados desde 2008 agregados por ano.</p>
+      </a>
+    </div>
+      
+    <div class="span6">
+      <a href="<%= url :programa, :estatisticas_programas_por_mes %>" class="btn btn-primary">
+        <h3>Período/Mês</h3>
+        <p>Programas disponibilizados desde 2008 agregados por mês.</p>
+      </a>
+    </div>
+  </div>
+</div>

@@ -22,4 +22,18 @@ ProgramasSiconv.controllers :programa do
     render 'programa/novos_programas'
   end
   
+  get :estatisticas, :map => '/estatisticas' do
+    render 'programa/estatistica/index'
+  end
+  
+  get :estatisticas_programas_por_ano, :map => '/estatisticas/periodo/ano' do
+    @chart_data = programas_por_ano_chart_data
+    render 'programa/estatistica/programas_por_ano'
+  end
+  
+  get :estatisticas_programas_por_mes, :map => '/estatisticas/periodo/mes' do
+    @chart_data = programas_por_mes_chart_data params[:ano].to_i
+    render 'programa/estatistica/programas_por_mes'
+  end
+  
 end

@@ -2,6 +2,7 @@
   <head>
     <title>Novos Programas: <%= @page_title %></title>
     <meta name="Description" content="Consulta de programas de convênio do governo federal (União)."/>
+    <%= @head_code %>
     <%= stylesheet_link_tag 'bootstrap.min.css' %>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag 'application' %>
@@ -39,6 +40,7 @@
             <ul class="nav pull-right">
               <li<%= @disponiblizacoes_ativa ? ' class="active"' : '' %>><a href="<%= @disponiblizacoes_ativa ? 'javascript:void(0)' : url(:programa, :disponibilizacoes) %>">Disponibilizações</a></li>
               <li<%= @consulta_ativa ? ' class="active"' : '' %>><a href="<%= @consulta_ativa ? 'javascript:void(0)' : url(:programa, :consulta) %>">Consulta</a></li>
+              <li<%= @estatisticas_ativa ? ' class="active"' : '' %>><a href="<%= url(:programa, :estatisticas) %>">Estatísticas</a></li>
               <li<%= @sobre_ativa ? ' class="active"' : '' %>><a href="<%= @sobre_ativa ? 'javascript:void(0)' : url(:sobre) %>">Sobre</a></li>
               <li class="divider-vertical"></li>
               <li<%= @changelog_ativa ? ' class="active"' : '' %>><%= link_to "Versão #{APP_VERSION}", (@changelog_ativa) ? 'javascript:void(0)' : url(:changelog, :version => 'atual') %></li>

@@ -1,0 +1,25 @@
+<% @page_title = 'Estatísticas'
+   @estatisticas_ativa = true %>
+
+<% @head_code = draw_chart :width => 800, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart' %>
+
+<div class="hero-unit">
+  <h3>Programas por mês</h3>
+  <p>Programas de Convênio disponibilizados pelo Governo Federal agregados por mês.</p>
+</div>
+
+<form method="get" action="<%= url :programa, :estatisticas_programas_por_mes, :ano => params[:ano] %>" accept-charset="UTF-8">
+  <div id="div_ano">
+    <label for="ano">Ano: </label>
+    <%= select_tag :ano, :id => 'anos', :options => (2008..Time.now.year).each {|ano| [ano, ano] }, :selected => params[:ano], :onchange => 'submit()' %>
+  </div>
+</form>
+<% if @chart_data.size <= 1 %>
+  <script>$(document).ready(function() {
+      alert('Não há Programas de Convênio disponibilizados no ano de "<%= params[:ano] %>.');
+    });</script>
+<% else %>
+  <div id="chart_div">
+    Não foi possível carregar o gráfico :(
+  </div>
+<% end %>

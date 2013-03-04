@@ -1,0 +1,13 @@
+<% @page_title = 'Estatísticas'
+   @estatisticas_ativa = true %>
+
+<% @head_code = draw_chart :width => 600, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart' %>
+
+<div class="hero-unit">
+  <h3>Programas por ano</h3>
+  <p>Programas de Convênio disponibilizados pelo Governo Federal agregados por ano.</p>
+</div>
+
+<div id="chart_div">
+  Não foi possível carregar o gráfico :(
+</div>
