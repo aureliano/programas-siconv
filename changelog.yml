@@ -1,4 +1,6 @@
 ---
+'0.5.1':
+- Altera exibição dos meses no gráfico de programas por meses. Antes era exibido o número que representa o mês. E agora é exibida a inicial do mês.
 '0.5.0':
 - Cria página com dados estatísticos
 - Cria página com gráfico exibindo dados agregados de programas disponibilizados por ano.

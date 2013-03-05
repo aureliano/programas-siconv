@@ -22,7 +22,7 @@ ProgramasSiconv.helpers do
     (1..12).each do |mes|
       soma = 0
       ProgramaPeriodoStat.where(:ano => ano, :mes => mes).each {|doc| soma += doc.total }
-      totais[mes] = soma
+      totais[nome_mes mes] = soma
     end
     
     data = [['Mês', 'Programas']]
@@ -73,5 +73,22 @@ ProgramasSiconv.helpers do
   def skip_value(limit=nil)
     limit ||= DataPage.default_page_size
     ((pagination_page_index - 1) * limit)
+  end
+  
+  def nome_mes(mes)
+    case mes
+      when 1 then 'Jan'
+      when 2 then 'Fev'
+      when 3 then 'Mar'
+      when 4 then 'Abr'
+      when 5 then 'Mai'
+      when 6 then 'Jun'
+      when 7 then 'Jul'
+      when 8 then 'Ago'
+      when 9 then 'Set'
+      when 10 then 'Out'
+      when 11 then 'Nov'
+      when 12 then 'Dez'
+    end
   end
 end
