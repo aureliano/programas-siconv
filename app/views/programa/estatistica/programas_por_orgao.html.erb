@@ -1,0 +1,21 @@
+<% @page_title = 'Estatísticas'
+   @estatisticas_ativa = true %>
+
+<% @head_code = draw_chart :width => 800, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart' %>
+
+<div class="hero-unit">
+  <h3>Programas por Órgão Mandatário</h3>
+  <p>Programas de Convênio disponibilizados pelo Governo Federal agregados por Órgão Mandatário.</p>
+</div>
+
+<form method="get" action="<%= url :programa, :estatisticas_programas_por_orgao, :concedente => params[:concedente] %>" accept-charset="UTF-8">
+  <div id="div_ano">
+    <label for="concedente">Órgão Mandatário: </label>
+    <%= select_tag :concedente, :id => 'concedentes', :options => ['Selecione...'].concat(ProgramaOrgaoStat.all.distinct(:concedente)), :selected => params[:concedente], :onchange => 'submit()' %>
+  </div>
+</form>
+<% if @chart_data.size > 1 %>
+  <div id="chart_div">
+    Não foi possível carregar o gráfico :(
+  </div>
+<% end %>

@@ -29,6 +29,20 @@ ProgramasSiconv.helpers do
     totais.each {|k, v| data << [k.to_s, v] }
     data
   end
+  
+  def programas_por_concedente_chart_data(concedente)
+    docs = ProgramaOrgaoStat.where(:concedente => concedente)
+    return [] if docs.empty?
+    totais = {}
+    (2008..Time.now.year).each do |ano|
+      doc = docs.select {|d| d.ano == ano }.first
+      totais[ano] = (doc) ? doc.total : 0
+    end
+    
+    data = [['Ano', 'Programas']]
+    totais.each {|k, v| data << [k.to_s, v] }
+    data
+  end
 
   def get_tags_without_stopwords(text)
     return [] if text.nil?

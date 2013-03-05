@@ -71,4 +71,25 @@ describe "ProgramaController" do
     last_response.body.should include '<form method="get" id="form_consulta" class="form-search" action="/consulta/programas" accept-charset="UTF-8">  <div class="input-append">'
   end
   
+  it 'carrega página inicial de estatística' do
+    get '/estatisticas'
+    
+    last_response.body.should include '<title>Novos Programas: Estatísticas</title>'
+    last_response.body.should include '<h3>Indicadores de Programas</h3>'
+  end
+  
+  it 'carrega página de estatística período/ano' do
+    get '/estatisticas/periodo/ano'
+    
+    last_response.body.should include '<title>Novos Programas: Estatísticas</title>'
+    last_response.body.should include '<h3>Programas por ano</h3>'
+  end
+  
+  it 'carrega página de estatística período/mes' do
+    get '/estatisticas/periodo/mes'
+    
+    last_response.body.should include '<title>Novos Programas: Estatísticas</title>'
+    last_response.body.should include '<h3>Programas por mês</h3>'
+  end
+  
 end

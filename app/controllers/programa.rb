@@ -36,4 +36,9 @@ ProgramasSiconv.controllers :programa do
     render 'programa/estatistica/programas_por_mes'
   end
   
+  get :estatisticas_programas_por_orgao, :map => '/estatisticas/orgao' do
+    @chart_data = programas_por_concedente_chart_data params[:concedente]
+    render 'programa/estatistica/programas_por_orgao'
+  end
+  
 end

@@ -8,7 +8,7 @@ Dado /^que eu preencho o campo '([\w\s_]+)' com '([\p{L}\s\d]+)'$/ do |campo, va
   fill_in campo, :with => valor
 end
 
-Dado /^que eu seleciono o campo '([\w\s]+)' com '([\p{L}\s]+)'$/ do |campo, valor|
+Dado /^que eu seleciono o campo '([\w\s]+)' com '([\p{L}\s\d]+)'$/ do |campo, valor|
   select valor, :from => campo
 end
 
