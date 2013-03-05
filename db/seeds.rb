@@ -153,6 +153,12 @@ shell.say 'Criando dados agregados de Programas por período'
 load('db/programas_periodo_stat.rb')
 
 shell.say ''
+
+shell.say 'Criando dados agregados de Programas por Concedente'
+load('db/programas_orgao_stat.rb')
+
+shell.say ''
+
 shell.say 'Povoamento da base de dados concluído'
 
 if PADRINO_ENV == 'production'
