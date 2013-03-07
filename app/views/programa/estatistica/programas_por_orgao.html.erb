@@ -4,8 +4,8 @@
 <% @head_code = draw_chart :width => 800, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart' %>
 
 <div class="hero-unit">
-  <h3>Programas por Órgão Mandatário</h3>
-  <p>Programas de Convênio disponibilizados pelo Governo Federal agregados por Órgão Mandatário.</p>
+  <h3>Programas por Órgão Superior</h3>
+  <p>Programas de Convênio disponibilizados pelo Governo Federal agregados por Órgão Superior.</p>
 </div>
 
 <form method="get" action="<%= url :programa, :estatisticas_programas_por_orgao, :concedente => params[:concedente] %>" accept-charset="UTF-8">

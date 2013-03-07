@@ -61,7 +61,7 @@ def get_tags_without_stopwords(text)
   txt = replace_special_characters text
   return txt if txt.nil?
   
-  tags = txt.downcase.split(/[\s\/]/)
+  tags = txt.downcase.split(/[\s\/,-\.]/)
   tags.delete_if {|t| STOPWORDS.include?(t) || t.empty? || t.size == 1 }
 end
 

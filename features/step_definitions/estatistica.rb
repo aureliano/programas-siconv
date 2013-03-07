@@ -16,7 +16,7 @@ Dado /^que eu acesso a página de dados estatísticos de programas por período\
   find(:xpath, "//div/a[@class='btn btn-primary']").click
 end
 
-Dado /^que eu acesso a página de dados estatísticos de programas por órgão mandatário$/ do
+Dado /^que eu acesso a página de dados estatísticos de programas por órgão superior$/ do
   find(:xpath, "//div/a[@class='btn btn-success']").click
 end
 
@@ -24,7 +24,7 @@ Então /^eu devo ver a página de dados estatísticos$/ do
   should have_text "Aqui você encontrará dados estatístico de Programas de Convênio do Governo Federal."
   "Período/Ano".should eq find(:xpath, "//div/a[@class='btn btn-info']/h3").text
   "Período/Mês".should eq find(:xpath, "//div/a[@class='btn btn-primary']/h3").text
-  "Órgão Mandatário".should eq find(:xpath, "//div/a[@class='btn btn-success']/h3").text
+  "Órgão Superior".should eq find(:xpath, "//div/a[@class='btn btn-success']/h3").text
 end
 
 Então /^eu devo ver a página com os dados estatístico de programas por período\/ano$/ do
@@ -37,8 +37,8 @@ Então /^eu devo ver a página com os dados estatístico de programas por perío
   should have_xpath "//div[@id='chart_div']"
 end
 
-Então /^eu devo ver a página com os dados estatístico de programas por órgão mandatário$/ do
-  should have_text "Programas de Convênio disponibilizados pelo Governo Federal agregados por Órgão Mandatário."  
+Então /^eu devo ver a página com os dados estatístico de programas por órgão superior$/ do
+  should have_text "Programas de Convênio disponibilizados pelo Governo Federal agregados por Órgão Superior."  
 end
 
 Então /^eu devo ver o gráfico de programas$/ do
