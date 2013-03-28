@@ -1,4 +1,6 @@
 ---
+'0.5.4':
+- Ordena resultado da consulta de programas por ordem decrescente da data de disponibilização.
 '0.5.3':
 - Melhora recuperação dos dados Órgãos Administrativos.
 - Altera a exibição de gráfico para programas disponibilizados por Órgão Administrativo. Usa como base o Órgão Superior e não mais o Órgão Mandatário.
