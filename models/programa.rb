@@ -44,7 +44,7 @@ class Programa
     options[:limit] ||= 0
     programas = []
     
-    where(:tags => {'$in' => options[:tags]}).asc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
+    where(:tags => {'$in' => options[:tags]}).desc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
     programas
   end
   
