@@ -2,6 +2,7 @@
 
 class ProgramasSiconv < Padrino::Application
   register Padrino::Rendering
+  register Padrino::Mailer
   register Padrino::Helpers
 
   get :index do
@@ -43,4 +44,14 @@ class ProgramasSiconv < Padrino::Application
     html << '  <br/><br/><a href="/">Ir para página inicial</a>'
     html << "\n</body>\n</html>"
   end
+  
+  # Configure smtp mailer
+  set :delivery_method, :smtp => { 
+    :address              => ENV['EMAIL_SMTP_ADDRESS'],
+    :port                 => 587,
+    :user_name            => ENV['EMAIL_USER_NAME'],
+    :password             => ENV['EMAIL_PASSWORD'],
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
 end

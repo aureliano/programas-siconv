@@ -16,32 +16,16 @@ require 'bundler/setup'
 Bundler.require(:default, PADRINO_ENV)
 
 ##
-# Enable devel logging
-#
-# Padrino::Logger::Config[:development] = { :log_level => :devel, :stream => :stdout }
-# Padrino::Logger.log_static = true
-#
-
-def load_environment_vars
-  return unless File.exist? '.env'
-  File.open('.env', 'r') {|f| f.read }.each_line do |line|
-    var = line.split '='
-    ENV[var[0].strip] ||= var[1].strip
-  end
-end
-
-
-##
 # Add your before load hooks here
 #
 Padrino.before_load do
-  load_environment_vars
 end
 
 ##
 # Add your after load hooks here
 #
 Padrino.after_load do
+  Padrino.require_dependencies("#{Padrino.root}/app/mailers/*.rb")
 end
 
 Padrino.load!
