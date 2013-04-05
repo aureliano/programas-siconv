@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-start_time = Time.now
+start_time = $data_preparation_start.nil? ? Time.now : $data_preparation_start
 BUCKET_SIZE = 100
 
 @characters = {
@@ -81,8 +81,8 @@ if diff_days > 1
   Process.exit 0
 end
 
-shell.say "Carregando dados de 'concedentes' do arquivo 'concedentes_db.csv'"
-data = load_data_from_csv 'db/concedentes_db.csv'
+shell.say "Carregando dados de 'concedentes' do arquivo 'tmp/concedentes_db.csv'"
+data = load_data_from_csv 'tmp/concedentes_db.csv'
 
 concedentes = {}
 data.each {|row| concedentes[row['id']] = row['nome'] }
@@ -92,8 +92,8 @@ shell.say "Removendo (se existir) registros da coleção 'programas'"
 Programa.delete_all
 shell.say ''
 
-shell.say "Carregando dados de 'programas' do arquivo 'programas_db.csv'"
-data = load_data_from_csv 'db/programas_db.csv'
+shell.say "Carregando dados de 'programas' do arquivo 'tmp/programas_db.csv'"
+data = load_data_from_csv 'tmp/programas_db.csv'
 docs = 0
 programas = []
 
@@ -160,6 +160,10 @@ load('db/programas_orgao_stat.rb')
 shell.say ''
 
 shell.say 'Povoamento da base de dados concluído'
+
+metadata = YAML.load_file 'metadata.yml'
+metadata['LAST_EXTRACTION_DATE'] = Time.now.strftime('%d/%m/%Y')
+File.open('metadata.yml', 'w') {|file| file.write metadata.to_yaml }
 
 if PADRINO_ENV == 'production'
   shell.say ''

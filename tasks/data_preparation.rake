@@ -5,10 +5,30 @@
 # autor: Aureliano
 # data: 07/11/2012
 
+DAY_SEED = 5
+
 namespace :data do
 
-  desc 'Gera arquivos de dados do sistema para posterior preenchimento da base de dados'
   task :prepare => [:extraction, :merge] do
-    puts 'Preparando arquivos de dados do sistema'
+    
+  end
+  
+  desc 'Carrega dados extraídos da API de dados abertos e salva no banco de dados para tratamento posterior (rake seed)'
+  task :fill do
+    $data_preparation_start = Time.now
+    if (Time.now.day % DAY_SEED) > 0
+      puts "Cancelando povoamento de dados. O povoamento de dados só ocorre nos dias do mês que são múltiplos de #{DAY_SEED}."
+      Process.exit 0
+    end
+    
+    ['data:extraction', 'data:merge', 'seed'].each do |task_name|
+      begin
+        Rake::Task[task_name].invoke
+      rescue Exception => ex
+        ProgramasSiconv.deliver(:application, :admin, :subject => "novosprogramas data:fill', :body => 'Povoamento da base de dados falhou. Exceção: #{ex}")
+        puts "Encerrando processo devido a um erro.\nExceção: #{ex}"
+        Process.exit -1
+      end
+    end
   end
 end

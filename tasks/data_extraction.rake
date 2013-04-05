@@ -5,21 +5,23 @@
 # autor: Aureliano
 # data: 07/11/2012
 
+require 'rest_client'
+
 namespace :data do
+
   resources = {
     :concedentes => 'http://api.convenios.gov.br/siconv/v1/consulta/orgaos.<formato>',
     :programas   => 'http://api.convenios.gov.br/siconv/v1/consulta/programas.<formato>?situacao=DISPONIBILIZADO'
   }
-
+  
   desc 'Web crawler para extração dos dados da api de dados do Siconv'
   task :extraction do
-    `mkdir tmp` unless File.exist? 'tmp'
     resources.each do |k, v|
       puts "Carregando arquivos de dados de '#{k}'"
       download_data_files(v.sub(/<formato>/ , 'csv'), 'csv')
     end
   end
-
+  
   def download_data_files(base_url, data_type)
     page_size = 500
     
@@ -36,16 +38,36 @@ namespace :data do
         url << "offset=#{offset}"
       end
       
-      while true do
-        `wget -O #{object_path}_db_#{offset}.#{data_type} "#{url}"`
-        break if $?.to_i == 0
-        sleep 1
+      res = download_data_file(url, object_path, offset, data_type)
+      if res != 0
+        raise "Encerrando download de arquivos porque o serviço parece estar indisponível no momento."
       end
       
-      break if `du #{object_path}_db_#{offset}.#{data_type}`.split("\t")[0].to_i == 4
+      break if `du #{object_path}_db_#{offset}_tmp.#{data_type}`.split("\t")[0].to_i == 4
       page_index += 1
     end
     
+  end
+  
+  def download_data_file(url, object_path, offset, data_type)
+    count = 0
+    
+    while true do
+      return -1 if count > 5
+      
+      begin
+        puts "Baixando recurso #{url}"
+        response = RestClient.get url
+        File.open("#{object_path}_db_#{offset}_tmp.#{data_type}", 'w') {|f| f.write response}
+        break
+      rescue
+        sleep 3
+        count += 1
+        puts "Nova tentativa..."
+      end
+    end
+    
+    0
   end
   
 end

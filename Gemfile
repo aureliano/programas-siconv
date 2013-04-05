@@ -21,8 +21,10 @@ gem 'capybara'
 gem 'cucumber'
 gem 'rack-test', :require => "rack/test"
 
+gem "rest-client", "~> 1.6.7"
+
 # Padrino Stable Gem
-gem 'padrino', '0.10.5'
+gem 'padrino', '0.10.7'
 gem 'padrino-rpm'
 gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 

@@ -11,9 +11,9 @@ require 'yaml'
 
 namespace :data do
   resources = {
-    :concedentes => { :file => 'tmp/orgaos_db_<offset>.csv', :columns => ['id', 'nome', 'orgao_superior'] },
+    :concedentes => { :file => 'tmp/orgaos_db_<offset>_tmp.csv', :columns => ['id', 'nome', 'orgao_superior'] },
     :programas   => {
-      :file => 'tmp/programas_db_<offset>.csv',
+      :file => 'tmp/programas_db_<offset>_tmp.csv',
       :columns => [
         'cod_programa_siconv', 'data_disponibilizacao', 'data_fim_beneficiario_especifico',
         'data_fim_emenda_parlamentar', 'data_fim_recebimento_propostas', 'data_inicio_beneficiario_especifico',
@@ -33,17 +33,16 @@ namespace :data do
       write_file k.to_s, v[:columns], data
     end
     
-    puts `rm tmp/*`
-    update_extraction_date
+    `rm tmp/*_tmp.csv`
   end
 
   def write_file(entity, columns, data)
-    file = 'db/' + entity + '_db.csv'
+    file = 'tmp/' + entity + '_db.csv'
     puts "Escrevendo arquivo de dados #{file}"
 
     text = columns.join(',') + "\n"
     data.each {|line| text << line.join(',') + "\n" }
-    
+
     File.open(file, 'w') {|f| f.write text }
   end
 
@@ -80,17 +79,12 @@ namespace :data do
     
     while true do
       file = seed.sub /<offset>/, (page_index * frequency).to_s
+      puts file
       break unless File.exist? file
       files << file
       page_index += 1
     end
 
     files
-  end
-  
-  def update_extraction_date
-    metadata = YAML.load_file 'metadata.yml'
-    metadata['LAST_EXTRACTION_DATE'] = Time.now.strftime('%d/%m/%Y')
-    File.open('metadata.yml', 'w') {|file| file.write metadata.to_yaml }
   end
 end
