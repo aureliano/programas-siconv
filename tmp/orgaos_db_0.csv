@@ -1,0 +1,501 @@
+id,uri,cod_siasg,id,nome,orgao_superior
+-9,http://api.convenios.gov.br/siconv/id/orgao/-9,-9,-9,NÃO SE APLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/-9>
+-8,http://api.convenios.gov.br/siconv/id/orgao/-8,-8,-8,NÃO INFORMADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/-8>
+-7,http://api.convenios.gov.br/siconv/id/orgao/-7,-7,-7,INVÁLIDO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/-7>
+1000,http://api.convenios.gov.br/siconv/id/orgao/1000,1000,1000,CAMARA DOS DEPUTADOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/1000>
+1901,http://api.convenios.gov.br/siconv/id/orgao/1901,1901,1901,FUNDO ROTATIVO DA CAMARA DOS DEPUTADOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/1000>
+2000,http://api.convenios.gov.br/siconv/id/orgao/2000,2000,2000,SENADO FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/2000>
+2001,http://api.convenios.gov.br/siconv/id/orgao/2001,2001,2001,FUNDO ESPECIAL DO SENADO FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/2000>
+2002,http://api.convenios.gov.br/siconv/id/orgao/2002,2002,2002,SENADO FEDERAL/FUNSEEP,<objeto: http://api.convenios.gov.br/siconv/id/orgao/2000>
+2003,http://api.convenios.gov.br/siconv/id/orgao/2003,2003,2003,FUNDO DA SECRETARIA ESPECIAL DE INFORMATICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/2000>
+3000,http://api.convenios.gov.br/siconv/id/orgao/3000,3000,3000,TRIBUNAL DE CONTAS DA UNIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/3000>
+10000,http://api.convenios.gov.br/siconv/id/orgao/10000,10000,10000,SUPREMO TRIBUNAL FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/10000>
+11000,http://api.convenios.gov.br/siconv/id/orgao/11000,11000,11000,SUPERIOR TRIBUNAL DE JUSTICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/11000>
+12000,http://api.convenios.gov.br/siconv/id/orgao/12000,12000,12000,JUSTICA FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12800,http://api.convenios.gov.br/siconv/id/orgao/12800,12800,12800,JUSTICA FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12801,http://api.convenios.gov.br/siconv/id/orgao/12801,12801,12801,TRIBUNAL REGIONAL FEDERAL - 1A REGIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12802,http://api.convenios.gov.br/siconv/id/orgao/12802,12802,12802,TRIBUNAL REGIONAL FEDERAL - 2A REGIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12803,http://api.convenios.gov.br/siconv/id/orgao/12803,12803,12803,TRIBUNAL REGIONAL FEDERAL - 3A REGIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12804,http://api.convenios.gov.br/siconv/id/orgao/12804,12804,12804,TRIBUNAL REGIONAL FEDERAL - 4A REGIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+12805,http://api.convenios.gov.br/siconv/id/orgao/12805,12805,12805,TRIBUNAL REGIONAL FEDERAL - 5A REGIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/12000>
+13000,http://api.convenios.gov.br/siconv/id/orgao/13000,13000,13000,JUSTICA MILITAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/13000>
+14000,http://api.convenios.gov.br/siconv/id/orgao/14000,14000,14000,JUSTICA ELEITORAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+14001,http://api.convenios.gov.br/siconv/id/orgao/14001,14001,14001,FUNDO ESPECIAL DE ASSIST.FINANC.PART.POLITICO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+14105,http://api.convenios.gov.br/siconv/id/orgao/14105,14105,14105,TRIBUNAL REGIONAL ELEITORAL DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+14109,http://api.convenios.gov.br/siconv/id/orgao/14109,14109,14109,TRIBUNAL REGIONAL ELEITORAL DE GOIAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+14113,http://api.convenios.gov.br/siconv/id/orgao/14113,14113,14113,TRIBUNAL REGIONAL ELEITORAL DE MINAS GERAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+14126,http://api.convenios.gov.br/siconv/id/orgao/14126,14126,14126,TRIBUNAL REGIONAL ELEITORAL DE TOCANTINS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/14000>
+15000,http://api.convenios.gov.br/siconv/id/orgao/15000,15000,15000,JUSTICA DO TRABALHO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/15000>
+16000,http://api.convenios.gov.br/siconv/id/orgao/16000,16000,16000,JUSTICA DO DISTRITO FEDERAL E DOS TERRITORIOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/16000>
+17000,http://api.convenios.gov.br/siconv/id/orgao/17000,17000,17000,CONSELHO NACIONAL DE JUSTIÇA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/17000>
+20000,http://api.convenios.gov.br/siconv/id/orgao/20000,20000,20000,PRESIDENCIA DA REPÚBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20101,http://api.convenios.gov.br/siconv/id/orgao/20101,20101,20101,PRESIDÊNCIA DA REPÚBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+20102,http://api.convenios.gov.br/siconv/id/orgao/20102,20102,20102,GABINETE DA VICE-PRESIDENCIA DA REPUBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+20103,http://api.convenios.gov.br/siconv/id/orgao/20103,20103,20103,MINISTERIO ADM.FED.REFORMA ESTADO-EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20103>
+20104,http://api.convenios.gov.br/siconv/id/orgao/20104,20104,20104,SECRETARIA DE ASSUNTOS ESTRATEGICOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+20105,http://api.convenios.gov.br/siconv/id/orgao/20105,20105,20105,GABINETE DA VICE-PRESIDENCIA DA REPUBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+20113,http://api.convenios.gov.br/siconv/id/orgao/20113,20113,20113,"MINISTERIO DO PLANEJAMENTO,ORCAMENTO E GESTAO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+20114,http://api.convenios.gov.br/siconv/id/orgao/20114,20114,20114,ADVOCACIA-GERAL DA UNIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20115,http://api.convenios.gov.br/siconv/id/orgao/20115,20115,20115,SECRETARIA ESPECIAL DE POLITICAS REGIONAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+20116,http://api.convenios.gov.br/siconv/id/orgao/20116,20116,20116,FUNDO DE IMPRENSA NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+20117,http://api.convenios.gov.br/siconv/id/orgao/20117,20117,20117,Fundo Nacional Antidrogas,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20121,http://api.convenios.gov.br/siconv/id/orgao/20121,20121,20121,SECRETARIA DE DIREITOS HUMANOS DA PRESIDÊNCIA DA REPÚBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20122,http://api.convenios.gov.br/siconv/id/orgao/20122,20122,20122,SECRETARIA ESPECIAL DE POLÍTICAS PARA AS MULHERES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20125,http://api.convenios.gov.br/siconv/id/orgao/20125,20125,20125,CONTROLADORIA-GERAL DA UNIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20125>
+20126,http://api.convenios.gov.br/siconv/id/orgao/20126,20126,20126,SECRETARIA DE POLÍTICAS DE PROMOÇÃO DA IGUALDADE RACIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20128,http://api.convenios.gov.br/siconv/id/orgao/20128,20128,20128,SECRETARIA ESPECIAL DE PORTOS/PR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+20202,http://api.convenios.gov.br/siconv/id/orgao/20202,20202,20202,FUNDACAO ESCOLA NACIONAL DE ADM. PUBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+20203,http://api.convenios.gov.br/siconv/id/orgao/20203,20203,20203,AGENCIA NACIONAL DO CINEMA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20214,http://api.convenios.gov.br/siconv/id/orgao/20214,20214,20214,AGÊNCIA NACIONAL DE AVIAÇÃO CIVIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20301,http://api.convenios.gov.br/siconv/id/orgao/20301,20301,20301,COMISSAO NACIONAL DE ENERGIA NUCLEAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20302,http://api.convenios.gov.br/siconv/id/orgao/20302,20302,20302,NUCLEBRAS EQUIPAMENTOS PESADOS S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20303,http://api.convenios.gov.br/siconv/id/orgao/20303,20303,20303,INDUSTRIAS NUCLEARES DO BRASIL S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20402,http://api.convenios.gov.br/siconv/id/orgao/20402,20402,20402,AGENCIA ESPACIAL BRASILEIRA - AEB,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20403,http://api.convenios.gov.br/siconv/id/orgao/20403,20403,20403,FUNDACAO CASA DE RUI BARBOSA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20404,http://api.convenios.gov.br/siconv/id/orgao/20404,20404,20404,FUNDACAO BIBLIOTECA NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20407,http://api.convenios.gov.br/siconv/id/orgao/20407,20407,20407,FUNDACAO DO CINEMA BRASILEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20408,http://api.convenios.gov.br/siconv/id/orgao/20408,20408,20408,FUNDACAO CULTURAL PALMARES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20410,http://api.convenios.gov.br/siconv/id/orgao/20410,20410,20410,NÃO INFORMADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20410>
+20411,http://api.convenios.gov.br/siconv/id/orgao/20411,20411,20411,INSTITUTO DO PATRIMONIO HIST. E ART. NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20412,http://api.convenios.gov.br/siconv/id/orgao/20412,20412,20412,FUNDACAO NACIONAL DE ARTES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+20415,http://api.convenios.gov.br/siconv/id/orgao/20415,20415,20415,EMPRESA BRASIL DE COMUNICACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20501,http://api.convenios.gov.br/siconv/id/orgao/20501,20501,20501,CONSELHO NACIONAL DE DES.CIENT.E TECNOLOGICO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20502,http://api.convenios.gov.br/siconv/id/orgao/20502,20502,20502,FINANCIADORA DE ESTUDOS E PROJETOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20503,http://api.convenios.gov.br/siconv/id/orgao/20503,20503,20503,FUNDACAO CENTRO TECNOLOGICO PARA INFORMATICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+20601,http://api.convenios.gov.br/siconv/id/orgao/20601,20601,20601,SUPERINTENDENCIA DO DESENVOLV. DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+20602,http://api.convenios.gov.br/siconv/id/orgao/20602,20602,20602,SUPERINTENDENCIA DO DESENVOLV. DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+20603,http://api.convenios.gov.br/siconv/id/orgao/20603,20603,20603,SUPERINTENDENCIA DA ZONA FRANCA DE MANAUS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+20604,http://api.convenios.gov.br/siconv/id/orgao/20604,20604,20604,INSTITUTO BRASILEIRO DE TURISMO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/54000>
+20605,http://api.convenios.gov.br/siconv/id/orgao/20605,20605,20605,COMPANHIA DE DESENVOLVIMENTO DE BARCARENA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+20701,http://api.convenios.gov.br/siconv/id/orgao/20701,20701,20701,INST.BRAS.DO MEIO AMB.E DOS REC.NAT.RENOVAV.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+20801,http://api.convenios.gov.br/siconv/id/orgao/20801,20801,20801,SECRETARIA DE PATRIMONIO DA UNIAO/MP,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+20802,http://api.convenios.gov.br/siconv/id/orgao/20802,20802,20802,"SUBSECRETARIA DE PLANEJ.,ORCAMENTO E ADM./MP",<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+20924,http://api.convenios.gov.br/siconv/id/orgao/20924,20924,20924,FUNDO NACIONAL DE DESENVOLVIMENTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+20928,http://api.convenios.gov.br/siconv/id/orgao/20928,20928,20928,Fundo Nacional para a Crinaca e o Adolescente,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+20930,http://api.convenios.gov.br/siconv/id/orgao/20930,20930,20930,SECRETARIA DE AVIAÇÃO CIVIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+22000,http://api.convenios.gov.br/siconv/id/orgao/22000,22000,22000,"MINIST. DA AGRICUL.,PECUARIA E ABASTECIMENTO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22201,http://api.convenios.gov.br/siconv/id/orgao/22201,22201,22201,INSTIT. NAC. DE COLONIZACAO E REFORMA AGRARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22201>
+22202,http://api.convenios.gov.br/siconv/id/orgao/22202,22202,22202,EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22203,http://api.convenios.gov.br/siconv/id/orgao/22203,22203,22203,COMPANHIA DE DESENV. DO VALE DO SAO FRANCISCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+22204,http://api.convenios.gov.br/siconv/id/orgao/22204,22204,22204,DEPARTAMENTO NAC.DE OBRAS CONTRA AS SECAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+22207,http://api.convenios.gov.br/siconv/id/orgao/22207,22207,22207,COMPANHIA DE COLONIZACAO DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22201>
+22211,http://api.convenios.gov.br/siconv/id/orgao/22211,22211,22211,COMPANHIA NACIONAL DE ABASTECIMENTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22500,http://api.convenios.gov.br/siconv/id/orgao/22500,22500,22500,CIA.DE ENTREPOSTOS E ARMAZENS GER.DE S.PAULO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22801,http://api.convenios.gov.br/siconv/id/orgao/22801,22801,22801,COMIS.EXEC.DO PLANO DA LAVOURA CACAUEIRA/MAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22802,http://api.convenios.gov.br/siconv/id/orgao/22802,22802,22802,INSTITUTO NACIONAL DE METEOROLOGIA/MAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22803,http://api.convenios.gov.br/siconv/id/orgao/22803,22803,22803,SECRETARIA NAC. DE DEFESA AGROPECUARIA/MAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22804,http://api.convenios.gov.br/siconv/id/orgao/22804,22804,22804,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MAPA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22805,http://api.convenios.gov.br/siconv/id/orgao/22805,22805,22805,FUNDO GERAL DO CACAU/MAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22806,http://api.convenios.gov.br/siconv/id/orgao/22806,22806,22806,SECRET.DE DESENV.AGROPEC.E COOPERATIVISMO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+22905,http://api.convenios.gov.br/siconv/id/orgao/22905,22905,22905,FUNDO DE DEFESA DA ECONOMIA CAFEEIRA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+23000,http://api.convenios.gov.br/siconv/id/orgao/23000,23000,23000,MINISTERIO DO BEM-ESTAR SOCIAL-EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/23000>
+23201,http://api.convenios.gov.br/siconv/id/orgao/23201,23201,23201,FUND.CENTRO BRAS.INF.ADOLESCENCIA-EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+23202,http://api.convenios.gov.br/siconv/id/orgao/23202,23202,23202,FUNDACAO LEGIAO BRAS.ASSISTENCIA-EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+24000,http://api.convenios.gov.br/siconv/id/orgao/24000,24000,24000,"MINISTERIO DA CIENCIA, TECNOLOGIA E INOVACAO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+24208,http://api.convenios.gov.br/siconv/id/orgao/24208,24208,24208,INSTITUTO NAC.DE TECNOLOGIA DA INFORMACAO-ITI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+24209,http://api.convenios.gov.br/siconv/id/orgao/24209,24209,24209,CENTRO NAC DE TECN ELETRONICA AVANCADA S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24209>
+24801,http://api.convenios.gov.br/siconv/id/orgao/24801,24801,24801,INSTITUTO NACIONAL DE PESQUISAS ESPACIAIS/MCT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+24802,http://api.convenios.gov.br/siconv/id/orgao/24802,24802,24802,"SUBSECRETARIA DE PLANEJ.,ORCAMENTO E ADM./MCT",<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+24803,http://api.convenios.gov.br/siconv/id/orgao/24803,24803,24803,FINANCIADORA DE ESTUDOS E PROJETOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+24901,http://api.convenios.gov.br/siconv/id/orgao/24901,24901,24901,FUNDO NAC.DE DESENV. CIENTIFICO E TECNOLOGICO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/24000>
+25000,http://api.convenios.gov.br/siconv/id/orgao/25000,25000,25000,MINISTERIO DA FAZENDA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25001,http://api.convenios.gov.br/siconv/id/orgao/25001,25001,25001,FUNDO ESP.DES. APERF.DAS ATIV.DE FISCALIZACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25002,http://api.convenios.gov.br/siconv/id/orgao/25002,25002,25002,FUNDO ESP. DE TREINAMENTO E DESENVOLVIMENTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25201,http://api.convenios.gov.br/siconv/id/orgao/25201,25201,25201,BANCO CENTRAL DO BRASIL-ORC.FISCAL/SEG.SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25203,http://api.convenios.gov.br/siconv/id/orgao/25203,25203,25203,COMISSAO DE VALORES MOBILIARIOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25205,http://api.convenios.gov.br/siconv/id/orgao/25205,25205,25205,FUND.INST.BRASILEIRO DE GEOG.E ESTATISTICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+25206,http://api.convenios.gov.br/siconv/id/orgao/25206,25206,25206,INSTITUTO DE PESQUISA ECONOMICA APLICADA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+25207,http://api.convenios.gov.br/siconv/id/orgao/25207,25207,25207,SERVICO FEDERAL DE PROCESSAMENTO DE DADOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25208,http://api.convenios.gov.br/siconv/id/orgao/25208,25208,25208,SUPERINTENDENCIA DE SEGUROS PRIVADOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25209,http://api.convenios.gov.br/siconv/id/orgao/25209,25209,25209,SUPERINTENDENCIA NAC.ABASTECIMENTO-EM EXTINCA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25211,http://api.convenios.gov.br/siconv/id/orgao/25211,25211,25211,CASA DA MOEDA DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25220,http://api.convenios.gov.br/siconv/id/orgao/25220,25220,25220,CAIXA ECONOMICA FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25280,http://api.convenios.gov.br/siconv/id/orgao/25280,25280,25280,BANCO CENTRAL DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25281,http://api.convenios.gov.br/siconv/id/orgao/25281,25281,25281,BANCO DO BRASIL S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25282,http://api.convenios.gov.br/siconv/id/orgao/25282,25282,25282,BANCO DO NORDESTE DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25301,http://api.convenios.gov.br/siconv/id/orgao/25301,25301,25301,EMPRESA GESTORA DE ATIVOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25801,http://api.convenios.gov.br/siconv/id/orgao/25801,25801,25801,RECEITA FEDERAL DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25802,http://api.convenios.gov.br/siconv/id/orgao/25802,25802,25802,ESCOLA DE ADMINISTRACAO FAZENDARIA/MF,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25803,http://api.convenios.gov.br/siconv/id/orgao/25803,25803,25803,PROCURADORIA-GERAL DA FAZENDA NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25804,http://api.convenios.gov.br/siconv/id/orgao/25804,25804,25804,"SUBSECRET.DE PLANEJ.,ORCAMENTO E ADM. ± SPOA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25805,http://api.convenios.gov.br/siconv/id/orgao/25805,25805,25805,SECRETARIA DO TESOURO NACIONAL - STN,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25806,http://api.convenios.gov.br/siconv/id/orgao/25806,25806,25806,SECRETARIA DE ACOMPANHAMENTO ECONOMICO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25901,http://api.convenios.gov.br/siconv/id/orgao/25901,25901,25901,FUNDO DE COMPENSACAO E VARIACOES SALARIAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25902,http://api.convenios.gov.br/siconv/id/orgao/25902,25902,25902,FUNDO DE INVESTIMENTO DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+25903,http://api.convenios.gov.br/siconv/id/orgao/25903,25903,25903,FUNDO DE INVESTIMENTO DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+25904,http://api.convenios.gov.br/siconv/id/orgao/25904,25904,25904,FUNDO DE ESTABILIDADE DO SEGURO RURAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25905,http://api.convenios.gov.br/siconv/id/orgao/25905,25905,25905,FUNDO DE APOIO AO DESENVOLVIMENTO SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25907,http://api.convenios.gov.br/siconv/id/orgao/25907,25907,25907,FUNDO CONST.DE FINANCIAMENTO-FNO - INTEGRACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25908,http://api.convenios.gov.br/siconv/id/orgao/25908,25908,25908,FUNDO CONSTIT.FINANC.CENTO-OESTE-FCO-INTEG.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25910,http://api.convenios.gov.br/siconv/id/orgao/25910,25910,25910,FUNDO CONSTIT.FINANC.DO NORDESTE-FNE-INTEG.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25914,http://api.convenios.gov.br/siconv/id/orgao/25914,25914,25914,FUNDO DE GARANTIA A EXPORTACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25915,http://api.convenios.gov.br/siconv/id/orgao/25915,25915,25915,FUNDO CONSTITUCIONAL DO DISTRITO FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25916,http://api.convenios.gov.br/siconv/id/orgao/25916,25916,25916,FUNDO CONTIGENTE DA EXTINTA RFFSA-FCMP.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+25917,http://api.convenios.gov.br/siconv/id/orgao/25917,25917,25917,FUNDO PAGTO. PREST. PERDA RENDA DESEMP. INVAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+26000,http://api.convenios.gov.br/siconv/id/orgao/26000,26000,26000,MINISTERIO DA EDUCACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26101,http://api.convenios.gov.br/siconv/id/orgao/26101,26101,26101,FUNDO DE FINANC. AO ESTUDANTE DO ENS.SUPERIOR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26201,http://api.convenios.gov.br/siconv/id/orgao/26201,26201,26201,COLEGIO PEDRO II,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26202,http://api.convenios.gov.br/siconv/id/orgao/26202,26202,26202,CENTRO FEDERAL DE EDUCACAO TECNOL.DE ALAGOAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26203,http://api.convenios.gov.br/siconv/id/orgao/26203,26203,26203,CENTRO FEDERAL DE ED.TECNOLOGICA DO AMAZONAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26204,http://api.convenios.gov.br/siconv/id/orgao/26204,26204,26204,ESCOLA TECNICA FEDERAL DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26205,http://api.convenios.gov.br/siconv/id/orgao/26205,26205,26205,CENTRO FED. DE EDUCACAO TECNOLOGICA DE CAMPOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26206,http://api.convenios.gov.br/siconv/id/orgao/26206,26206,26206,CENTRO FEDERAL DE EDUCACAO TECNOL.DO CEARA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26207,http://api.convenios.gov.br/siconv/id/orgao/26207,26207,26207,CENTRO FED.DE EDUC.TECNOLOGICA DO ESPIR.SANTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26208,http://api.convenios.gov.br/siconv/id/orgao/26208,26208,26208,CENTRO FED. DE EDUCACAO TECNOLOGICA DE GOIAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26209,http://api.convenios.gov.br/siconv/id/orgao/26209,26209,26209,CENTRO FEDERAL DE EDUCACAO TECNOL.DO MARANHAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26210,http://api.convenios.gov.br/siconv/id/orgao/26210,26210,26210,CENTRO FEDERAL DE EDUC.TECNOL.DO M. GROSSO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26211,http://api.convenios.gov.br/siconv/id/orgao/26211,26211,26211,CENTRO FEDERAL DE EDUC. TECNOL. DE OURO PRETO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26212,http://api.convenios.gov.br/siconv/id/orgao/26212,26212,26212,CENTRO FEDERAL DE EDUCACAO TECNOL.DO PARA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26213,http://api.convenios.gov.br/siconv/id/orgao/26213,26213,26213,CENTRO FEDERAL DE EDUCACAO TECNOL.DA PARAIBA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26214,http://api.convenios.gov.br/siconv/id/orgao/26214,26214,26214,CENTRO FEDERAL DE EDUCACAO TECNOL.DE PELOTAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26215,http://api.convenios.gov.br/siconv/id/orgao/26215,26215,26215,CENTRO FED.DE EDUC. TECNOLOGICA DE PERNAMBUCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26216,http://api.convenios.gov.br/siconv/id/orgao/26216,26216,26216,CENTRO FED. DE EDUC. TECNOLOG. DO PIAUI-CEFET,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26217,http://api.convenios.gov.br/siconv/id/orgao/26217,26217,26217,CENT.FED.DE EDUC.TECNOL.DE QUIMICA-NILOP./RJ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26218,http://api.convenios.gov.br/siconv/id/orgao/26218,26218,26218,CENTRO FEDERAL DE EDUCACAO TECNOL.DO RN,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26219,http://api.convenios.gov.br/siconv/id/orgao/26219,26219,26219,CENTRO FED.DE EDUC.TECNOLOGICA DE S.CATARINA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26220,http://api.convenios.gov.br/siconv/id/orgao/26220,26220,26220,CENTRO FEDERAL DE EDUCACAO TECNOL DE S.PAULO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26221,http://api.convenios.gov.br/siconv/id/orgao/26221,26221,26221,CENTRO FEDERAL DE EDUCACAO TEC. DE SERGIPE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26222,http://api.convenios.gov.br/siconv/id/orgao/26222,26222,26222,CENTRO FED.DE EDUC. TECNOLOGIA DE RORAIMA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26223,http://api.convenios.gov.br/siconv/id/orgao/26223,26223,26223,ESCOLA TECNICA  FEDERAL DE PALMAS - TO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26224,http://api.convenios.gov.br/siconv/id/orgao/26224,26224,26224,ESCOLA TECNICA FEDERAL DE RONDONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26230,http://api.convenios.gov.br/siconv/id/orgao/26230,26230,26230,FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26231,http://api.convenios.gov.br/siconv/id/orgao/26231,26231,26231,UNIVERSIDADE FEDERAL DE ALAGOAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26232,http://api.convenios.gov.br/siconv/id/orgao/26232,26232,26232,UNIVERSIDADE FEDERAL DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26233,http://api.convenios.gov.br/siconv/id/orgao/26233,26233,26233,UNIVERSIDADE FEDERAL DO CEARA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26234,http://api.convenios.gov.br/siconv/id/orgao/26234,26234,26234,UNIVERSIDADE FEDERAL DO ESPIRITO SANTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26235,http://api.convenios.gov.br/siconv/id/orgao/26235,26235,26235,UNIVERSIDADE FEDERAL DE GOIAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26236,http://api.convenios.gov.br/siconv/id/orgao/26236,26236,26236,UNIVERSIDADE FEDERAL FLUMINENSE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26237,http://api.convenios.gov.br/siconv/id/orgao/26237,26237,26237,UNIVERSIDADE FEDERAL DE JUIZ DE FORA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26238,http://api.convenios.gov.br/siconv/id/orgao/26238,26238,26238,UNIVERSIDADE FEDERAL DE MINAS GERAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26239,http://api.convenios.gov.br/siconv/id/orgao/26239,26239,26239,UNIVERSIDADE FEDERAL DO PARA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26240,http://api.convenios.gov.br/siconv/id/orgao/26240,26240,26240,UNIVERSIDADE FEDERAL DA PARAIBA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26241,http://api.convenios.gov.br/siconv/id/orgao/26241,26241,26241,UNIVERSIDADE FEDERAL DO PARANA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26242,http://api.convenios.gov.br/siconv/id/orgao/26242,26242,26242,UNIVERSIDADE FEDERAL DE PERNAMBUCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26243,http://api.convenios.gov.br/siconv/id/orgao/26243,26243,26243,UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26244,http://api.convenios.gov.br/siconv/id/orgao/26244,26244,26244,UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26245,http://api.convenios.gov.br/siconv/id/orgao/26245,26245,26245,UNIVERSIDADE FEDERAL DO RIO DE JANEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26246,http://api.convenios.gov.br/siconv/id/orgao/26246,26246,26246,UNIVERSIDADE FEDERAL DE SANTA CATARINA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26247,http://api.convenios.gov.br/siconv/id/orgao/26247,26247,26247,UNIVERSIDADE FEDERAL DE SANTA MARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26248,http://api.convenios.gov.br/siconv/id/orgao/26248,26248,26248,UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26249,http://api.convenios.gov.br/siconv/id/orgao/26249,26249,26249,UNIVERSIDADE FEDERAL RURAL DO RIO DE JANEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26250,http://api.convenios.gov.br/siconv/id/orgao/26250,26250,26250,UNIVERSIDADE FEDERAL DE RORAIMA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26251,http://api.convenios.gov.br/siconv/id/orgao/26251,26251,26251,FUNDACAO UNIVERSIDADE FEDERAL DO TOCANTINS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26252,http://api.convenios.gov.br/siconv/id/orgao/26252,26252,26252,UNIVERSIDADE FEDERAL DE CAMPINA GRANDE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26253,http://api.convenios.gov.br/siconv/id/orgao/26253,26253,26253,UNIVERSIDADE FEDERAL RURAL DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26254,http://api.convenios.gov.br/siconv/id/orgao/26254,26254,26254,UNIVERSIDADE FEDERAL DO TRIANGULO MINEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26255,http://api.convenios.gov.br/siconv/id/orgao/26255,26255,26255,UNIVERSIDADE FED.VALES JEQUITINHONHA E MUCURI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26256,http://api.convenios.gov.br/siconv/id/orgao/26256,26256,26256,CENTRO FED.EDUC.TECN.CELSO SUCKOW DA FONSECA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26257,http://api.convenios.gov.br/siconv/id/orgao/26257,26257,26257,CENTRO FEDERAL DE EDUCACAO TECNOLOGICA DE MG,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26258,http://api.convenios.gov.br/siconv/id/orgao/26258,26258,26258,UNIVERSIDADE TECNOLOGICA FEDERAL DO PARANA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26259,http://api.convenios.gov.br/siconv/id/orgao/26259,26259,26259,CENTRO DE EDUCACAO TECNOLOGICA DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26260,http://api.convenios.gov.br/siconv/id/orgao/26260,26260,26260,UNIVERSIDADE FEDERAL DE ALFENAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26261,http://api.convenios.gov.br/siconv/id/orgao/26261,26261,26261,UNIVERSIDADE FEDERAL DE ITAJUBA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26262,http://api.convenios.gov.br/siconv/id/orgao/26262,26262,26262,UNIVERSIDADE FEDERAL DE SAO PAULO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26263,http://api.convenios.gov.br/siconv/id/orgao/26263,26263,26263,UNIVERSIDADE FEDERAL DE LAVRAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26264,http://api.convenios.gov.br/siconv/id/orgao/26264,26264,26264,UNIVERSIDADE FEDERAL RURAL DO SEMI-ARIDO/RN,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26266,http://api.convenios.gov.br/siconv/id/orgao/26266,26266,26266,FUNDACAO UNIVERSIDADE FEDERAL DO PAMPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26267,http://api.convenios.gov.br/siconv/id/orgao/26267,26267,26267,UNIVERSIDADE FED. DA INTEGR.LATINO-AMERICANA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26268,http://api.convenios.gov.br/siconv/id/orgao/26268,26268,26268,FUNDACAO UNIVERSIDADE FEDERAL DE RONDONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26269,http://api.convenios.gov.br/siconv/id/orgao/26269,26269,26269,FUNDACAO UNIVERSIDADE DO RIO DE JANEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26270,http://api.convenios.gov.br/siconv/id/orgao/26270,26270,26270,FUNDACAO UNIVERSIDADE DO AMAZONAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26271,http://api.convenios.gov.br/siconv/id/orgao/26271,26271,26271,FUNDACAO UNIVERSIDADE DE BRASILIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26272,http://api.convenios.gov.br/siconv/id/orgao/26272,26272,26272,FUNDACAO UNIVERSIDADE DO MARANHAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26273,http://api.convenios.gov.br/siconv/id/orgao/26273,26273,26273,FUNDACAO UNIVERSIDADE DO RIO GRANDE - RS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26274,http://api.convenios.gov.br/siconv/id/orgao/26274,26274,26274,FUNDACAO UNIVERSIDADE FEDERAL DE UBERLANDIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26275,http://api.convenios.gov.br/siconv/id/orgao/26275,26275,26275,FUNDACAO UNIVERSIDADE FEDERAL DO ACRE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26276,http://api.convenios.gov.br/siconv/id/orgao/26276,26276,26276,FUNDACAO UNIVERSIDADE FEDERAL DE MATO GROSSO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26277,http://api.convenios.gov.br/siconv/id/orgao/26277,26277,26277,UNIVERSIDADE FEDERAL DE OURO PRETO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26278,http://api.convenios.gov.br/siconv/id/orgao/26278,26278,26278,FUNDACAO UNIVERSIDADE FEDERAL DE PELOTAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26279,http://api.convenios.gov.br/siconv/id/orgao/26279,26279,26279,FUNDACAO UNIVERSIDADE FEDERAL DO PIAUI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26280,http://api.convenios.gov.br/siconv/id/orgao/26280,26280,26280,FUNDACAO UNIVERSIDADE FEDERAL DE SAO CARLOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26281,http://api.convenios.gov.br/siconv/id/orgao/26281,26281,26281,FUNDACAO UNIVERSIDADE FEDERAL DE SERGIPE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26282,http://api.convenios.gov.br/siconv/id/orgao/26282,26282,26282,UNIVERSIDADE FEDERAL DE VICOSA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26283,http://api.convenios.gov.br/siconv/id/orgao/26283,26283,26283,FUNDACAO UNIVERSIDADE FEDERAL DE MATO G. SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26284,http://api.convenios.gov.br/siconv/id/orgao/26284,26284,26284,FUNDACAO UNIVERSIDADE FEDERAL DE CIENCIAS DA SAUDE DE PORTO ALEGRE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26285,http://api.convenios.gov.br/siconv/id/orgao/26285,26285,26285,FUNDACAO UNIVERSIDADE FEDERAL DE S.J.DEL-REI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26286,http://api.convenios.gov.br/siconv/id/orgao/26286,26286,26286,FUNDACAO UNIVERSIDADE FEDERAL DO AMAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26287,http://api.convenios.gov.br/siconv/id/orgao/26287,26287,26287,ESCOLA AGROTECNICA FEDERAL DE MARABA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26287>
+26288,http://api.convenios.gov.br/siconv/id/orgao/26288,26288,26288,ESCOLA AGROTECNICA FEDERAL DE NOVA ANDRADINA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26288>
+26289,http://api.convenios.gov.br/siconv/id/orgao/26289,26289,26289,ESCOLA AGROT.FED.DE S.RAIMUN.DAS MANGABEIRAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26289>
+26290,http://api.convenios.gov.br/siconv/id/orgao/26290,26290,26290,INST.NACIONAL DE EST.E PESQUISAS EDUCACIONAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26291,http://api.convenios.gov.br/siconv/id/orgao/26291,26291,26291,FUND.COORD.DE APERF.DE PESSOAL NIVEL SUPERIOR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26292,http://api.convenios.gov.br/siconv/id/orgao/26292,26292,26292,FUNDACAO JOAQUIM NABUCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26293,http://api.convenios.gov.br/siconv/id/orgao/26293,26293,26293,FUNDACAO ROQUETTE PINTO - EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+26294,http://api.convenios.gov.br/siconv/id/orgao/26294,26294,26294,HOSPITAL DE CLINICAS DE PORTO ALEGRE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26295,http://api.convenios.gov.br/siconv/id/orgao/26295,26295,26295,INSTITUTO NACIONAL DE DESENVOLV.DO DESPORTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/51000>
+26298,http://api.convenios.gov.br/siconv/id/orgao/26298,26298,26298,FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26301,http://api.convenios.gov.br/siconv/id/orgao/26301,26301,26301,CENTRO FEDERAL DE EDUCAC.TECNOLOGICA DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26302,http://api.convenios.gov.br/siconv/id/orgao/26302,26302,26302,ESCOLA AGROTECNICA FEDERAL DE ALEGRE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26303,http://api.convenios.gov.br/siconv/id/orgao/26303,26303,26303,ESCOLA AGROTECNICA FEDERAL DE ALEGRETE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26304,http://api.convenios.gov.br/siconv/id/orgao/26304,26304,26304,ESCOLA AGROTECNICA FEDERAL DE ARAGUATINS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26305,http://api.convenios.gov.br/siconv/id/orgao/26305,26305,26305,CENTRO FEDERAL DE EDUCACAO TECNOL. DE BAMBUI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26306,http://api.convenios.gov.br/siconv/id/orgao/26306,26306,26306,ESCOLA AGROTECNICA FEDERAL DE BARBACENA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26307,http://api.convenios.gov.br/siconv/id/orgao/26307,26307,26307,ESCOLA AGROTECNICA FEDERAL DE BARREIROS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26308,http://api.convenios.gov.br/siconv/id/orgao/26308,26308,26308,ESCOLA AGROTECNICA FEDERAL DE BELO JARDIM,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26309,http://api.convenios.gov.br/siconv/id/orgao/26309,26309,26309,CENTRO FEDERAL DE EDUCACAO TEC.DE B.GONCALVES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26310,http://api.convenios.gov.br/siconv/id/orgao/26310,26310,26310,ESCOLA AGROTECNICA FEDERAL DE CACERES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26311,http://api.convenios.gov.br/siconv/id/orgao/26311,26311,26311,ESCOLA AGROTECNICA FEDERAL DE CASTANHAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26312,http://api.convenios.gov.br/siconv/id/orgao/26312,26312,26312,ESCOLA AGROTECNICA FEDERAL DE CATU,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26313,http://api.convenios.gov.br/siconv/id/orgao/26313,26313,26313,ESCOLA AGROTECNICA FEDERAL DE COLATINA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26314,http://api.convenios.gov.br/siconv/id/orgao/26314,26314,26314,ESCOLA AGROTECNICA FEDERAL DE CONCORDIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26315,http://api.convenios.gov.br/siconv/id/orgao/26315,26315,26315,ESCOLA AGROTECNICA FEDERAL DE CRATO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26316,http://api.convenios.gov.br/siconv/id/orgao/26316,26316,26316,ESCOLA AGROTECNICA FEDERAL DE CUIABA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26317,http://api.convenios.gov.br/siconv/id/orgao/26317,26317,26317,ESCOLA AGROTECNICA FEDERAL DE IGUATU,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26318,http://api.convenios.gov.br/siconv/id/orgao/26318,26318,26318,ESCOLA AGROTECNICA FEDERAL DE INCONFIDENTES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26319,http://api.convenios.gov.br/siconv/id/orgao/26319,26319,26319,CENTRO FEDERAL DE EDUCACAO TECNOL.DE JANUARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26320,http://api.convenios.gov.br/siconv/id/orgao/26320,26320,26320,ESCOLA AGROTECNICA FEDERAL DE MACHADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26321,http://api.convenios.gov.br/siconv/id/orgao/26321,26321,26321,ESCOLA AGROTECNICA FEDERAL DE MANAUS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26322,http://api.convenios.gov.br/siconv/id/orgao/26322,26322,26322,ESCOLA AGROTECNICA FEDERAL DE MUZAMBINHO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26323,http://api.convenios.gov.br/siconv/id/orgao/26323,26323,26323,CENTRO FED. DE EDUC. TECNOLOGICA DE PETROLINA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26324,http://api.convenios.gov.br/siconv/id/orgao/26324,26324,26324,CENTRO FEDERAL DE EDUCACAO TECNOLOG.RIO POMBA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26325,http://api.convenios.gov.br/siconv/id/orgao/26325,26325,26325,CENTRO FEDERAL DE EDUCACAO TEC. DE RIO VERDE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26326,http://api.convenios.gov.br/siconv/id/orgao/26326,26326,26326,ESCOLA AGROTECNICA FEDERAL DE SALINAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26327,http://api.convenios.gov.br/siconv/id/orgao/26327,26327,26327,ESCOLA AGROTECNICA FEDERAL DE SANTA TERESA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26328,http://api.convenios.gov.br/siconv/id/orgao/26328,26328,26328,ESCOLA AGROTECNICA FEDERAL DE SAO CRISTOVAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26329,http://api.convenios.gov.br/siconv/id/orgao/26329,26329,26329,ESCOLA AGROTECNICA FEDERAL DE S.J.EVANGELISTA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26330,http://api.convenios.gov.br/siconv/id/orgao/26330,26330,26330,ESCOLA AGROTECNICA FEDERAL DE SAO LUIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26331,http://api.convenios.gov.br/siconv/id/orgao/26331,26331,26331,CENTRO FED.EDUCACAO TECNOLOGICA S.VICENTE SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26332,http://api.convenios.gov.br/siconv/id/orgao/26332,26332,26332,ESCOLA AGROTECNICA FEDERAL DE SATUBA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26333,http://api.convenios.gov.br/siconv/id/orgao/26333,26333,26333,ESCOLA AGROTECNICA FEDERAL DE SERTAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26334,http://api.convenios.gov.br/siconv/id/orgao/26334,26334,26334,ESCOLA AGROTECNICA FEDERAL DE SOUSA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26335,http://api.convenios.gov.br/siconv/id/orgao/26335,26335,26335,CENTRO FEDERAL DE EDUC TECNOLOGICA DE UBERABA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26336,http://api.convenios.gov.br/siconv/id/orgao/26336,26336,26336,ESCOLA AGROTECNICA FEDERAL DE UBERLANDIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26337,http://api.convenios.gov.br/siconv/id/orgao/26337,26337,26337,CENTRO FEDERAL DE EDUC. TECNOLOGICA DE URUTAI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26338,http://api.convenios.gov.br/siconv/id/orgao/26338,26338,26338,ESCOLA AGROTECNICA FEDERAL DE VIT.DE S.ANTAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26339,http://api.convenios.gov.br/siconv/id/orgao/26339,26339,26339,ESCOLA AGROTECNICA FEDERAL DE S.G.CACHOEIRA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26340,http://api.convenios.gov.br/siconv/id/orgao/26340,26340,26340,ESCOLA AGROTECNICA FEDERAL DE SOMBRIO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26341,http://api.convenios.gov.br/siconv/id/orgao/26341,26341,26341,ESCOLA AGROTECNICA FEDERAL DE CERES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26342,http://api.convenios.gov.br/siconv/id/orgao/26342,26342,26342,ESCOLA AGROTECNICA FEDERAL DE COLOR. DO OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26343,http://api.convenios.gov.br/siconv/id/orgao/26343,26343,26343,ESCOLA AGROTECNICA FEDERAL DE CODO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26344,http://api.convenios.gov.br/siconv/id/orgao/26344,26344,26344,ESCOLA AGROTECNICA FEDERAL DE GUANAMBI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26345,http://api.convenios.gov.br/siconv/id/orgao/26345,26345,26345,ESCOLA AGROTECNICA FEDERAL DE RIO DO SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26346,http://api.convenios.gov.br/siconv/id/orgao/26346,26346,26346,ESCOLA AGROTECNICA FEDERAL DE SANTA INES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26347,http://api.convenios.gov.br/siconv/id/orgao/26347,26347,26347,ESCOLA AGROTECNICA FED. DO SENHOR DO BOMFIM,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26350,http://api.convenios.gov.br/siconv/id/orgao/26350,26350,26350,FUNDACAO UNIVERSIDADE FED. DA GRANDE DOURADOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26351,http://api.convenios.gov.br/siconv/id/orgao/26351,26351,26351,UNIVERSIDADE FEDERAL DO RECONCAVO DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26352,http://api.convenios.gov.br/siconv/id/orgao/26352,26352,26352,FUNDACAO UNIVERSIDADE FEDERAL DO ABC,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26353,http://api.convenios.gov.br/siconv/id/orgao/26353,26353,26353,ESCOLA TECNICA FEDERAL DE BRASILIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26354,http://api.convenios.gov.br/siconv/id/orgao/26354,26354,26354,ESCOLA TECNICA FEDERAL DO AMAPA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26354>
+26355,http://api.convenios.gov.br/siconv/id/orgao/26355,26355,26355,ESCOLA TECNICA FEDERAL DO MATO GROSSO DO SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26355>
+26356,http://api.convenios.gov.br/siconv/id/orgao/26356,26356,26356,INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26356>
+26357,http://api.convenios.gov.br/siconv/id/orgao/26357,26357,26357,ESCOLA TECNICA FEDERAL DE CANOAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26357>
+26402,http://api.convenios.gov.br/siconv/id/orgao/26402,26402,26402,"INST.FED.DE EDUC.,CIENC.E TEC.DE ALAGOAS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26402>
+26403,http://api.convenios.gov.br/siconv/id/orgao/26403,26403,26403,"INST.FED.DE EDUC.,CIENC.E TEC.DO AMAZONAS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26403>
+26404,http://api.convenios.gov.br/siconv/id/orgao/26404,26404,26404,"INST.FED.DE EDUC.,CIENC.E TEC.BAIANO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26405,http://api.convenios.gov.br/siconv/id/orgao/26405,26405,26405,"INST.FED.DE EDUC.,CIENC.E TEC.DO CEARA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26406,http://api.convenios.gov.br/siconv/id/orgao/26406,26406,26406,"INST.FED.DE EDUC.,CIENC.E TEC.DO ESP.SANTO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26407,http://api.convenios.gov.br/siconv/id/orgao/26407,26407,26407,"INST.FED.DE EDUC.,CIENC.E TEC.GOIANO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26408,http://api.convenios.gov.br/siconv/id/orgao/26408,26408,26408,"INST.FED.DE EDUC.,CIENC.E TEC.DO MARANHAO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26408>
+26409,http://api.convenios.gov.br/siconv/id/orgao/26409,26409,26409,"INST.FED.DE EDUC.,CIENC.E TEC.DE MINAS GERAIS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26409>
+26410,http://api.convenios.gov.br/siconv/id/orgao/26410,26410,26410,"INST.FED.DE EDUC.,CIENC.E TEC.DO NORTE DE MG",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26411,http://api.convenios.gov.br/siconv/id/orgao/26411,26411,26411,"INST.FED.DE EDUC.,CIENC.E TEC.DO SUDESTE MG",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26412,http://api.convenios.gov.br/siconv/id/orgao/26412,26412,26412,"INST.FED.DE EDUC.,CIENC.E TEC.DO SUL DE MG",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26413,http://api.convenios.gov.br/siconv/id/orgao/26413,26413,26413,"INST.FED.DE EDUC.,CIENC.E TEC.DO TRIA.MINEIRO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26414,http://api.convenios.gov.br/siconv/id/orgao/26414,26414,26414,"INST.FED.DE EDUC.,CIENC.E TEC.DO MATO GROSSO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26415,http://api.convenios.gov.br/siconv/id/orgao/26415,26415,26415,"INST.FED.DE EDUC.,CIENC.E TEC.DO MAT.G.DO SUL",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26415>
+26416,http://api.convenios.gov.br/siconv/id/orgao/26416,26416,26416,"INST.FED.DE EDUC.,CIENC.E TEC.DO PARA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26416>
+26417,http://api.convenios.gov.br/siconv/id/orgao/26417,26417,26417,"INST.FED.DE EDUC.,CIENC.E TEC.DA PARAIBA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26418,http://api.convenios.gov.br/siconv/id/orgao/26418,26418,26418,"INST.FED.DE EDUC.,CIENC.E TEC.DE PERNAMBUCO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26418>
+26419,http://api.convenios.gov.br/siconv/id/orgao/26419,26419,26419,"INST.FED.DE EDUC.,CIENC.E TEC.DO RS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26419>
+26420,http://api.convenios.gov.br/siconv/id/orgao/26420,26420,26420,"INST.FED.DE EDUC.,CIENC.E TEC.FARROUPILHA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26420>
+26421,http://api.convenios.gov.br/siconv/id/orgao/26421,26421,26421,"INST.FED.DE EDUC.,CIENC.E TEC.DE RONDONIA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26422,http://api.convenios.gov.br/siconv/id/orgao/26422,26422,26422,"INST.FED.DE EDUC.,CIENC.E TEC.CATARINENSE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26422>
+26423,http://api.convenios.gov.br/siconv/id/orgao/26423,26423,26423,"INST.FED.DE EDUC.,CIENC.E TEC.DE SERGIPE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26424,http://api.convenios.gov.br/siconv/id/orgao/26424,26424,26424,"INST.FED.DE EDUC.,CIENC.E TEC.DO TOCANTINS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26424>
+26425,http://api.convenios.gov.br/siconv/id/orgao/26425,26425,26425,"INST.FED.DE EDUC.,CIENC.E TEC.DO ACRE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26425>
+26426,http://api.convenios.gov.br/siconv/id/orgao/26426,26426,26426,"INST.FED.DE EDUC.,CIENC.E TEC.DO AMAPA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26426>
+26427,http://api.convenios.gov.br/siconv/id/orgao/26427,26427,26427,"INST.FED.DE EDUC.,CIENC.E TEC.DA BAHIA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26427>
+26428,http://api.convenios.gov.br/siconv/id/orgao/26428,26428,26428,"INST.FED.DE EDUC.,CIENC.E TEC.DE BRASILIA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26428>
+26429,http://api.convenios.gov.br/siconv/id/orgao/26429,26429,26429,"INST.FED.DE EDUC.,CIENC.E TEC.DE GOIAS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26429>
+26430,http://api.convenios.gov.br/siconv/id/orgao/26430,26430,26430,"INST.FED.DE ED.,CIENC.E TEC.DO S.PERNAMBUCANO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26430>
+26431,http://api.convenios.gov.br/siconv/id/orgao/26431,26431,26431,"INST.FED.DE EDUC.,CIENC.E TEC.DO PIAUI",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26432,http://api.convenios.gov.br/siconv/id/orgao/26432,26432,26432,"INST. FED. DE EDUC., CIENC. E TEC. DO PARANÁ",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26433,http://api.convenios.gov.br/siconv/id/orgao/26433,26433,26433,"INST.FED.DE EDUC.,CIENC.E TEC.DO R.DE JANEIRO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26433>
+26434,http://api.convenios.gov.br/siconv/id/orgao/26434,26434,26434,"INST.FED.DE EDUC.,CIENC.E TEC.FLUMINENSE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26434>
+26435,http://api.convenios.gov.br/siconv/id/orgao/26435,26435,26435,"INST.FED.DE EDUC.,CIENC.E TEC.DO RN",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26436,http://api.convenios.gov.br/siconv/id/orgao/26436,26436,26436,"INST.FED.DE EDUC.,CIE.E TEC.SUL-RIO-GRANDENSE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26437,http://api.convenios.gov.br/siconv/id/orgao/26437,26437,26437,"INST.FED.DE EDUC.,CIENC.E TEC.DE RORAIMA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26437>
+26438,http://api.convenios.gov.br/siconv/id/orgao/26438,26438,26438,"instituto federal de educacao,ciencia e tecnologia de santa catarina",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26439,http://api.convenios.gov.br/siconv/id/orgao/26439,26439,26439,"INST.FED.DE EDUC.,CIENC.E TEC.DE SAO PAULO",<objeto: http://api.convenios.gov.br/siconv/id/orgao/26439>
+26440,http://api.convenios.gov.br/siconv/id/orgao/26440,26440,26440,UNIVERSIDADE FEDERAL DA FRONTEIRA SUL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26441,http://api.convenios.gov.br/siconv/id/orgao/26441,26441,26441,UNIVERSIDADE FEDERAL DO OESTE DO PARÁ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26801,http://api.convenios.gov.br/siconv/id/orgao/26801,26801,26801,SECRETARIA DE EDUCACAO BASICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+26802,http://api.convenios.gov.br/siconv/id/orgao/26802,26802,26802,SUBSECRETARIA DE ASSUNTOS ADMINISTRATIVOS-SAA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/26000>
+27201,http://api.convenios.gov.br/siconv/id/orgao/27201,27201,27201,FUNDACAO HABITACIONAL DO EXERCITO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/27201>
+28000,http://api.convenios.gov.br/siconv/id/orgao/28000,28000,28000,"MINISTERIO DO DESENV,IND. E COMERCIO EXTERIOR",<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+28500,http://api.convenios.gov.br/siconv/id/orgao/28500,28500,28500,FUNDO DE GARANTIA P/ PROM. DA COMPETITIVIDADE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+28501,http://api.convenios.gov.br/siconv/id/orgao/28501,28501,28501,FUNDO NACIONAL DE DESESTATIZACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+28801,http://api.convenios.gov.br/siconv/id/orgao/28801,28801,28801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MDIC",<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+28904,http://api.convenios.gov.br/siconv/id/orgao/28904,28904,28904,FUNDO DE GAR.P/PROMOC.DA COMPETITIVIDADE-FGPC,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+29201,http://api.convenios.gov.br/siconv/id/orgao/29201,29201,29201,DEPARTAMENTO NACIONAL DE ESTRADAS DE RODAGEM,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+29202,http://api.convenios.gov.br/siconv/id/orgao/29202,29202,29202,COMPANHIA DE NAVEGACAO DO SAO FRANCISCO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+29203,http://api.convenios.gov.br/siconv/id/orgao/29203,29203,29203,EMP. BRAS. DE PLANEJ. E TRANSP.-EM LIQUIDACAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+29205,http://api.convenios.gov.br/siconv/id/orgao/29205,29205,29205,EMPRESA DE TRENS URBANOS DE PORTO ALEGRE S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+29207,http://api.convenios.gov.br/siconv/id/orgao/29207,29207,29207,SERVICO DE NAVEGACAO DA BACIA DO PRATA S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+29208,http://api.convenios.gov.br/siconv/id/orgao/29208,29208,29208,COMPANHIA DE PESQUISA DE RECURSOS MINERAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+29209,http://api.convenios.gov.br/siconv/id/orgao/29209,29209,29209,"VALEC-ENGENHARIA, CONSTRUCOES E FERROVIAS S/A",<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+29214,http://api.convenios.gov.br/siconv/id/orgao/29214,29214,29214,COMPANHIA BRASILEIRA DE TRENS URBANOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+30000,http://api.convenios.gov.br/siconv/id/orgao/30000,30000,30000,MINISTERIO DA JUSTICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30108,http://api.convenios.gov.br/siconv/id/orgao/30108,30108,30108,DEPARTAMENTO DE POLICIA FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30201,http://api.convenios.gov.br/siconv/id/orgao/30201,30201,30201,RADIOBRAS - EMP.BRASILEIRA DE COMUNICACAO S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+30202,http://api.convenios.gov.br/siconv/id/orgao/30202,30202,30202,FUNDACAO NACIONAL DO INDIO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30203,http://api.convenios.gov.br/siconv/id/orgao/30203,30203,30203,"INST.NAC. DE METROLOGIA, QUALIDADE E TECNOLOGIA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+30204,http://api.convenios.gov.br/siconv/id/orgao/30204,30204,30204,INSTITUTO NAC. DA PROPRIEDADE INDUSTRIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+30205,http://api.convenios.gov.br/siconv/id/orgao/30205,30205,30205,FUNDACAO NACIONAL DO INDIO - PATRIM.INDIGENA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30211,http://api.convenios.gov.br/siconv/id/orgao/30211,30211,30211,CONSELHO ADMINISTRATIVO DE DEFESA ECONOMICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30801,http://api.convenios.gov.br/siconv/id/orgao/30801,30801,30801,DEPARTAMENTO DE POLICIA FEDERAL/MJ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30802,http://api.convenios.gov.br/siconv/id/orgao/30802,30802,30802,DEPARTAMENTO DE POLICIA RODOVIARIA FEDERAL/MJ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30803,http://api.convenios.gov.br/siconv/id/orgao/30803,30803,30803,"SUBSECRETARIA DE PLANEJ., ORCAMENTO E ADM./MJ",<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30905,http://api.convenios.gov.br/siconv/id/orgao/30905,30905,30905,FUNDO DE DEFESA DOS DIREITOS DIFUSOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30907,http://api.convenios.gov.br/siconv/id/orgao/30907,30907,30907,FUNDO PENITENCIARIO NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30909,http://api.convenios.gov.br/siconv/id/orgao/30909,30909,30909,FUNDO P/APAR.E OPERAC.ATIV.FIM.POL.FEDERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30911,http://api.convenios.gov.br/siconv/id/orgao/30911,30911,30911,FUNDO NACIONAL DE SEGURANCA PUBLICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+30912,http://api.convenios.gov.br/siconv/id/orgao/30912,30912,30912,FUNDO NACIONAL ANTIDROGAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/30000>
+31280,http://api.convenios.gov.br/siconv/id/orgao/31280,31280,31280,CAIXA DE CONSTRUCOES DE CASAS P/PESSOAL DA MB,<objeto: http://api.convenios.gov.br/siconv/id/orgao/31280>
+32000,http://api.convenios.gov.br/siconv/id/orgao/32000,32000,32000,MINISTERIO DE MINAS E ENERGIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32201,http://api.convenios.gov.br/siconv/id/orgao/32201,32201,32201,CENTRO DE PESQUISAS DE ENERGIA ELETRICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32205,http://api.convenios.gov.br/siconv/id/orgao/32205,32205,32205,AGENCIA NACIONAL DO PETROLEO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32210,http://api.convenios.gov.br/siconv/id/orgao/32210,32210,32210,AGENCIA NACIONAL DE ENERGIA ELETRICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32263,http://api.convenios.gov.br/siconv/id/orgao/32263,32263,32263,DEPARTAMENTO NACIONAL DE PRODUCAO MINERAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32314,http://api.convenios.gov.br/siconv/id/orgao/32314,32314,32314,EMPRESA DE PESQUISA ENERGETICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32314>
+32801,http://api.convenios.gov.br/siconv/id/orgao/32801,32801,32801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MME",<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32802,http://api.convenios.gov.br/siconv/id/orgao/32802,32802,32802,COMPANHIA DE PESQ.DE RECURSOS MINERAIS - CPRM,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32000>
+32991,http://api.convenios.gov.br/siconv/id/orgao/32991,32991,32991,RESERVA GLOBAL DE REVERSAO/ELETROBRAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32991>
+32992,http://api.convenios.gov.br/siconv/id/orgao/32992,32992,32992,CONTA DE DESENVOLV. ENERGETICO/ELETROBRAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32992>
+32993,http://api.convenios.gov.br/siconv/id/orgao/32993,32993,32993,CONTA CONSUMO DE COMBUST. FOSSEIS/ELETROBRAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/32993>
+33000,http://api.convenios.gov.br/siconv/id/orgao/33000,33000,33000,MINISTERIO DA PREVIDENCIA SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+33206,http://api.convenios.gov.br/siconv/id/orgao/33206,33206,33206,SUPERINT.NACIONAL DE PREVIDENCIA COMPLEMENTAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+33801,http://api.convenios.gov.br/siconv/id/orgao/33801,33801,33801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MPS",<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+34000,http://api.convenios.gov.br/siconv/id/orgao/34000,34000,34000,MINISTERIO PUBLICO DA UNIAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/34000>
+34801,http://api.convenios.gov.br/siconv/id/orgao/34801,34801,34801,MINISTERIO PUBLICO FEDERAL ± MPF,<objeto: http://api.convenios.gov.br/siconv/id/orgao/34000>
+34802,http://api.convenios.gov.br/siconv/id/orgao/34802,34802,34802,MINISTERIO PUBLICO DO TRABALHO - MPT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/34000>
+34902,http://api.convenios.gov.br/siconv/id/orgao/34902,34902,34902,FUNDO NACIONAL DE CULTURA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+35000,http://api.convenios.gov.br/siconv/id/orgao/35000,35000,35000,MINISTERIO DAS RELACOES EXTERIORES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/35000>
+35201,http://api.convenios.gov.br/siconv/id/orgao/35201,35201,35201,FUNDACAO ALEXANDRE DE GUSMAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/35000>
+36000,http://api.convenios.gov.br/siconv/id/orgao/36000,36000,36000,MINISTERIO DA SAUDE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36201,http://api.convenios.gov.br/siconv/id/orgao/36201,36201,36201,FUNDACAO OSWALDO CRUZ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36208,http://api.convenios.gov.br/siconv/id/orgao/36208,36208,36208,HOSPITAL CRISTO REDENTOR S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36209,http://api.convenios.gov.br/siconv/id/orgao/36209,36209,36209,HOSPITAL FEMINA S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36210,http://api.convenios.gov.br/siconv/id/orgao/36210,36210,36210,HOSPITAL NOSSA SENHORA DA CONCEICAO S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36211,http://api.convenios.gov.br/siconv/id/orgao/36211,36211,36211,FUNDACAO NACIONAL DE SAUDE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36212,http://api.convenios.gov.br/siconv/id/orgao/36212,36212,36212,AGENCIA NACIONAL DE VIGILANCIA SANITARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+36213,http://api.convenios.gov.br/siconv/id/orgao/36213,36213,36213,AGENCIA NACIONAL DE SAUDE SUPLEMENTAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/36000>
+37000,http://api.convenios.gov.br/siconv/id/orgao/37000,37000,37000,MINIST. DO TRABALHO E DA PREVIDENCIA SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/37000>
+37201,http://api.convenios.gov.br/siconv/id/orgao/37201,37201,37201,FUND.JORGE D.FIGUEIREDO DE SEG.E MED DO TRAB.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+37202,http://api.convenios.gov.br/siconv/id/orgao/37202,37202,37202,INSTITUTO NACIONAL DO SEGURO SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+38000,http://api.convenios.gov.br/siconv/id/orgao/38000,38000,38000,MINISTERIO DO TRABALHO E EMPREGO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+38299,http://api.convenios.gov.br/siconv/id/orgao/38299,38299,38299,REDE FERROVIARIA FEDERAL S/A,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+38500,http://api.convenios.gov.br/siconv/id/orgao/38500,38500,38500,NÃO INFORMADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38500>
+38505,http://api.convenios.gov.br/siconv/id/orgao/38505,38505,38505,NÃO INFORMADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38505>
+38518,http://api.convenios.gov.br/siconv/id/orgao/38518,38518,38518,NÃO INFORMADO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38518>
+38801,http://api.convenios.gov.br/siconv/id/orgao/38801,38801,38801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM/MTE",<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+38802,http://api.convenios.gov.br/siconv/id/orgao/38802,38802,38802,SECRET.DE POLITICAS PUBLICAS DE EMPREGO-SPPE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+38803,http://api.convenios.gov.br/siconv/id/orgao/38803,38803,38803,DELEGACIA REGIONAL DO TRABALHO/SAO PAULO/MTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+38901,http://api.convenios.gov.br/siconv/id/orgao/38901,38901,38901,FUNDO DE AMPARO AO TRABALHADOR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/38000>
+39000,http://api.convenios.gov.br/siconv/id/orgao/39000,39000,39000,MINISTERIO DOS TRANSPORTES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39250,http://api.convenios.gov.br/siconv/id/orgao/39250,39250,39250,AGENCIA NACIONAL DE TRANSPORTES TERRESTRES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39251,http://api.convenios.gov.br/siconv/id/orgao/39251,39251,39251,AGENCIA NACIONAL DE TRANSPORTES AQUAVIARIOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39252,http://api.convenios.gov.br/siconv/id/orgao/39252,39252,39252,DEPTO. NAC. DE INFRA-ESTRUTURA DE TRANSPORTES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39801,http://api.convenios.gov.br/siconv/id/orgao/39801,39801,39801,SUBSECRETARIA DE ASSUNTOS ADMINISTRATIVOS/MT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39802,http://api.convenios.gov.br/siconv/id/orgao/39802,39802,39802,SUBSECRETARIA DE PLANEJAMENTO E ORCAMENTO/MT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+39811,http://api.convenios.gov.br/siconv/id/orgao/39811,39811,39811,COMPANHIA DOCAS DO RIO DE JANEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39812,http://api.convenios.gov.br/siconv/id/orgao/39812,39812,39812,COMPANHIA DOCAS DO ESTADO DA BAHIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39813,http://api.convenios.gov.br/siconv/id/orgao/39813,39813,39813,COMPANHIA DOCAS DO CEARá,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39814,http://api.convenios.gov.br/siconv/id/orgao/39814,39814,39814,COMPANHIA DOCAS DO PARA - CDP,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39815,http://api.convenios.gov.br/siconv/id/orgao/39815,39815,39815,COMPANHIA DOCAS DO RIO GRANDE DO NORTE-CODERN,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39816,http://api.convenios.gov.br/siconv/id/orgao/39816,39816,39816,COMPANHIA DOCAS DO ESTADO DE SAO PAULO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+39817,http://api.convenios.gov.br/siconv/id/orgao/39817,39817,39817,COMPANHIA DOCAS DO ESPIRITO SANTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20101>
+41000,http://api.convenios.gov.br/siconv/id/orgao/41000,41000,41000,MINISTERIO DAS COMUNICACOES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41000>
+41231,http://api.convenios.gov.br/siconv/id/orgao/41231,41231,41231,AGENCIA NACIONAL DE TELECOMUNICACOES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41231>
+41232,http://api.convenios.gov.br/siconv/id/orgao/41232,41232,41232,FUNDO DE UNIVERS.DOS SERV. DE TELECOMUNICOES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41231>
+41233,http://api.convenios.gov.br/siconv/id/orgao/41233,41233,41233,FUNDO DE FISCALIZACAO DAS TELECOMUNICACOES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41231>
+41801,http://api.convenios.gov.br/siconv/id/orgao/41801,41801,41801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MC",<objeto: http://api.convenios.gov.br/siconv/id/orgao/41000>
+41903,http://api.convenios.gov.br/siconv/id/orgao/41903,41903,41903,FUNDO P/ O DESENVOLV.TEC.DAS TELECOMUNICACOES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41000>
+42000,http://api.convenios.gov.br/siconv/id/orgao/42000,42000,42000,MINISTERIO DA CULTURA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+42207,http://api.convenios.gov.br/siconv/id/orgao/42207,42207,42207,INSTITUTO BRASILEIRO DE MUSEUS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+42801,http://api.convenios.gov.br/siconv/id/orgao/42801,42801,42801,DIRETORIA DE GESTAO INTERNA/MINC,<objeto: http://api.convenios.gov.br/siconv/id/orgao/42000>
+44000,http://api.convenios.gov.br/siconv/id/orgao/44000,44000,44000,MINISTERIO DO MEIO AMBIENTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44204,http://api.convenios.gov.br/siconv/id/orgao/44204,44204,44204,FUNDO NACIONAL DO MEIO AMBIENTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44205,http://api.convenios.gov.br/siconv/id/orgao/44205,44205,44205,AGENCIA NACIONAL DE AGUAS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44206,http://api.convenios.gov.br/siconv/id/orgao/44206,44206,44206,INSTITUTO DE PESQUISAS JARDIM BOTANICO DO RJ,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44207,http://api.convenios.gov.br/siconv/id/orgao/44207,44207,44207,INST.CHICO MENDES DE CONSER.DA BIODIVERSIDADE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44208,http://api.convenios.gov.br/siconv/id/orgao/44208,44208,44208,SERVICO FLORESTAL BRASILEIRO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44801,http://api.convenios.gov.br/siconv/id/orgao/44801,44801,44801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MMA",<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+44902,http://api.convenios.gov.br/siconv/id/orgao/44902,44902,44902,FUNDO NACIONAL SOBRE MUDANÇA DO CLIMA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/44000>
+45282,http://api.convenios.gov.br/siconv/id/orgao/45282,45282,45282,BANCO NACIONAL DE DESENV. ECONOMICO E SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/28000>
+45283,http://api.convenios.gov.br/siconv/id/orgao/45283,45283,45283,INSTITUTO DE RESSEGUROS DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+49000,http://api.convenios.gov.br/siconv/id/orgao/49000,49000,49000,MINISTERIO DO DESENVOLVIMENTO AGRARIO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/49000>
+49001,http://api.convenios.gov.br/siconv/id/orgao/49001,49001,49001,FUNDO TERRAS E DA REF.AGRARIA-BANCO DA TERRA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/49000>
+49280,http://api.convenios.gov.br/siconv/id/orgao/49280,49280,49280,EMPRESA BRASILEIRA DE CORREIOS E TELEGRAFOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/41000>
+49901,http://api.convenios.gov.br/siconv/id/orgao/49901,49901,49901,FUNDO DA MARINHA MERCANTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/39000>
+50000,http://api.convenios.gov.br/siconv/id/orgao/50000,50000,50000,GAB.DO MINISTRO EXTRAORD.DE PROJ.ESPECIAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20116>
+51000,http://api.convenios.gov.br/siconv/id/orgao/51000,51000,51000,MINISTERIO DO ESPORTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/51000>
+51801,http://api.convenios.gov.br/siconv/id/orgao/51801,51801,51801,"SECRETARIA DE PLANEJ.,ORCAM.E ADM.±SPOA/ME",<objeto: http://api.convenios.gov.br/siconv/id/orgao/51000>
+52000,http://api.convenios.gov.br/siconv/id/orgao/52000,52000,52000,MINISTERIO DA DEFESA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52001,http://api.convenios.gov.br/siconv/id/orgao/52001,52001,52001,FUNDO DO MINISTERIO DA DEFESA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52002,http://api.convenios.gov.br/siconv/id/orgao/52002,52002,52002,FUNDO DE ADMINISTRACAO DO HFA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52003,http://api.convenios.gov.br/siconv/id/orgao/52003,52003,52003,FUNDO DO SERVICO MILITAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52111,http://api.convenios.gov.br/siconv/id/orgao/52111,52111,52111,COMANDO DA AERONAUTICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52111>
+52121,http://api.convenios.gov.br/siconv/id/orgao/52121,52121,52121,COMANDO DO EXERCITO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52121>
+52131,http://api.convenios.gov.br/siconv/id/orgao/52131,52131,52131,COMANDO DA MARINHA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52131>
+52132,http://api.convenios.gov.br/siconv/id/orgao/52132,52132,52132,COMANDO DA MARINHA - FUNDO NAVAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52131>
+52133,http://api.convenios.gov.br/siconv/id/orgao/52133,52133,52133,COM.MARINHA - FUNDO DESENV.ENS.PROF.MARITIMO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52131>
+52201,http://api.convenios.gov.br/siconv/id/orgao/52201,52201,52201,AGENCIA NACIONAL DE AVIACAO CIVIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52201>
+52211,http://api.convenios.gov.br/siconv/id/orgao/52211,52211,52211,CAIXA DE FINANC. IMOBILIARIO DA AERONAUTICA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52111>
+52212,http://api.convenios.gov.br/siconv/id/orgao/52212,52212,52212,EMPRESA BRAS.DE INFRA-ESTRUTURA AEROPORTUARIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52221,http://api.convenios.gov.br/siconv/id/orgao/52221,52221,52221,INDUSTRIA DE MATERIAL BELICO DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52121>
+52222,http://api.convenios.gov.br/siconv/id/orgao/52222,52222,52222,FUNDACAO OSORIO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52121>
+52231,http://api.convenios.gov.br/siconv/id/orgao/52231,52231,52231,EMPRESA GERENCIAL DE PROJETOS NAVAIS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52131>
+52801,http://api.convenios.gov.br/siconv/id/orgao/52801,52801,52801,SECRETARIA DE ORGANIZACAO INSTITUCIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52000>
+52904,http://api.convenios.gov.br/siconv/id/orgao/52904,52904,52904,FUNDO DO EXERCITO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52121>
+52911,http://api.convenios.gov.br/siconv/id/orgao/52911,52911,52911,FUNDO AERONAUTICO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52111>
+52912,http://api.convenios.gov.br/siconv/id/orgao/52912,52912,52912,FUNDO AEROVIARIO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/52201>
+53000,http://api.convenios.gov.br/siconv/id/orgao/53000,53000,53000,MINISTERIO DA INTEGRACAO NACIONAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53202,http://api.convenios.gov.br/siconv/id/orgao/53202,53202,53202,SUPERINTEND. DO DESENVOLVIMENTO DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53202>
+53203,http://api.convenios.gov.br/siconv/id/orgao/53203,53203,53203,SUPERINTENDENCIA DO DESENVOLV. DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53204,http://api.convenios.gov.br/siconv/id/orgao/53204,53204,53204,FUNDO DE DESENVOLVIMENTO DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53202>
+53205,http://api.convenios.gov.br/siconv/id/orgao/53205,53205,53205,AGENCIA DE DESENVOLVIMENTO DA AMAZONIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53206,http://api.convenios.gov.br/siconv/id/orgao/53206,53206,53206,AGENCIA DE DESENVOLVIMENTO DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53207,http://api.convenios.gov.br/siconv/id/orgao/53207,53207,53207,SUPERINT. DE DESENVOLVIMENTO DO CENTRO-OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53208,http://api.convenios.gov.br/siconv/id/orgao/53208,53208,53208,FUNDO CONST. DE FINANCIAMENTO DO NORTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53209,http://api.convenios.gov.br/siconv/id/orgao/53209,53209,53209,FUNDO CONST.DE FINANCIAMENTO DO CENTRO-OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53210,http://api.convenios.gov.br/siconv/id/orgao/53210,53210,53210,FUNDO CONST.DE FINANCIAMENTO DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53297,http://api.convenios.gov.br/siconv/id/orgao/53297,53297,53297,SUPERINT. DO DESENVOLVIMENTO DO CENTRO-OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53801,http://api.convenios.gov.br/siconv/id/orgao/53801,53801,53801,DEPARTAMENTO DE GESTAO INTERNA/MI,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53802,http://api.convenios.gov.br/siconv/id/orgao/53802,53802,53802,DEPARTAMENTO GESTAO DOS FUNDOS DE INVESTIMENT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53901,http://api.convenios.gov.br/siconv/id/orgao/53901,53901,53901,FUNDO CONSTITUCIONAL DE FINANCIAM.DO NORTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53902,http://api.convenios.gov.br/siconv/id/orgao/53902,53902,53902,FUNDO CONSTITUCIONAL DE FINAN.DO CENTRO OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53903,http://api.convenios.gov.br/siconv/id/orgao/53903,53903,53903,FUNDO CONSTITUCIONAL DE FINANCIAM.DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+53905,http://api.convenios.gov.br/siconv/id/orgao/53905,53905,53905,FUNDO DE DESENVOLVIMENTO DO NORDESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/53000>
+54000,http://api.convenios.gov.br/siconv/id/orgao/54000,54000,54000,MINISTERIO DO TURISMO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/54000>
+54801,http://api.convenios.gov.br/siconv/id/orgao/54801,54801,54801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MTUR",<objeto: http://api.convenios.gov.br/siconv/id/orgao/54000>
+54901,http://api.convenios.gov.br/siconv/id/orgao/54901,54901,54901,FUNDO GERAL DE TURISMO-FUNGETUR/METUR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/54000>
+55000,http://api.convenios.gov.br/siconv/id/orgao/55000,55000,55000,MINISTERIO DO DESENV. SOCIAL E COMBATE A FOME,<objeto: http://api.convenios.gov.br/siconv/id/orgao/55000>
+55001,http://api.convenios.gov.br/siconv/id/orgao/55001,55001,55001,FUNDO NACIONAL DA ASSISTENCIA SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/55000>
+55801,http://api.convenios.gov.br/siconv/id/orgao/55801,55801,55801,SPOA/MDS E COMBATE A FOME,<objeto: http://api.convenios.gov.br/siconv/id/orgao/55000>
+56000,http://api.convenios.gov.br/siconv/id/orgao/56000,56000,56000,MINISTERIO DAS CIDADES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+56801,http://api.convenios.gov.br/siconv/id/orgao/56801,56801,56801,"SUBSECRETARIA DE PLANEJ.,ORCAM.E ADM./MICI",<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+56901,http://api.convenios.gov.br/siconv/id/orgao/56901,56901,56901,FUNDO NAC. DE SEGUR. E EDUCACAO DO TRANSITO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+56902,http://api.convenios.gov.br/siconv/id/orgao/56902,56902,56902,FUNDO NACIONAL DE HAB. INTERESSE SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/56000>
+57280,http://api.convenios.gov.br/siconv/id/orgao/57280,57280,57280,EMPRESA DE PROC.DE DADOS DA PREVID.SOCIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/33000>
+58000,http://api.convenios.gov.br/siconv/id/orgao/58000,58000,58000,MINISTÉRIO DA PESCA E AQUICULTURA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/58000>
+61000,http://api.convenios.gov.br/siconv/id/orgao/61000,61000,61000,SECRETARIA DE ASSUNTOS ESTRTEGICOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+62201,http://api.convenios.gov.br/siconv/id/orgao/62201,62201,62201,AGENCIA NACIONAL DE AVIACAO CIVIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+64000,http://api.convenios.gov.br/siconv/id/orgao/64000,64000,64000,SECRETARIA DE DIREITOS HUMANOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+65000,http://api.convenios.gov.br/siconv/id/orgao/65000,65000,65000,SECRETARIA DE POLITICAS PARA AS MULHERES,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+66000,http://api.convenios.gov.br/siconv/id/orgao/66000,66000,66000,CONTROLADORIA GERAL DA UNIAO -CGU/PR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+67000,http://api.convenios.gov.br/siconv/id/orgao/67000,67000,67000,SEC.DE POLITICAS DE PROMOCAO DA IGUALDADE RACIAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+68000,http://api.convenios.gov.br/siconv/id/orgao/68000,68000,68000,SECRETARIA DE PORTOS,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20000>
+71902,http://api.convenios.gov.br/siconv/id/orgao/71902,71902,71902,FUNDO SOBERANO DO BRASIL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/71902>
+80000,http://api.convenios.gov.br/siconv/id/orgao/80000,80000,80000,"ENTIDADES EM EXTINC.,DISSOL.OU PRIV.L.8029/90",<objeto: http://api.convenios.gov.br/siconv/id/orgao/80000>
+80201,http://api.convenios.gov.br/siconv/id/orgao/80201,80201,80201,SUPERINTEND.DO DESENV.DA REGIAO CENTRO-OESTE,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+80202,http://api.convenios.gov.br/siconv/id/orgao/80202,80202,80202,SUPERINTENDENCIA DO DESENV.DA REGIAO SUL-EXT.,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+80203,http://api.convenios.gov.br/siconv/id/orgao/80203,80203,80203,DEPARTAMENTO NACIONAL DE OBRAS DE SANEAMENTO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+80204,http://api.convenios.gov.br/siconv/id/orgao/80204,80204,80204,INSTITUTO DO ACUCAR E DO ALCOOL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+80208,http://api.convenios.gov.br/siconv/id/orgao/80208,80208,80208,EMPRESA DE PORTOS DO BRASIL S/A-EM EXTINCAO,<objeto: http://api.convenios.gov.br/siconv/id/orgao/20113>
+80210,http://api.convenios.gov.br/siconv/id/orgao/80210,80210,80210,EMPRESA BRAS.DE ASSISTENCIA TEC.E EXT.RURAL,<objeto: http://api.convenios.gov.br/siconv/id/orgao/22000>
+90000,http://api.convenios.gov.br/siconv/id/orgao/90000,90000,90000,RESERVA DE CONTINGENCIA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
+91000,http://api.convenios.gov.br/siconv/id/orgao/91000,91000,91000,ENTIDADES QUE UTILIZAM CONTA UNICA - TCT,<objeto: http://api.convenios.gov.br/siconv/id/orgao/91000>
+91001,http://api.convenios.gov.br/siconv/id/orgao/91001,91001,91001,GOVERNO DO DISTRITO FEDERAL - DAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/91001>
+91002,http://api.convenios.gov.br/siconv/id/orgao/91002,91002,91002,PREFEITURA DE SAO LUIS - DAR,<objeto: http://api.convenios.gov.br/siconv/id/orgao/91002>
+91010,http://api.convenios.gov.br/siconv/id/orgao/91010,91010,91010,ESTATAIS DO MINISTERIO DA FAZENDA,<objeto: http://api.convenios.gov.br/siconv/id/orgao/25000>
