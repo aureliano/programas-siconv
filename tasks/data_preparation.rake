@@ -25,7 +25,6 @@ namespace :data do
       begin
         Rake::Task[task_name].invoke
       rescue Exception => ex
-        ProgramasSiconv.deliver(:application, :admin, :subject => "novosprogramas data:fill', :body => 'Povoamento da base de dados falhou. Exceção: #{ex}")
         puts "Encerrando processo devido a um erro.\nExceção: #{ex}"
         Process.exit -1
       end
