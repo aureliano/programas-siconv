@@ -5,7 +5,7 @@ require 'rest_client'
 desc 'Remova-me quando não precisar mais de mim.'
 task :teste do
   puts 'Carregando órgãos concedentes'
-  puts RestClient.get 'http://api.convenios.gov.br/siconv/v1/consulta/orgaos.xml'
+  puts RestClient.get 'http://api.convenios.gov.br/siconv/v1/consulta/orgaos.csv'
   
   puts "\n\nCarregando programas"
   puts RestClient.get 'http://api.convenios.gov.br/siconv/v1/consulta/programas.xml?situacao=DISPONIBILIZADO'
