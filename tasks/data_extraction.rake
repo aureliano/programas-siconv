@@ -18,7 +18,7 @@ namespace :data do
   task :extraction do
     resources.each do |k, v|
       puts "Carregando arquivos de dados de '#{k}'"
-      download_data_files(v.sub(/<formato>/ , 'csv'), 'csv')
+      download_data_files(v.sub(/<formato>/ , 'xml'), 'xml')
     end
   end
   
