@@ -5,7 +5,7 @@
 # autor: Aureliano
 # data: 07/11/2012
 
-DAY_SEED = 5
+DAY_SEED = 2
 
 namespace :data do
 
