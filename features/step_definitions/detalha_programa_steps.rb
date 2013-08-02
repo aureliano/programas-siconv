@@ -3,10 +3,10 @@
 Dado /^que existe o programa '(\d+)' disponibilizado '(\d+)' dia\(s\) atrás$/ do |codigo, dias|
   Programa.create :aceita_emenda_parlamentar => true, :_id => codigo,
                   :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
-                  :obriga_plano_trabalho => true, :orgao_executor => 'MINISTERIO DOS TESTES', :tags => ['ministerio', 'testes']
+                  :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DOS TESTES'
 end
 
-Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pelo órgão executor '([\p{L}\s-]+)'$/ do |total, dias, orgao|
+Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pelo órgão superior '([\p{L}\s-]+)'$/ do |total, dias, orgao|
   programas = []
   total.to_i.times do |index|
     codigo = ''
@@ -15,7 +15,7 @@ Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pe
     programas << {
       :aceita_emenda_parlamentar => true, :_id => codigo.to_i,
       :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
-      :obriga_plano_trabalho => true, :orgao_executor => orgao, :tags => orgao.split(' ').each(&:downcase!)
+      :obriga_plano_trabalho => true, :orgao_superior => orgao
     }
   end
   
@@ -46,7 +46,7 @@ Então /^eu devo ver a página de detalhamento do programa '(\d+)'$/ do |codigo|
 end
 
 Então /^eu devo ver a página de consulta de programas$/ do
-  should have_xpath "//form/div/input[@id='search_params']"
+  should have_xpath "//form/div/select[@id='orgao_superior']"
   should have_button 'Consultar'
 end
 

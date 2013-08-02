@@ -38,7 +38,7 @@
   <span><strong>Data inicial para recebimento de propostas: </strong></span><span><%= format_date @programa.data_inicio_recebimento_propostas %></span>
 </div>
 <div name="data_fim_recebimento_propostas">
-  <span><strong>Data final para recebimento de propostas: </strong></span><span><%= format_date @programa.data_fim_recebimento_propostas %></span>
+  <span><strong>Data final para recebimento de propostas: </strong></span><span><%= time_to_date_s @programa.data_fim_recebimento_propostas %></span>
 </div>
 <% end %>
 

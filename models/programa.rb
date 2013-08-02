@@ -8,7 +8,7 @@ class Programa
   field :data_inicio_beneficiario_especifico, :type => String
   field :data_fim_emenda_parlamentar, :type => String
   field :data_inicio_emenda_parlamentar, :type => String
-  field :data_fim_recebimento_propostas, :type => String
+  field :data_fim_recebimento_propostas, :type => Date
   field :data_inicio_recebimento_propostas, :type => String
   field :nome, :type => String
   field :obriga_plano_trabalho, :type => Boolean
@@ -20,7 +20,7 @@ class Programa
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
-    start_time = end_time - (10 * DAY)
+    start_time = end_time - (options[:last_days] * DAY)
     options[:skip] ||= 0
     options[:limit] ||= 0
 
@@ -34,7 +34,7 @@ class Programa
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
     start_time = end_time - (last_days * DAY)
-    
+
     where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).count
   end
   

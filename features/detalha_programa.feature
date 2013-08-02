@@ -11,8 +11,8 @@ Funcionalidade: Detalhar dados de um programa do governo federal
     Dado que existe o programa '1875424879' disponibilizado '5' dia(s) atrás
     Dado que existe o programa '5687745239' disponibilizado '14' dia(s) atrás
     
-    Dado que existem '50' programas disponibilizados '23' dia(s) atrás pelo órgão executor 'MINISTERIO DA INTEGRACAO CONTINUA'
-    Dado que existem '50' programas disponibilizados '25' dia(s) atrás pelo órgão executor 'MINISTERIO POPULAR'
+    Dado que existem '50' programas disponibilizados '23' dia(s) atrás pelo órgão superior 'MINISTERIO DA INTEGRACAO CONTINUA'
+    Dado que existem '50' programas disponibilizados '25' dia(s) atrás pelo órgão superior 'MINISTERIO POPULAR'
 
     Cenário: C1 - Um usuário acessa o sítio e seleciona um programa que está na lista dos programas disponibilizados nos últimos 10 dias.
       Dado que eu acesso a página inicial do sistema
@@ -41,7 +41,7 @@ Funcionalidade: Detalhar dados de um programa do governo federal
       Quando eu clico no item 'Consulta' do menu
       Então eu devo ver a página de consulta de programas
       
-      Dado que eu preencho o campo 'search_params' com 'testes'
+      Dado que eu seleciono o campo 'orgao_superior' com 'MINISTERIO DOS TESTES'
       Quando eu clico no botão 'Consultar'
       Então eu devo ver o resultado da consulta de programas
       E eu devo ver '4' programas no resultado da consulta
@@ -50,12 +50,12 @@ Funcionalidade: Detalhar dados de um programa do governo federal
       Então eu devo ver a página de detalhamento do programa '6658947120'
 
     Cenário: C4 - Um usuário acessa o sítio, faz uma pesquisa de programas e navega até o último programa da lista.
-      Dado que existem '900' programas disponibilizados '25' dia(s) atrás pelo órgão executor 'MINISTERIO POPULAR'
+      Dado que existem '954' programas disponibilizados '25' dia(s) atrás pelo órgão superior 'MINISTERIO POPULAR'
       Dado que eu acesso a página inicial do sistema
       Quando eu clico no item 'Consulta' do menu
       Então eu devo ver a página de consulta de programas
       
-      Dado que eu preencho o campo 'search_params' com 'ministerio'
+      Dado que eu seleciono o campo 'orgao_superior' com 'MINISTERIO POPULAR'
       Quando eu clico no botão 'Consultar'
       Então eu devo ver o resultado da consulta de programas
       E eu devo ver '1004' programas no resultado da consulta

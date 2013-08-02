@@ -50,7 +50,7 @@ ProgramasSiconv.helpers do
   
   def inject_params(page_index=nil)
     url = '?'
-    url << "search_params=#{params[:search_params].gsub(/\s/, '+')}" if params[:search_params]
+    url << "orgao_superior=#{params[:orgao_superior].gsub(/\s/, '+')}" if params[:orgao_superior]
     url << '&' unless url == '?'
     url << "page=#{page_index}"
     url << "&dias=#{params[:dias]}" if params[:dias]
