@@ -16,12 +16,11 @@ class Programa
   field :orgao_executor, :type => String
   field :orgao_mandatario, :type => String
   field :orgao_vinculado, :type => String
-  field :tags, :type => Array
 
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
     end_time = Time.new(tokens[2], tokens[1], tokens[0]) + DAY
-    start_time = end_time - (options[:last_days] * DAY)
+    start_time = end_time - (10 * DAY)
     options[:skip] ||= 0
     options[:limit] ||= 0
 
@@ -39,16 +38,29 @@ class Programa
     where(:data_disponibilizacao => {'$gte' => start_time, '$lte' => end_time}).count
   end
   
-  def self.with_tags(options)
-    options[:skip] ||= 0
-    options[:limit] ||= 0
-    programas = []
-    
-    where(:tags => {'$all' => options[:tags]}).desc(:data_disponibilizacao).skip(options[:skip]).limit(options[:limit]).each {|document| programas << document }
-    programas
+  def self.search(options)
+    [_search(options), _count_search(options)]
   end
   
-  def self.count_with_tags(tags)
-    where(:tags => {'$all' => tags}).count
+  def self.orgaos_superiores
+    only(:orgao_superior).distinct(:orgao_superior)
   end
+  
+  private
+    def self._search(options)
+      options[:skip] ||= 0
+      options[:limit] ||= 0
+      programas = []
+      
+      where(:orgao_superior => options[:orgao_superior])
+        .desc(:data_disponibilizacao)
+        .skip(options[:skip])
+        .limit(options[:limit])
+        .each {|document| programas << document }
+      programas
+    end
+    
+    def self._count_search(options)
+      where(:orgao_superior => options[:orgao_superior]).count
+    end
 end

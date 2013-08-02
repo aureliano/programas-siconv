@@ -3,21 +3,6 @@
 start_time = $data_preparation_start.nil? ? Time.now : $data_preparation_start
 BUCKET_SIZE = 100
 
-@characters = {
-  'á' => 'a', 'Á' => 'A',
-  'é' => 'e', 'É' => 'E',
-  'í' => 'i', 'Í' => 'I',
-  'ó' => 'o', 'Ó' => 'O',
-  'ú' => 'u', 'Ú' => 'U',
-  'ã' => 'a', 'Ã' => 'A',
-  'õ' => 'o', 'Õ' => 'O',
-  'ê' => 'e', 'Ê' => 'E',
-  'ô' => 'o', 'Ô' => 'O',
-  'ü' => 'u', 'Ü' => 'U',
-  'ç' => 'c', 'Ç' => 'C',
-  'à' => 'a', 'À' => 'A'
-}
-
 def elapsed_time(t1, t2)
   diff = (t2 - t1)
   s = (diff % 60).to_i
@@ -47,22 +32,6 @@ def load_data_from_csv(file)
   end
   
   data
-end
-
-def replace_special_characters(text)
-  return text if text.nil?
-  
-  txt = text.dup
-  @characters.each {|k, v| txt.gsub! /#{k}/, v }
-  txt
-end
-
-def get_tags_without_stopwords(text)
-  txt = replace_special_characters text
-  return txt if txt.nil?
-  
-  tags = txt.downcase.split(/[\s\/,-\.]/)
-  tags.delete_if {|t| STOPWORDS.include?(t) || t.empty? || t.size == 1 }
 end
 
 def time_to_date_s(time)
@@ -96,28 +65,6 @@ data.each do |row|
     data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
   end
   
-  tagged_orgs = []
-  tags = []
-  org_exe = concedentes[row['orgao_executor']]
-  tokens = get_tags_without_stopwords(org_exe)
-  tags.concat tokens if tokens
-  tagged_orgs << org_exe
-  
-  org_sup = concedentes[row['orgao_superior']]
-  tokens = get_tags_without_stopwords(org_sup)
-  tags.concat tokens if tokens && !tagged_orgs.include?(org_sup)
-  tagged_orgs << org_sup
-  
-  org_mand = concedentes[row['orgao_mandatario']]
-  tokens = get_tags_without_stopwords(org_mand)
-  tags.concat tokens if tokens && !tagged_orgs.include?(org_mand)
-  tagged_orgs << org_mand
-  
-  org_vin = concedentes[row['orgao_vinculado']]
-  tokens = get_tags_without_stopwords(org_vin)
-  tags.concat tokens if tokens && !tagged_orgs.include?(org_vin)
-  tagged_orgs << org_vin
-  
   programas << { :_id => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
@@ -125,8 +72,7 @@ data.each do |row|
                   :data_inicio_emenda_parlamentar => row['data_inicio_emenda_parlamentar'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
                   :orgao_executor => org_exe, :orgao_mandatario => org_mand,
-                  :orgao_superior => org_sup, :orgao_vinculado => org_vin,
-                  :tags => tags }
+                  :orgao_superior => org_sup, :orgao_vinculado => org_vin }
 
   docs += 1
   if docs == BUCKET_SIZE

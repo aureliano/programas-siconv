@@ -6,7 +6,7 @@ describe "Entidade Programa" do
 
   let(:programa) { Programa.new }
   it 'pode ser criada' do
-    programa.should_not be_nil    
+    programa.should_not be_nil
   end
   
   it 'permite acesso a todos os atributos' do
@@ -25,7 +25,6 @@ describe "Entidade Programa" do
     programa.should respond_to :orgao_executor
     programa.should respond_to :orgao_mandatario
     programa.should respond_to :orgao_vinculado
-    programa.should respond_to :tags
   end
   
   it 'carrega os programas disponibilizados nos últimos 10 dias' do

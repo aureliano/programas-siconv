@@ -68,7 +68,7 @@ describe "ProgramaController" do
     get '/consulta/programas'
     
     last_response.body.should include '<title>Novos Programas: Consulta Programas</title>'
-    last_response.body.should include '<form method="get" id="form_consulta" class="form-search" action="/consulta/programas" accept-charset="UTF-8">  <div class="input-append">'
+    last_response.body.should include '<form method="get" id="form_consulta" action="/consulta/programas" accept-charset="UTF-8">  <div class="input-append">'
   end
   
   it 'carrega página inicial de estatística' do

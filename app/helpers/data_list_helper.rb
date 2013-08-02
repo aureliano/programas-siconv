@@ -11,7 +11,7 @@ ProgramasSiconv.helpers do
         
     data_page.data.each do |programa|      
       d << "<div name=\"div_item_resultado_consulta\">"
-      d << "\n  <a href=\"/programa/#{programa.id}?page=#{params[:page]}&search_params=#{format_get_params params[:search_params]}\"> #{programa.nome}</a><br/>"
+      d << "\n  <a href=\"/programa/#{programa.id}\"> #{programa.nome}</a><br/>"
       d << "\n  Data de disponibilização: #{time_to_date_s programa.data_disponibilizacao}<br/>"
       d << "\n  Órgãos Relacionados: #{related_concedentes(programa).join '; '}"
       d << "\n</div>"

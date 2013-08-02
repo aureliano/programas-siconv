@@ -43,13 +43,6 @@ ProgramasSiconv.helpers do
     totais.each {|k, v| data << [k.to_s, v] }
     data
   end
-
-  def get_tags_without_stopwords(text)
-    return [] if text.nil?
-    tags = text.split(/\s/)
-    tags.each {|tag| tag.downcase! }
-    tags.delete_if {|t| STOPWORDS.include? t }
-  end
   
   def time_to_date_s(time)
     return '-' if time.nil?
