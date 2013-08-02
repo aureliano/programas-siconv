@@ -73,14 +73,6 @@ end
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
-tokens = LAST_EXTRACTION_DATE.split '/'
-diff_days = ((Time.now - Time.new(tokens[2], tokens[1], tokens[0])) / 60 / 60 / 24).to_i
-if diff_days > 1
-  puts "Ignorando povoamento da base de dados porque a extração de dados não foi feita nos dois últimos dias.\n" +
-       "Data da última extração: #{LAST_EXTRACTION_DATE}. Diferença: #{diff_days} dias."
-  Process.exit 0
-end
-
 shell.say "Carregando dados de 'concedentes' do arquivo 'tmp/concedentes_db.csv'"
 data = load_data_from_csv 'tmp/concedentes_db.csv'
 
