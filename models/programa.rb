@@ -2,6 +2,7 @@ class Programa
   include Mongoid::Document
   
   field :_id, :type => Integer
+  field :codigo_programa, :type => Integer
   field :aceita_emenda_parlamentar, :type => Boolean
   field :data_disponibilizacao, :type => Date
   field :data_fim_beneficiario_especifico, :type => String

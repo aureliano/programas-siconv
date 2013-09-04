@@ -65,7 +65,7 @@ data.each do |row|
     data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
   end
   
-  programas << { :_id => row['cod_programa_siconv'].to_i,
+  programas << { :_id => row['id'].to_i, :codigo_programa => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
                   :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],

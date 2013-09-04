@@ -12,6 +12,7 @@ describe "Entidade Programa" do
   it 'permite acesso a todos os atributos' do
     programa.should respond_to :aceita_emenda_parlamentar
     programa.should respond_to :_id
+    programa.should respond_to :codigo_programa
     programa.should respond_to :data_disponibilizacao
     programa.should respond_to :data_fim_recebimento_propostas
     programa.should respond_to :data_inicio_recebimento_propostas

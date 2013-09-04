@@ -15,7 +15,7 @@ namespace :data do
     :programas   => {
       :file => 'tmp/programas_db_<offset>_tmp.csv',
       :columns => [
-        'cod_programa_siconv', 'data_disponibilizacao', 'data_fim_beneficiario_especifico',
+        'id', 'cod_programa_siconv', 'data_disponibilizacao', 'data_fim_beneficiario_especifico',
         'data_fim_emenda_parlamentar', 'data_fim_recebimento_propostas', 'data_inicio_beneficiario_especifico',
         'data_inicio_emenda_parlamentar', 'data_inicio_recebimento_propostas', 'nome', 'obriga_plano_trabalho',
         'orgao_executor', 'orgao_mandatario', 'orgao_superior', 'orgao_vinculado'
