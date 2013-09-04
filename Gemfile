@@ -19,6 +19,7 @@ gem 'koala', '1.6.0'
 gem 'rspec', '2.12.0'
 gem 'capybara'
 gem 'cucumber'
+gem 'selenium-webdriver'
 gem 'rack-test', :require => "rack/test"
 
 gem "rest-client", "~> 1.6.7"
