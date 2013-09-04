@@ -27,6 +27,8 @@ namespace :data do
     
     object_path = base_url[base_url.rindex('/') + 1, base_url.size]
     object_path = 'tmp/' + object_path[0, object_path.index('.')]
+
+    `mkdir tmp` unless File.exists?(Dir.pwd + '/tmp')
     
     page_index = 0
     while true do
@@ -60,10 +62,10 @@ namespace :data do
         response = RestClient.get url
         File.open("#{object_path}_db_#{offset}_tmp.#{data_type}", 'w') {|f| f.write response}
         break
-      rescue
+      rescue Exception => ex
         sleep 3
         count += 1
-        puts "Nova tentativa..."
+        puts "Erro: #{ex}\nNova tentativa..."
       end
     end
     
