@@ -14,4 +14,4 @@
   <button type="submit" class="btn btn-primary" onclick="return validateDays()">Filtrar</button>
 </form>
 
-<%= programas_data_table :data => @programas, :total => @total, :last_days => @days %>
+<%= programas_data_table(:data => @programas, :total => @total, :last_days => @days).html_safe %>

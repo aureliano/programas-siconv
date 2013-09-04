@@ -23,5 +23,5 @@
 </div>
 
 <div name="div_resultado_consulta">
-  <%= search_data_list :data => @programas, :total => @total %>
+  <%= search_data_list(:data => @programas, :total => @total).html_safe %>
 </div>

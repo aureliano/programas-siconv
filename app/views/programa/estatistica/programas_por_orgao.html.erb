@@ -1,7 +1,7 @@
 <% @page_title = 'Estatísticas'
    @estatisticas_ativa = true %>
 
-<% @head_code = draw_chart :width => 800, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart' %>
+<% @head_code = draw_chart(:width => 800, :height => 450, :data => @chart_data, :chart_class => 'ColumnChart').html_safe %>
 
 <div class="hero-unit">
   <h3>Programas por Órgão Superior</h3>
