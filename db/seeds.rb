@@ -71,8 +71,8 @@ data.each do |row|
                   :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],
                   :data_inicio_emenda_parlamentar => row['data_inicio_emenda_parlamentar'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
-                  :orgao_executor => org_exe, :orgao_mandatario => org_mand,
-                  :orgao_superior => org_sup, :orgao_vinculado => org_vin }
+                  :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
+                  :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']] }
 
   docs += 1
   if docs == BUCKET_SIZE
