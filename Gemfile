@@ -24,7 +24,7 @@ gem 'rack-test', :require => "rack/test"
 gem "rest-client", "~> 1.6.7"
 
 # Padrino Stable Gem
-gem 'padrino', '0.10.7'
+gem 'padrino', '0.11.3'
 gem 'padrino-rpm'
 gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 
@@ -33,5 +33,5 @@ gem 'newrelic_rpm' # https://devcenter.heroku.com/articles/newrelic
 
 # Or Individual Gems
 # %w(core gen helpers cache mailer admin).each do |g|
-#   gem 'padrino-' + g, '0.10.5'
+#   gem 'padrino-' + g, '0.11.3'
 # end
