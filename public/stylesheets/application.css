@@ -11,3 +11,21 @@
   width: 40px;
   height: 15px;
 }
+
+label {
+  display: block;
+  width: 200px;
+  float: left;
+}
+
+input {
+  width: 300px;
+}
+
+select {
+  width: 310px;
+}
+
+#action_buttons {
+  margin-left: 100px;
+}

@@ -10,14 +10,25 @@
 <div class="row-fluid">
 <% form_tag '/consulta/programas', :method => 'get', :id => 'form_consulta' do %>
   <div class="input-append">
-    <select id="orgao_superior" name="orgao_superior">
-      <option value=""></option>
-      <% @orgaos_superiores.each do |org| %>
-      <option value="<%= org %>"<%= ' selected' if params[:orgao_superior] == org %>><%= org %></option>
-      <% end %>
-    </select>
+    <div id="div_nome">
+      <label for="orgao_superior">Órgão Superior: </label>
+      <select id="orgao_superior" name="orgao_superior">
+        <option value="">Selecione...</option>
+        <% @orgaos_superiores.each do |org| %>
+        <option value="<%= org %>"<%= ' selected' if params[:orgao_superior] == org %>><%= org %></option>
+        <% end %>
+      </select>
+    </div>
     
-    <button type="submit" class="btn">Consultar</button>
+    <div id="div_inclui_programas_expirados">
+      <label for="inclui_programas_expirados">Incluir Programas expirados: </label><input type="checkbox" <%= 'checked' if params['inclui_programas_expirados'] %> id="inclui_programas_expirados" name="inclui_programas_expirados"/>
+    </div>
+    
+    <br/>
+    <div id="action_buttons">
+      <button type="submit" class="btn">Consultar</button>
+      <a class="btn" href="<%= url :programa, :consulta %>">&nbsp;&nbsp;Limpar&nbsp;&nbsp;</a>
+    </div>
   </div>
 <% end %>
 </div>

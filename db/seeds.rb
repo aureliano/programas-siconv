@@ -65,6 +65,17 @@ data.each do |row|
     data_disponibilizacao = Time.new(tokens[0], tokens[1], tokens[2])
   end
   
+  data_expiracao_programa = if row['data_fim_recebimento_propostas']
+    tokens = row['data_fim_recebimento_propostas'].split '-'
+    Time.new(tokens[0], tokens[1], tokens[2])
+  elsif row['data_fim_beneficiario_especifico']
+    tokens = row['data_fim_beneficiario_especifico'].split '-'
+    Time.new(tokens[0], tokens[1], tokens[2])
+  elsif row['data_fim_emenda_parlamentar']
+    tokens = row['data_fim_emenda_parlamentar'].split '-'
+    Time.new(tokens[0], tokens[1], tokens[2])
+  end
+  
   programas << { :_id => row['id'].to_i, :codigo_programa => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
@@ -72,7 +83,8 @@ data.each do |row|
                   :data_inicio_emenda_parlamentar => row['data_inicio_emenda_parlamentar'],
                   :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
                   :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
-                  :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']] }
+                  :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']],
+                  :data_expiracao_programa => data_expiracao_programa }
 
   docs += 1
   if docs == BUCKET_SIZE

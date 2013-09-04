@@ -3,16 +3,16 @@ class Programa
   
   field :_id, :type => Integer
   field :codigo_programa, :type => Integer
-  field :aceita_emenda_parlamentar, :type => Boolean
   field :data_disponibilizacao, :type => Date
   field :data_fim_beneficiario_especifico, :type => String
   field :data_inicio_beneficiario_especifico, :type => String
   field :data_fim_emenda_parlamentar, :type => String
   field :data_inicio_emenda_parlamentar, :type => String
-  field :data_fim_recebimento_propostas, :type => Date
+  field :data_fim_recebimento_propostas, :type => String
   field :data_inicio_recebimento_propostas, :type => String
   field :nome, :type => String
   field :obriga_plano_trabalho, :type => Boolean
+  field :data_expiracao_programa, :type => Date
   field :orgao_superior, :type => String
   field :orgao_executor, :type => String
   field :orgao_mandatario, :type => String
@@ -40,20 +40,25 @@ class Programa
   end
   
   def self.search(options)
-    [_search(options), _count_search(options)]
+    criteria = _create_criteria options
+    [_search(options, criteria), _count_search(options, criteria)]
   end
   
   def self.orgaos_superiores
     only(:orgao_superior).distinct(:orgao_superior)
   end
   
+  def aceita_emenda_parlamentar
+    (!data_inicio_emenda_parlamentar.nil? || !data_fim_emenda_parlamentar.nil?)
+  end
+  
   private
-    def self._search(options)
+    def self._search(options, criteria)
       options[:skip] ||= 0
       options[:limit] ||= 0
       programas = []
       
-      where(:orgao_superior => options[:orgao_superior])
+      where(criteria)
         .desc(:data_disponibilizacao)
         .skip(options[:skip])
         .limit(options[:limit])
@@ -61,7 +66,14 @@ class Programa
       programas
     end
     
-    def self._count_search(options)
-      where(:orgao_superior => options[:orgao_superior]).count
+    def self._count_search(options, criteria)
+      where(criteria).count
+    end
+    
+    def self._create_criteria(options)
+      criteria = {}
+      criteria[:orgao_superior] = options[:orgao_superior] if options[:orgao_superior]
+      criteria[:data_expiracao_programa] = {:$gte => Time.now} unless options[:inclui_programas_expirados]
+      criteria
     end
 end

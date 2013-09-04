@@ -1,4 +1,11 @@
 ---
+'0.6.0':
+- Atualiza versão do framework web (padrino).
+- Corrige bug na tarefa de extração de dados. Erro ocorria quando a pasta temporária não existia.
+- Melhora povoamento da base de dados.
+- Altera consulta de programas por órgão concedente, permitindo que o usuário selecione o nome do órgão num combo invés de preenchê-lo num campo texto.
+- Altera extração de dados para recuperar id do programa.
+- Adiciona filtro na consulta de programas. Exclui por padrão os programas que expirados (que já não podem receber propostas).
 '0.5.4':
 - Ordena resultado da consulta de programas por ordem decrescente da data de disponibilização.
 '0.5.3':
