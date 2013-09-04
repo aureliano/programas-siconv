@@ -39,6 +39,10 @@ def time_to_date_s(time)
   time.strftime '%d/%m/%Y'
 end
 
+def parse_boolean(txt)
+  (txt.downcase == 'true') ? true : false
+end
+
 shell.say 'Populando base de dados do projeto'
 shell.say ''
 
@@ -81,7 +85,7 @@ data.each do |row|
                   :data_inicio_recebimento_propostas => row['data_inicio_recebimento_propostas'], :data_fim_beneficiario_especifico => row['data_fim_beneficiario_especifico'],
                   :data_inicio_beneficiario_especifico => row['data_inicio_beneficiario_especifico'], :data_fim_emenda_parlamentar => row['data_fim_emenda_parlamentar'],
                   :data_inicio_emenda_parlamentar => row['data_inicio_emenda_parlamentar'],
-                  :nome => row['nome'], :obriga_plano_trabalho => row['obriga_plano_trabalho'],
+                  :nome => row['nome'], :obriga_plano_trabalho => parse_boolean(row['obriga_plano_trabalho']),
                   :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
                   :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']],
                   :data_expiracao_programa => data_expiracao_programa }
