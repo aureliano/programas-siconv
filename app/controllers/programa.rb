@@ -7,9 +7,13 @@ ProgramasSiconv.controllers :programa do
   end
   
   get :consulta, :map => '/consulta/programas' do
-    @programas, @total = Programa.search(:skip => skip_value, :limit => DataPage.default_page_size, :orgao_superior => params[:orgao_superior], :inclui_programas_expirados => params[:inclui_programas_expirados])
     @orgaos_superiores = Programa.orgaos_superiores
-
+    @programas, @total = if params[:orgao_superior]
+      Programa.search(:skip => skip_value, :limit => DataPage.default_page_size, :orgao_superior => params[:orgao_superior], :inclui_programas_expirados => params[:inclui_programas_expirados])
+    else
+      [[], 0]
+    end
+    
     render 'programa/consulta_programas'
   end
   

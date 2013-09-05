@@ -1,9 +1,9 @@
 # encoding: utf-8
 
 Dado /^que existe o programa '(\d+)' disponibilizado '(\d+)' dia\(s\) atrás$/ do |codigo, dias|
-  Programa.create :aceita_emenda_parlamentar => true, :_id => codigo,
+  Programa.create :aceita_emenda_parlamentar => true, :_id => codigo, :codigo_programa => codigo,
                   :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
-                  :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DOS TESTES'
+                  :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DOS TESTES', :data_expiracao_programa => Time.now
 end
 
 Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pelo órgão superior '([\p{L}\s-]+)'$/ do |total, dias, orgao|
@@ -15,11 +15,19 @@ Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pe
     programas << {
       :aceita_emenda_parlamentar => true, :_id => codigo.to_i,
       :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
-      :obriga_plano_trabalho => true, :orgao_superior => orgao
+      :obriga_plano_trabalho => true, :orgao_superior => orgao, :data_expiracao_programa => Time.now
     }
   end
   
   Programa.collection.insert programas  
+end
+
+Dado /^que todos os programas disponibilizados pelo órgão '([\p{L}\s-]+)' estão expirados$/ do |orgao|
+  programas = Programa.where(:orgao_superior => orgao)
+  programas.each do |p|
+    p.data_expiracao_programa = Time.now - (1 * DAY)
+    p.save
+  end
 end
 
 Quando /^eu verifico os programas disponibilizados nos últimos 10 dias$/ do
@@ -46,7 +54,8 @@ Então /^eu devo ver a página de detalhamento do programa '(\d+)'$/ do |codigo|
 end
 
 Então /^eu devo ver a página de consulta de programas$/ do
-  should have_xpath "//form/div/select[@id='orgao_superior']"
+  should have_xpath "//form/div/div/select[@id='orgao_superior']"
+  should have_xpath "//form/div/div/input[@id='inclui_programas_expirados']"
   should have_button 'Consultar'
 end
 
@@ -72,6 +81,10 @@ end
 
 Quando /^eu clico no link de paginação '([\.\p{L}\s\d-><]+)'$/ do |link|
   find(:xpath, "//div[@class='pagination']/ul/li/a[text()='#{link}']").click
+end
+
+Então /^eu devo ver lista de programas vazia$/ do
+  find(:xpath, "//div[@name='div_resultado_consulta']/i").text.should eq 'Nenhum resultado encontrado.'
 end
 
 def verifica_pagina_resultado_consulta_programas(total, itens)
