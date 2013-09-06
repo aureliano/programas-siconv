@@ -18,6 +18,7 @@ class Programa
   field :orgao_mandatario, :type => String
   field :orgao_vinculado, :type => String
   field :esferas_administrativas, :type => Array
+  field :ufs_habilitadas, :type => Array
 
   def self.most_up_to_date_programs(options)
     tokens = LAST_EXTRACTION_DATE.split '/'
@@ -53,6 +54,10 @@ class Programa
     only(:esferas_administrativas).distinct(:esferas_administrativas)
   end
   
+  def self.ufs_habilitadas
+    only(:ufs_habilitadas).distinct(:ufs_habilitadas).sort
+  end
+  
   def aceita_emenda_parlamentar
     (!data_inicio_emenda_parlamentar.nil? || !data_fim_emenda_parlamentar.nil?)
   end
@@ -77,9 +82,11 @@ class Programa
     
     def self._create_criteria(options)
       criteria = {}
-      criteria[:orgao_superior] = options[:orgao_superior] if options[:orgao_superior]
-      criteria[:esferas_administrativas] = {:$in => [options[:esfera_administrativa]]} if options[:esfera_administrativa]
+      criteria[:orgao_superior] = options[:orgao_superior] if options[:orgao_superior] && !options[:orgao_superior].empty?
+      criteria[:esferas_administrativas] = {:$in => [options[:esfera_administrativa]]} if options[:esfera_administrativa] && !options[:esfera_administrativa].empty?
+      criteria[:ufs_habilitadas] = {:$in => [options[:uf_habilitada]]} if options[:uf_habilitada] && !options[:uf_habilitada].empty?
       criteria[:data_expiracao_programa] = {:$gte => Time.now} unless options[:inclui_programas_expirados]
+      puts criteria
       criteria
     end
 end

@@ -28,6 +28,7 @@ describe "Entidade Programa" do
     programa.should respond_to :orgao_vinculado
     programa.should respond_to :data_expiracao_programa
     programa.should respond_to :esferas_administrativas
+    programa.should respond_to :ufs_habilitadas
   end
   
   it 'carrega os programas disponibilizados nos últimos 10 dias' do

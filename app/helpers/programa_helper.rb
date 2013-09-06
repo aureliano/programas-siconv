@@ -100,6 +100,14 @@ ProgramasSiconv.helpers do
   end
   
   def combo_esferas_administrativas
-    [['Selecione...', '']].concat(Programa.esferas_administrativas.map {|p| [p, p] })
+    [['Selecione...', '']].concat(Programa.esferas_administrativas.map {|e| [e, e] })
+  end
+  
+  def combo_ufs_habilitadas
+    [['Selecione...', '']].concat(Programa.ufs_habilitadas.map {|uf| [uf, uf] })
+  end
+  
+  def uf_nome_estado(uf)
+    "#{uf} - #{APP[:estados][uf]}"
   end
 end

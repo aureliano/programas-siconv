@@ -8,10 +8,12 @@ ProgramasSiconv.controllers :programa do
   
   get :consulta, :map => '/consulta/programas' do
     @orgaos_superiores = Programa.orgaos_superiores
-    @programas, @total = if (params[:orgao_superior] || params[:esfera_administrativa])
+    @programas, @total = if (params[:orgao_superior] || params[:esfera_administrativa] || params[:uf])
+      puts 'CONSULTEI' + params[:uf]
       Programa.search(:skip => skip_value, :limit => DataPage.default_page_size,
         :orgao_superior => params[:orgao_superior],
         :esfera_administrativa => params[:esfera_administrativa],
+        :uf_habilitada => params[:uf],
         :inclui_programas_expirados => params[:inclui_programas_expirados])
     else
       [[], 0]

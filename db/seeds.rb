@@ -88,6 +88,7 @@ data.each do |row|
   end
   
   esferas = row['atende_a'].scan(/\d+/).map {|e| esferas_administrativas[e] }
+  ufs = row['ufs_habilitadas'].scan(/[A-Z]+/)
   
   programas << { :_id => row['id'].to_i, :codigo_programa => row['cod_programa_siconv'].to_i,
                   :data_disponibilizacao => data_disponibilizacao, :data_fim_recebimento_propostas => row['data_fim_recebimento_propostas'],
@@ -97,7 +98,7 @@ data.each do |row|
                   :nome => row['nome'], :obriga_plano_trabalho => parse_boolean(row['obriga_plano_trabalho']),
                   :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
                   :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']],
-                  :data_expiracao_programa => data_expiracao_programa, :esferas_administrativas => esferas }
+                  :data_expiracao_programa => data_expiracao_programa, :esferas_administrativas => esferas, :ufs_habilitadas => ufs }
 
   docs += 1
   if docs == BUCKET_SIZE

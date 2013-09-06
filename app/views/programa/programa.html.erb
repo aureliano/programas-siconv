@@ -71,6 +71,15 @@
 
 <hr/>
 
+<h4>Unidades Federativas habilitadas</h4>
+<ul>
+  <% @programa.ufs_habilitadas.each do |uf| %>
+  <li><%= uf_nome_estado uf %></li>
+  <% end %>
+</ul>
+
+<hr/>
+
 <h4>Órgãos Administrativos Relacionados</h4>
 <div name="orgao_superior">
   <span><strong>Órgão Superior: </strong></span><span><%= @programa.orgao_superior %></span>

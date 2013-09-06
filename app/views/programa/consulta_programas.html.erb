@@ -25,6 +25,11 @@
       <%= select_tag :esfera_administrativa, :id => 'esfera_administrativa', :options => combo_esferas_administrativas, :selected => params[:esfera_administrativa] %>
     </div>
     
+    <div id="div_uf">
+      <label for="uf">UF habilitada: </label>
+      <%= select_tag :uf, :id => 'uf', :options => combo_ufs_habilitadas, :selected => params[:uf] %>
+    </div>
+    
     <div id="div_inclui_programas_expirados">
       <label for="inclui_programas_expirados">Incluir Programas expirados: </label><input type="checkbox" <%= 'checked' if params['inclui_programas_expirados'] %> id="inclui_programas_expirados" name="inclui_programas_expirados"/>
     </div>
