@@ -20,6 +20,11 @@
       </select>
     </div>
     
+    <div id="div_esfera_administrativa">
+      <label for="esfera_administrativa">Esfera administrativa: </label>
+      <%= select_tag :esfera_administrativa, :id => 'esfera_administrativa', :options => combo_esferas_administrativas, :selected => params[:esfera_administrativa] %>
+    </div>
+    
     <div id="div_inclui_programas_expirados">
       <label for="inclui_programas_expirados">Incluir Programas expirados: </label><input type="checkbox" <%= 'checked' if params['inclui_programas_expirados'] %> id="inclui_programas_expirados" name="inclui_programas_expirados"/>
     </div>

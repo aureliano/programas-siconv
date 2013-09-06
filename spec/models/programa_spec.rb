@@ -27,6 +27,7 @@ describe "Entidade Programa" do
     programa.should respond_to :orgao_mandatario
     programa.should respond_to :orgao_vinculado
     programa.should respond_to :data_expiracao_programa
+    programa.should respond_to :esferas_administrativas
   end
   
   it 'carrega os programas disponibilizados nos últimos 10 dias' do

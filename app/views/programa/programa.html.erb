@@ -62,6 +62,15 @@
 
 <hr/>
 
+<h4>Esferas Administrativas atendidas</h4>
+<ul>
+  <% @programa.esferas_administrativas.each do |e| %>
+  <li><%= e %></li>
+  <% end %>
+</ul>
+
+<hr/>
+
 <h4>Órgãos Administrativos Relacionados</h4>
 <div name="orgao_superior">
   <span><strong>Órgão Superior: </strong></span><span><%= @programa.orgao_superior %></span>

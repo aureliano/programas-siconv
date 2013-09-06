@@ -98,4 +98,8 @@ ProgramasSiconv.helpers do
       when 12 then 'Dez'
     end
   end
+  
+  def combo_esferas_administrativas
+    [['Selecione...', '']].concat(Programa.esferas_administrativas.map {|p| [p, p] })
+  end
 end
