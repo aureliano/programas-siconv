@@ -8,6 +8,7 @@
 - Adiciona filtro na consulta de programas. Exclui por padrão os programas que expirados (que já não podem receber propostas).
 - Adiciona filtro na consulta de programas. Consulta programas que atendam esferas administrativas (prefeituras, ONGs etc.) específicas.
 - Adiciona filtro na consulta de programas. Consulta programas que estejam habilitados para Unidades Federativas específicas.
+- Adiona arquivos de dados ao controle de versão.
 '0.5.4':
 - Ordena resultado da consulta de programas por ordem decrescente da data de disponibilização.
 '0.5.3':
