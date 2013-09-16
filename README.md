@@ -17,7 +17,6 @@ Para orientações detalhadas da configuração do ambiente de desenvolvimento v
 Pré-requisitos:
 - [Ruby] (http://www.ruby-lang.org)
 - [Bundler] (http://gembundler.com)
-- [wget] (http://www.gnu.org/software/wget/)
 - [MongoDB] (http://www.mongodb.org/)
 
 Baixar gems necessárias:
@@ -29,8 +28,7 @@ Para orientações detalhadas para execução da aplicação visite a página [E
 
 Preparar ambiente de trabalho:
 ```
-padrino rake data:prepare
-padrino rake seed
+padrino rake data:fill
 ```
 
 Iniciar aplicação:
