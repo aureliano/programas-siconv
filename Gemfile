@@ -17,7 +17,7 @@ gem 'koala', '1.6.0'
 
 # Test requirements
 gem 'rspec', '2.12.0'
-gem 'capybara'
+gem 'capybara', '2.0.3' # Using this version 'cause highers versions are no longer supported for Ruby 1.9.2 (Heroku supports Ruby 1.9.2).
 gem 'cucumber'
 gem 'selenium-webdriver'
 gem 'rack-test', :require => "rack/test"
