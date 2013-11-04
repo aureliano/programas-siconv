@@ -86,7 +86,6 @@ class Programa
       criteria[:esferas_administrativas] = {:$in => [options[:esfera_administrativa]]} if options[:esfera_administrativa] && !options[:esfera_administrativa].empty?
       criteria[:ufs_habilitadas] = {:$in => [options[:uf_habilitada]]} if options[:uf_habilitada] && !options[:uf_habilitada].empty?
       criteria[:data_expiracao_programa] = {:$gte => Time.now} unless options[:inclui_programas_expirados]
-      puts criteria
       criteria
     end
 end
