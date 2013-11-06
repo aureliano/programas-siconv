@@ -21,7 +21,7 @@ namespace :data do
         'orgao_executor', 'orgao_mandatario', 'orgao_superior', 'orgao_vinculado', 'atende_a', 'ufs_habilitadas'
       ]
     },
-    :esferas_administrativas => { :file => 'tmp/esferas_administrativas_db_<offset>_tmp.csv', :columns => ['id', 'nome'] }
+    :naturezas_juridicas => { :file => 'tmp/naturezas_juridicas_db_<offset>_tmp.csv', :columns => ['id', 'nome'] }
   }
 
   desc 'Mescla todos osarquivos de dados (CSV) de uma entidade (após a execução os arquivos da pasta tmp são excluídos)'

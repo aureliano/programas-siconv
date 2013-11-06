@@ -12,7 +12,7 @@ namespace :data do
   resources = {
     :concedentes => 'http://api.convenios.gov.br/siconv/v1/consulta/orgaos.<formato>',
     :programas   => 'http://api.convenios.gov.br/siconv/v1/consulta/programas.<formato>?situacao=DISPONIBILIZADO',
-    :esferas_administrativas => 'http://api.convenios.gov.br/siconv/v1/consulta/esferas_administrativas.<formato>'
+    :naturezas_juridicas => 'http://api.convenios.gov.br/siconv/v1/consulta/naturezas_juridicas.<formato>'
   }
   
   desc 'Web crawler para extração dos dados da api de dados do Siconv'

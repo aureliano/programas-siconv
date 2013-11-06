@@ -99,8 +99,8 @@ ProgramasSiconv.helpers do
     end
   end
   
-  def combo_esferas_administrativas
-    [['Selecione...', '']].concat(Programa.esferas_administrativas.map {|e| [e, e] })
+  def combo_naturezas_juridicas
+    [['Selecione...', '']].concat(Programa.naturezas_juridicas.map {|e| [e, e] })
   end
   
   def combo_ufs_habilitadas

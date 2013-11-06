@@ -27,7 +27,7 @@ describe "Entidade Programa" do
     programa.should respond_to :orgao_mandatario
     programa.should respond_to :orgao_vinculado
     programa.should respond_to :data_expiracao_programa
-    programa.should respond_to :esferas_administrativas
+    programa.should respond_to :naturezas_juridicas
     programa.should respond_to :ufs_habilitadas
   end
   

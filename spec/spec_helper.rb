@@ -19,20 +19,20 @@ def populate_programs_collection
                   :data_disponibilizacao => Time.now, :data_fim_recebimento_propostas => '2013-09-01',
                   :data_inicio_recebimento_propostas => '2013-01-02', :nome => 'Programa de Teste 1 ',
                   :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DOS TESTES',
-                  :esferas_administrativas => [], :ufs_habilitadas => []
+                  :naturezas_juridicas => [], :ufs_habilitadas => []
   Programa.create :aceita_emenda_parlamentar => true, :_id => 565689765465, :codigo_programa => 565689765465,
                   :data_disponibilizacao => Time.now - (10 * DAY), :data_fim_recebimento_propostas => '2013-09-01',
                   :data_inicio_recebimento_propostas => '2013-01-02', :nome => 'Programa de Teste 2 ',
                   :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DAS ESPECIFICACOES',
-                  :esferas_administrativas => [], :ufs_habilitadas => []
+                  :naturezas_juridicas => [], :ufs_habilitadas => []
   Programa.create :aceita_emenda_parlamentar => true, :_id => 798432120, :codigo_programa => 798432120,
                   :data_disponibilizacao => Time.now - (11 * DAY), :data_fim_recebimento_propostas => '2013-09-01',
                   :data_inicio_recebimento_propostas => '2013-01-02', :nome => 'Programa de Teste 3 ',
                   :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO NUMERO UM',
-                  :esferas_administrativas => [], :ufs_habilitadas => []
+                  :naturezas_juridicas => [], :ufs_habilitadas => []
   Programa.create :aceita_emenda_parlamentar => true, :_id => 6648785121321, :codigo_programa => 6648785121321,
                   :data_disponibilizacao => Time.now - (5 * DAY), :data_fim_recebimento_propostas => '2013-09-01',
                   :data_inicio_recebimento_propostas => '2013-01-02', :nome => 'Programa de Teste 4 ',
                   :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO NUMERO UM',
-                  :esferas_administrativas => [], :ufs_habilitadas => []
+                  :naturezas_juridicas => [], :ufs_habilitadas => []
 end

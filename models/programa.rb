@@ -17,7 +17,7 @@ class Programa
   field :orgao_executor, :type => String
   field :orgao_mandatario, :type => String
   field :orgao_vinculado, :type => String
-  field :esferas_administrativas, :type => Array
+  field :naturezas_juridicas, :type => Array
   field :ufs_habilitadas, :type => Array
 
   def self.most_up_to_date_programs(options)
@@ -50,8 +50,8 @@ class Programa
     only(:orgao_superior).distinct(:orgao_superior)
   end
   
-  def self.esferas_administrativas
-    only(:esferas_administrativas).distinct(:esferas_administrativas)
+  def self.naturezas_juridicas
+    only(:naturezas_juridicas).distinct(:naturezas_juridicas)
   end
   
   def self.ufs_habilitadas
@@ -83,7 +83,7 @@ class Programa
     def self._create_criteria(options)
       criteria = {}
       criteria[:orgao_superior] = options[:orgao_superior] if options[:orgao_superior] && !options[:orgao_superior].empty?
-      criteria[:esferas_administrativas] = {:$in => [options[:esfera_administrativa]]} if options[:esfera_administrativa] && !options[:esfera_administrativa].empty?
+      criteria[:naturezas_juridicas] = {:$in => [options[:naturezas_juridicas]]} if options[:naturezas_juridicas] && !options[:naturezas_juridicas].empty?
       criteria[:ufs_habilitadas] = {:$in => [options[:uf_habilitada]]} if options[:uf_habilitada] && !options[:uf_habilitada].empty?
       criteria[:data_expiracao_programa] = {:$gte => Time.now} unless options[:inclui_programas_expirados]
       criteria

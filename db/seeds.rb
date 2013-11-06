@@ -53,11 +53,11 @@ concedentes = {}
 data.each {|row| concedentes[row['id']] = row['nome'] }
 shell.say ''
 
-shell.say "Carregando dados de 'esferas administrativas' do arquivo 'tmp/esferas_administrativas_db.csv'"
-data = load_data_from_csv 'tmp/esferas_administrativas_db.csv'
+shell.say "Carregando dados de 'naturezas jurídicas' do arquivo 'tmp/naturezas_juridicas_db.csv'"
+data = load_data_from_csv 'tmp/naturezas_juridicas_db.csv'
 
-esferas_administrativas = {}
-data.each {|row| esferas_administrativas[row['id']] = row['nome'] }
+naturezas_juridicas = {}
+data.each {|row| naturezas_juridicas[row['id']] = row['nome'] }
 
 shell.say ''
 shell.say "Removendo (se existir) registros da coleção 'programas'"
@@ -87,7 +87,7 @@ data.each do |row|
     Time.new(tokens[0], tokens[1], tokens[2])
   end
   
-  esferas = row['atende_a'].scan(/\d+/).map {|e| esferas_administrativas[e] }
+  naturezas = row['atende_a'].scan(/\d+/).map {|e| naturezas_juridicas[e] }
   ufs = row['ufs_habilitadas'].scan(/[A-Z]+/)
   
   programas << { :_id => row['id'].to_i, :codigo_programa => row['cod_programa_siconv'].to_i,
@@ -98,7 +98,7 @@ data.each do |row|
                   :nome => row['nome'], :obriga_plano_trabalho => parse_boolean(row['obriga_plano_trabalho']),
                   :orgao_executor => concedentes[row['orgao_executor']], :orgao_mandatario => concedentes[row['orgao_mandatario']],
                   :orgao_superior => concedentes[row['orgao_superior']], :orgao_vinculado => concedentes[row['orgao_vinculado']],
-                  :data_expiracao_programa => data_expiracao_programa, :esferas_administrativas => esferas, :ufs_habilitadas => ufs }
+                  :data_expiracao_programa => data_expiracao_programa, :naturezas_juridicas => naturezas, :ufs_habilitadas => ufs }
 
   docs += 1
   if docs == BUCKET_SIZE

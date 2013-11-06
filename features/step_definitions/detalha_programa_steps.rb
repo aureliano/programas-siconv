@@ -4,7 +4,7 @@ Dado /^que existe o programa '(\d+)' disponibilizado '(\d+)' dia\(s\) atrás$/ d
   Programa.create :aceita_emenda_parlamentar => true, :_id => codigo, :codigo_programa => codigo,
                   :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
                   :obriga_plano_trabalho => true, :orgao_superior => 'MINISTERIO DOS TESTES', :data_expiracao_programa => Time.now,
-                  :esferas_administrativas => ['teste1'], :ufs_habilitadas => []
+                  :naturezas_juridicas => ['teste1'], :ufs_habilitadas => []
 end
 
 Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pelo órgão superior '([\p{L}\s-]+)'$/ do |total, dias, orgao|
@@ -17,7 +17,7 @@ Dado /^que existem '(\d+)' programas disponibilizados '(\d+)' dia\(s\) atrás pe
       :aceita_emenda_parlamentar => true, :_id => codigo.to_i, :codigo_programa => codigo,
       :data_disponibilizacao => Time.now - (dias.to_i * DAY), :nome => "Programa de Teste #{codigo}",
       :obriga_plano_trabalho => true, :orgao_superior => orgao, :data_expiracao_programa => Time.now,
-      :esferas_administrativas => ['teste1', 'teste2'], :ufs_habilitadas => []
+      :naturezas_juridicas => ['teste1', 'teste2'], :ufs_habilitadas => []
     }
   end
   
