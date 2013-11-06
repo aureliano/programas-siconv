@@ -1,4 +1,6 @@
 ---
+'0.6.1':
+- Altera método de consulta de dados referente a esfera administrativa na API de dados abertos do Siconv.
 '0.6.0':
 - Atualiza versão do framework web (padrino).
 - Corrige bug na tarefa de extração de dados. Erro ocorria quando a pasta temporária não existia.
