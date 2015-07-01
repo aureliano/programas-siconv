@@ -147,6 +147,7 @@ DEPENDENCIES
   capybara (= 2.0.3)
   cucumber
   erubis (~> 2.7.0)
+  i18n (~> 0.6)
   koala (= 1.6.0)
   mongoid (= 2.4.12)
   newrelic_rpm

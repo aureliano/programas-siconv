@@ -15,6 +15,8 @@ gem 'bson_ext', :require => "mongo"
 gem 'twitter', '~> 4.4.0'
 gem 'koala', '1.6.0'
 
+gem 'i18n', '~> 0.6'
+
 # Test requirements
 gem 'rspec', '2.12.0'
 gem 'capybara', '2.0.3' # Using this version 'cause highers versions are no longer supported for Ruby 1.9.2 (Heroku supports Ruby 1.9.2).
