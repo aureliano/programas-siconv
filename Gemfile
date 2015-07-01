@@ -15,7 +15,7 @@ gem 'bson_ext', :require => "mongo"
 gem 'twitter', '~> 4.4.0'
 gem 'koala', '1.6.0'
 
-gem 'i18n', '~> 0.6'
+gem 'i18n', '0.6'
 
 # Test requirements
 gem 'rspec', '2.12.0'
